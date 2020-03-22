@@ -50,4 +50,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="lambda 3 without params" value="y=lambda: True" description="my lambda" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
