@@ -1,5 +1,5 @@
 <templateSet group="_ITER">
-  <template name="for WHILE  (dict iterate with removing)" value="while d0:&#10;    print (d0.popitem())&#10;$END$    " description="my while popitem" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE  (GOOD dict iterate and delete element)" value="while d0:&#10;    print (d0.popitem())&#10;$END$    " description="while popitem" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
