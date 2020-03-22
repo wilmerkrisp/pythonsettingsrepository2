@@ -126,4 +126,18 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="newlist copy shallow" value="$copy$=$l$[:]" description="list[:]" toReformat="false" toShortenFQNames="true">
+    <variable name="l" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="copy" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="newlist copy deep" value="from copy import *&#10;$copy$=deepcopy($l$)&#10;" description="deepcopy(list)" toReformat="false" toShortenFQNames="true">
+    <variable name="l" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="copy" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
