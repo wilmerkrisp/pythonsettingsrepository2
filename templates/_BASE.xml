@@ -21,17 +21,22 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="if ternarn" value="v = x if True else y $END$" description="my if" toReformat="false" toShortenFQNames="true">
+  <template name="if ternarn" value="v = x if True else y $END$" description="X if else Y" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="if default" value="v = x or defualt $END$" description="my if" toReformat="false" toShortenFQNames="true">
+  <template name="if default" value="v = x or defualt $END$" description="x OR default" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
   <template name="nop empty command 1" value="...&#10;$END$" description="my ..." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="if classic" value="if True: &#10;    print(&quot;1&quot;)&#10;elif False:&#10;    print(&quot;2&quot;)&#10;else:&#10;    print(&quot;3&quot;)&#10;$END$" description="if elif else" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
