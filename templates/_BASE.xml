@@ -1,0 +1,39 @@
+<templateSet group="_BASE">
+  <template name="import" value="from  $module$ import * &#10;&#10;$END$" description="my import *" toReformat="false" toShortenFQNames="true">
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+      <option name="Python_Class" value="false" />
+    </context>
+  </template>
+  <template name="nop empty command 2" value="pass&#10;$END$" description="my pass" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="block code multiline" value="(&#10;$END$&#10;)" description="my group of operators" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="if oneline" value="if x&gt;y: print(x) $END$" description="my onelined operator" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="if ternarn" value="v = x if True else y $END$" description="my if" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="if default" value="v = x or defualt $END$" description="my if" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="nop empty command 1" value="pass&#10;$END$" description="my ..." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

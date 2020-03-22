@@ -1,0 +1,47 @@
+<templateSet group="_ITER">
+  <template name="for WHILE  (dict iterate with removing)" value="while d0:&#10;    print (d0.popitem())&#10;$END$    " description="my while popitem" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for WHILE  esle" value="while d0:&#10;    print (d0.popitem())&#10;    if True: continue&#10;    if True: break&#10;else: #более структурированный способ перехвата случая с неудавшимся поиском.&#10;    print (&quot;final cycle&quot;)   " description="my while else break continue" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for WHILE  C-style" value="k=10&#10;fnn=1&#10;while ((i:=fnn)!=-1):&#10;    k-=1&#10;    fnn = -1 if k==0 else k&#10;    print(&quot;iter&quot;,i)" description="my while (i:=)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for FOR else" value="for i in range(1,10):&#10;    print (&quot;i=&quot;,i)&#10;    if True: continue&#10;    if True: break&#10;else: #более структурированный способ перехвата случая с неудавшимся поиском.&#10;    print (&quot;final cycle&quot;)   " description="my for  else break continue" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for FOR one line" value="for i in range(1,10):  print (&quot;i=&quot;,i)" description="my while else break continue" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for GEN  new list" value="[х + 1 for х in L if True]" description="my list update" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for FOR  with index" value="arr=range(1,10)&#10;for (i,e) in enumerate(arr):  print (f&quot;{i}={e}&quot;)" description="for enumerate" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for GEN new list for-for" value="nlist = [(i,j) for i in range(1,10) for j in range(1,10) ]&#10;print(&quot;&gt;&gt;&quot;,nlist )" description="my list update" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for MAP operations" value="l1=list(map(lambda x: x+1, range(1,10)))&#10;l2 = list(map(pow, range(1, 10),range(1, 10))) # у функции pow два аргумента&#10;l3=list(filter(lambda x: True, range(1,10)))&#10;&quot;&quot;&quot;&#10;reduce&#10;sum&#10;any&#10;all&#10;max&#10;min&#10;&quot;&quot;&quot;" description="my love funcs" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

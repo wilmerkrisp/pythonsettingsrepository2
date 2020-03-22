@@ -1,0 +1,8 @@
+<templateSet group="_TEST">
+  <template name="test function" value="def test_$something$(self):&#10;    $something$()$END$&#10;    self.assertEqual(True, True)&#10;$END$    " description="my simple test some function" toReformat="false" toShortenFQNames="true">
+    <variable name="something" expression="pyFunctionName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python_Class" value="true" />
+    </context>
+  </template>
+</templateSet>

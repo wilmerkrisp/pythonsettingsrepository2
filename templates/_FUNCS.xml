@@ -1,0 +1,53 @@
+<templateSet group="_FUNCS">
+  <template name="function" value="def $name$(x,y):&#10;    print (f&quot;{x} {y}&quot;)&#10; &#10;$name$(x=1,y=2)&#10;$END$" description="my fn" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function use external vars" value="v=&quot;no&quot;&#10;def $name$(x,y):&#10;    global v&#10;    nonlocal w  &#10;    v=&quot;yes&quot;&#10;    print (f&quot;{x} {y}&quot;)&#10; &#10;$name$(x=1,y=2)&#10;$END$" description="my fn 2" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="lambda 1" value="y=lambda x:x+1" description="my lambda" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function multiple results" value="def $name$(x,y):&#10;    return x,y&#10; &#10;a,b=$name$(x=1,y=2)&#10;print(a,b)&#10;$END$" description="my fn" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function with  default args" value="def $name$(*,x=11,y=12):&#10;    print (f&quot;{x} {y}&quot;)&#10; &#10;$name$(x=1,y=2)&#10;$END$" description="my fn" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function oneline aka lambda" value="def func(x, у, z): return x + у + z" description="my lambda" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="lambda 2 with default args" value="y=lambda x=11,y=12: x+y&#10;" description="my lambda" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function GEN lazy iterator" value="#генераторные функции это одноразовый итератор&#10;def $name$(n):&#10;     for i in range(n):&#10;        yield i&#10; &#10;for i in $name$(10): print(i)&#10;&#10;$END$" description="my fn" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function NEW-SET-CALL pattern" value="def $name$():&#10;    print (f&quot;{myfnn.x} {myfnn.y}&quot;)&#10; &#10;$name$.x=[1]&#10;$name$.y=['a']&#10;$name$()&#10;$END$" description="my fn" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

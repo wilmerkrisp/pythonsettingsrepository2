@@ -1,0 +1,8 @@
+<templateSet group="_TYPES">
+  <template name="class simple inline" value="class $name$():&#10;    &quot;&quot;&quot; class $name$ &quot;&quot;&quot;&#10;&#10;    def __init__(self,one,two):&#10;        self.one=one&#10;        self.two=two&#10;&#10;    def method1(self):&#10;        print (f&quot;{self.one} {self.two}&quot;)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.one} {self.two}&quot;&#10;&#10;    def __str__(self):&#10;        return f&quot;{self.one} {self.two}&quot;&#10;&#10;obj1=$name$(&quot;1&quot;,&quot;2&quot;)&#10;obj1.method1()&#10;$END$" description="my class" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

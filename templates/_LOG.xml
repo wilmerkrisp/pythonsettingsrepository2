@@ -1,0 +1,18 @@
+<templateSet group="_LOG">
+  <template name="log print enhansed" value="print(&quot;ovan&quot;,&quot;alsu$END$&quot;,sep=&quot;,&quot;,end=&quot; &quot;)" description="my print 3" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="log pring &quot;&quot;" value="print(&quot;$END$&quot;)" description="my print 2" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="log print (&quot;&quot;,var)" value="print(&quot;&gt;&gt;&quot;,$varr$ $END$)" description="my print 1" toReformat="false" toShortenFQNames="true">
+    <variable name="varr" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
