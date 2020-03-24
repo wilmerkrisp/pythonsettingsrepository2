@@ -11,5 +11,14 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newmethod 1" value="def method1(self):&#10;    MyClass.method1(self) #явный вызов метода суперкласса&#10;    print (f&quot;{self.one} {self.two}&quot;)" toReformat="false" toShortenFQNames="true" />
+  <template name="newmethod 1" value="def method1(self):&#10;    MyClass.method1(self) #явный вызов метода суперкласса&#10;    print (f&quot;{self.one} {self.two}&quot;)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="newmethod abstract" value="from abc import ABCMeta, abstractmethod&#10;&#10;class MyAbstract(metaclass=ABCMeta):&#10;    @abstractmethod&#10;    def method1(self):...&#10;&#10;class MyImplementation:&#10;    def method1(self):&#10;        print(&quot;mymethod&quot;)&#10;&#10;o12=MyImplementation()&#10;o12.method1()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
