@@ -11,4 +11,5 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="newmethod 1" value="def method1(self):&#10;    MyClass.method1(self) #явный вызов метода суперкласса&#10;    print (f&quot;{self.one} {self.two}&quot;)" toReformat="false" toShortenFQNames="true" />
 </templateSet>
