@@ -35,13 +35,13 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newclass static methods" value="class $name$():&#10;    &quot;&quot;&quot; class $name$ &quot;&quot;&quot;&#10;&#10;    @staticmethod&#10;    def method1(self,arg):&#10;        if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;) &#10;        print (f&quot;method1:{arg}&quot;)&#10;&#10; &#10;&#10;$name$.method1(12)&#10;$END$" description="my class" toReformat="false" toShortenFQNames="true">
+  <template name="newclass static methods" value="class $name$():&#10;    &quot;&quot;&quot; class $name$ &quot;&quot;&quot;&#10;&#10;    @staticmethod&#10;    def method1(arg):&#10;        if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;) &#10;        print (f&quot;method1:{arg}&quot;)&#10;&#10; &#10;&#10;$name$.method1(12)&#10;$END$" description="my class" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newmethod static" value="@staticmethod&#10;def method1(self,arg):&#10;    if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;) &#10;    print (f&quot;method1:{arg}&quot;)" description="" toReformat="false" toShortenFQNames="true">
+  <template name="newmethod static" value="@staticmethod&#10;def method1(arg):&#10;    if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;) &#10;    print (f&quot;method1:{arg}&quot;)" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
