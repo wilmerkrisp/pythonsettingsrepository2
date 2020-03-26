@@ -1,4 +1,4 @@
-<templateSet group="_TYPES">
+<templateSet group="_CLASS">
   <template name="newclass simple" value="class $name$():&#10;    &quot;&quot;&quot; class $name$ &quot;&quot;&quot;&#10;&#10;    def __init__(self,one,two):&#10;        self.__one=one&#10;        self.__two=two&#10;        self.__age=None&#10;&#10;    @property&#10;    def age(self):&#10;        return self.__age&#10;&#10;    @age.setter&#10;    def age(self,value):&#10;        self.__age=value&#10;&#10;    def method1(self,arg):&#10;        if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;) &#10;        print (f&quot;method1:{arg}&quot;)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__one} {self.__two}&quot;&#10;&#10;&#10;obj1=$name$(&quot;1&quot;,&quot;2&quot;)&#10;obj1.method1(12)&#10;$END$" description="my class" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
