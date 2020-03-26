@@ -1,5 +1,5 @@
 <templateSet group="_TYPES">
-  <template name="newclass simple inline" value="class $name$():&#10;    &quot;&quot;&quot; class $name$ &quot;&quot;&quot;&#10;&#10;    def __init__(self,one,two):&#10;        self.one=one&#10;        self.two=two&#10;&#10;    def method1(self):&#10;        print (f&quot;{self.one} {self.two}&quot;)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.one} {self.two}&quot;&#10;&#10;&#10;obj1=$name$(&quot;1&quot;,&quot;2&quot;)&#10;obj1.method1()&#10;$END$" description="my class" toReformat="false" toShortenFQNames="true">
+  <template name="newclass simple inline" value="class $name$():&#10;    &quot;&quot;&quot; class $name$ &quot;&quot;&quot;&#10;&#10;    def __init__(self,one,two):&#10;        self.__one=one&#10;        self.__two=two&#10;        self.__age=None&#10;&#10;    @property&#10;    def age(self):&#10;        return self.__age&#10;&#10;    @age.setter&#10;    def age(self,value):&#10;        self.__age=value&#10;&#10;    def method1(self,arg):&#10;        if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;) &#10;        print (f&quot;method1:{self.__one} {self.__two}&quot;)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__one} {self.__two}&quot;&#10;&#10;&#10;obj1=$name$(&quot;1&quot;,&quot;2&quot;)&#10;obj1.method1()&#10;$END$" description="my class" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -11,7 +11,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newmethod 1" value="def method1(self):&#10;    MyClass.method1(self) #явный вызов метода суперкласса&#10;    print (f&quot;{self.one} {self.two}&quot;)" description="" toReformat="false" toShortenFQNames="true">
+  <template name="newmethod 1" value="def method1(self,arg):&#10;    if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;) &#10;    MyClass.method1(self) #явный вызов метода суперкласса&#10;    print (f&quot;{arg} &quot;)" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -22,6 +22,15 @@
     </context>
   </template>
   <template name="newclass overload +" value="class Comp:&#10;    def __init__(self, val):&#10;        self.val = val&#10;&#10;    def __add__(self, other):   # x+2&#10;        if isinstance(other, Comp):&#10;            other = other.val&#10;        return Comp(self.val + other)&#10;&#10;    def __radd__(self, other):  # 2+x&#10;        return Comp(other + self.val)&#10;&#10;    def __iadd__(self,other):   # x+=2&#10;        self.val+=other&#10;        return self&#10;&#10;    def __repr__(self):&#10;        return f'Comp={self.val}'&#10;&#10;c1, c2 = Comp(88), Comp(99)&#10;print(1+c1)&#10;print(c1+c2)&#10;c1+=3&#10;print(c1)" description="overload __add__" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="newproperty 1" value="# todo: &#10;#      add to the __init__:  self.__$age$=None&#10;#      add to the __repr__:  f&quot;{self.__$age$}&quot;&#10;&#10;@property&#10;def $age$(self):&#10;    return self.__$age$&#10;&#10;@age.setter&#10;def $age$(self,value):&#10;    self.__$age$=value" toReformat="false" toShortenFQNames="true">
+    <variable name="age" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="newclass new-call pattern" value="class $name$():&#10;    &quot;&quot;&quot; class $name$&#10;        new-call pattern &#10;    &quot;&quot;&quot;&#10;&#10;    def __init__(self,age):&#10;        if not age: raise ValueError(&quot;Constructor's argument must not be empty.&quot;) &#10;        self.__age=age&#10;&#10;    @property&#10;    def age(self):&#10;        return self.__age&#10;&#10;    def method1(self):&#10;        print (f&quot;method1:{self.__age}&quot;)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__age}&quot;&#10;&#10;&#10;obj1=$name$(&quot;1&quot;,&quot;2&quot;)&#10;obj1.method1()&#10;$END$" description="new-call pattern" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
