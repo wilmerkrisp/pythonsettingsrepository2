@@ -26,7 +26,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newproperty 1" value="# todo: &#10;#      add to the __init__:  self.__$age$=None&#10;#      add to the __repr__:  f&quot;{self.__$age$}&quot;&#10;&#10;@property&#10;def $age$(self):&#10;    return self.__$age$&#10;&#10;@age.setter&#10;def $age$(self,value):&#10;    self.__$age$=value" toReformat="false" toShortenFQNames="true">
+  <template name="newproperty 1" value="# todo: &#10;#      add to the __init__:  self.__$age$=None&#10;#      add to the __repr__:  f&quot;{self.__$age$}&quot;&#10;&#10;@property&#10;def $age$(self):&#10;    return self.__$age$&#10;&#10;@age.setter&#10;def $age$(self,value):&#10;    self.__$age$=value" description="" toReformat="false" toShortenFQNames="true">
     <variable name="age" expression="" defaultValue="" alwaysStopAt="true" />
   </template>
   <template name="newclass new-call pattern" value="class $name$():&#10;    &quot;&quot;&quot; class $name$&#10;        new-call pattern &#10;    &quot;&quot;&quot;&#10;&#10;    def __init__(self,age):&#10;        if not age: raise ValueError(&quot;Constructor's argument must not be empty.&quot;) &#10;        self.__age=age&#10;&#10;    @property&#10;    def age(self):&#10;        return self.__age&#10;&#10;    def method1(self):&#10;        print (f&quot;method1:{self.__age}&quot;)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__age}&quot;&#10;&#10;&#10;obj1=$name$(&quot;test&quot;)&#10;obj1.method1()&#10;$END$" description="new-call pattern" toReformat="false" toShortenFQNames="true">
