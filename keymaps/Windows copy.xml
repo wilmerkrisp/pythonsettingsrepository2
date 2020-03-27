@@ -44,10 +44,11 @@
   <action id="DatabaseView.CopyTable" />
   <action id="DatabaseView.Refresh" />
   <action id="Debug">
-    <keyboard-shortcut first-keystroke="shift f9" />
     <keyboard-shortcut first-keystroke="f18" />
     <keyboard-shortcut first-keystroke="ctrl f6" />
   </action>
+  <action id="Debugger.EditTypeSource" />
+  <action id="EditSourceInNewWindow" />
   <action id="ExpandAllRegions">
     <keyboard-shortcut first-keystroke="shift ctrl add" />
     <keyboard-shortcut first-keystroke="shift ctrl equals" />
@@ -110,7 +111,7 @@
   <action id="JumpToLastWindow" />
   <action id="LPPythonTypeInfoAdded">
     <keyboard-shortcut first-keystroke="shift ctrl y" />
-    <keyboard-shortcut first-keystroke="alt f10" />
+    <keyboard-shortcut first-keystroke="shift f9" />
   </action>
   <action id="ModifyObject" />
   <action id="Move" />
@@ -130,12 +131,14 @@
     <keyboard-shortcut first-keystroke="f7" />
   </action>
   <action id="Rerun" />
+  <action id="Resume" />
   <action id="Run">
     <keyboard-shortcut first-keystroke="shift f10" />
     <keyboard-shortcut first-keystroke="alt 3" />
     <keyboard-shortcut first-keystroke="f17" />
     <keyboard-shortcut first-keystroke="ctrl f5" />
   </action>
+  <action id="RunDashboard.EditConfiguration" />
   <action id="RunToCursor">
     <keyboard-shortcut first-keystroke="alt f9" />
     <keyboard-shortcut first-keystroke="f19" />
@@ -154,6 +157,10 @@
     <keyboard-shortcut first-keystroke="shift ctrl space" />
     <keyboard-shortcut first-keystroke="f2" />
   </action>
+  <action id="SonarLint.AnalyzeFiles">
+    <keyboard-shortcut first-keystroke="shift ctrl s" />
+    <keyboard-shortcut first-keystroke="shift f4" />
+  </action>
   <action id="StepInto" />
   <action id="StepOver" />
   <action id="ToggleBookmark" />
@@ -166,5 +173,10 @@
   </action>
   <action id="Vcs.Log.Refresh" />
   <action id="XDebugger.EditWatch" />
+  <action id="XDebugger.JumpToTypeSource" />
   <action id="XDebugger.SetValue" />
+  <action id="com.ludditelabs.intellij.autodoc.actions.AutodocCurrentFile">
+    <keyboard-shortcut first-keystroke="shift ctrl alt a" />
+    <keyboard-shortcut first-keystroke="f9" />
+  </action>
 </keymap>
