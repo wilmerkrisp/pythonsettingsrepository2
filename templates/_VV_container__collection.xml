@@ -140,7 +140,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newnamedtuple immutable class" value="Car = namedtuple('Car', ['attr1', 'attr2'])&#10;c1=Car(1,2)&#10;print(c1)&#10;$END$" description="namedtuple()" toReformat="false" toShortenFQNames="true">
+  <template name="newnamedtuple immutable class (short)" value="Car = namedtuple('Car', 'attr1 attr2')&#10;#Car = namedtuple('Car', ['attr1', 'attr2'])&#10;c1=Car(1,2)&#10;print(c1)&#10;$END$" description="namedtuple()" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
