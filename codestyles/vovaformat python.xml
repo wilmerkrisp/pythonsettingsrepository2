@@ -1,4 +1,7 @@
 <code_scheme name="vovaformat python" version="173">
+  <option name="AUTODETECT_INDENTS" value="false" />
+  <option name="RIGHT_MARGIN" value="400" />
+  <option name="FORMATTER_TAGS_ENABLED" value="true" />
   <Python>
     <option name="SPACE_WITHIN_BRACES" value="true" />
     <option name="SPACE_AFTER_PY_COLON" value="false" />
@@ -8,11 +11,7 @@
   <codeStyleSettings language="Python">
     <option name="RIGHT_MARGIN" value="400" />
     <option name="KEEP_LINE_BREAKS" value="false" />
-    <option name="SPACE_WITHIN_METHOD_CALL_PARENTHESES" value="true" />
-    <option name="SPACE_WITHIN_METHOD_PARENTHESES" value="true" />
     <indentOptions>
-      <option name="INDENT_SIZE" value="8" />
-      <option name="TAB_SIZE" value="8" />
       <option name="KEEP_INDENTS_ON_EMPTY_LINES" value="true" />
     </indentOptions>
   </codeStyleSettings>

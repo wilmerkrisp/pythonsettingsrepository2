@@ -1,7 +1,7 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="File '...\playground.py'" />
-    <option name="defaultScopeName" value="File '...\playground.py'" />
-    <option name="SEARCH_SCOPE" value="File '...\playground.py'" />
+    <option name="customScope" value="File '...\playgroundClasses.py'" />
+    <option name="defaultScopeName" value="File '...\playgroundClasses.py'" />
+    <option name="SEARCH_SCOPE" value="File '...\playgroundClasses.py'" />
   </component>
 </application>
