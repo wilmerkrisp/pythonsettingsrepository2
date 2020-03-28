@@ -1,0 +1,21 @@
+<scheme name="_@user_Darcula" version="142" parent_scheme="Darcula">
+  <metaInfo>
+    <property name="created">2020-03-28T10:03:36</property>
+    <property name="ide">Python</property>
+    <property name="ideVersion">2019.3.0.0</property>
+    <property name="modified">2020-03-28T10:51:25</property>
+    <property name="originalScheme">Darcula</property>
+  </metaInfo>
+  <attributes>
+    <option name="DEFAULT_BLOCK_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="4e4e4e" />
+      </value>
+    </option>
+    <option name="DEFAULT_LINE_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="4e4e4e" />
+      </value>
+    </option>
+  </attributes>
+</scheme>
