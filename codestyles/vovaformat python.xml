@@ -3,7 +3,6 @@
   <option name="RIGHT_MARGIN" value="400" />
   <option name="FORMATTER_TAGS_ENABLED" value="true" />
   <Python>
-    <option name="SPACE_WITHIN_BRACES" value="true" />
     <option name="SPACE_AFTER_PY_COLON" value="false" />
     <option name="DICT_WRAPPING" value="2" />
     <option name="FROM_IMPORT_WRAPPING" value="0" />

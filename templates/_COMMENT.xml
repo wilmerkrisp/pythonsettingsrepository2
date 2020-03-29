@@ -1,5 +1,5 @@
 <templateSet group="_COMMENT">
-  <template name="comment folding" value="# &lt;editor-fold desc=&quot;core methods&quot;&gt;&#10;&#10;# &lt;/editor-fold&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="comment folding" value="# &lt;editor-fold desc=&quot;core methods&quot;&gt;&#10;&#10;# &lt;/editor-fold&gt;" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
