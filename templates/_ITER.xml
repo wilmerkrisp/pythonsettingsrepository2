@@ -49,4 +49,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="for cold-&gt;hot" value="# сделать итератор истощаемым&#10;new_=iter($coll$)" description="for enumerate" toReformat="false" toShortenFQNames="true">
+    <variable name="coll" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
