@@ -20,8 +20,20 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr assert isinstance" value="assert isinstance($var$,int)" description="class exception" toReformat="false" toShortenFQNames="true">
+  <template name="newerr assert isinstance" value="assert isinstance($var$,int)" description="isinstance" toReformat="false" toShortenFQNames="true">
     <variable name="var" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="newerr assert is function" value="assert callable($var$)&#10;" description="callable" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="newerr assert has attribute" value="assert hasattr($var$,&quot;method1&quot;) #также проверяет наличие виртуальных атрибутов&#10;" description="hasattr" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
