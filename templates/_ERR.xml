@@ -44,4 +44,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="newerr if raise" value="if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;assert isinstance(arg,int)&#10;if result is NotImplemented:&#10;    return result" description="check input arguments" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
