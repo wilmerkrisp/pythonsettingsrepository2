@@ -38,4 +38,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="newerr assert issubclass" value="assert issubclass($var$,(object,str))" description="issubclass" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
