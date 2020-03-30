@@ -38,7 +38,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="function GEN lazy iterator" value="#генераторные функции это одноразовый итератор&#10;def $name$(n):&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;     for i in range(n):&#10;        yield i&#10; &#10;for i in $name$(10): print(i)&#10;&#10;$END$" description="my fn" toReformat="false" toShortenFQNames="true">
+  <template name="function GEN yield with for" value="#генераторные функции это одноразовый итератор&#10;def $name$(n):&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;     for i in range(n):&#10;        yield i&#10; &#10;for i in $name$(10): print(i)&#10;&#10;$END$" description="def yield (lazy iterator)" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -56,6 +56,12 @@
     </context>
   </template>
   <template name="function decorator" value="#функция  перенесет все __метаданные на обёртку декоратор&#10;from functools import *&#10;@wraps(func)&#10;&#10;&#10;$END$" description="my fn" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function GEN simpliest" value="#генераторные функции это одноразовый итератор&#10;def $name$():&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;    yield &quot;one&quot;&#10;    yield &quot;two&quot;&#10;    yield &quot;three&quot;&#10; &#10;for i in $name$(): print(i)&#10;&#10;$END$" description="def yield  yield yield" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
