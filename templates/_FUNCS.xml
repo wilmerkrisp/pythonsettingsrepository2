@@ -55,4 +55,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function decorator" value="#функция  перенесет все __метаданные на обёртку декоратор&#10;from functools import *&#10;@wraps(func)&#10;&#10;&#10;$END$" description="my fn" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
