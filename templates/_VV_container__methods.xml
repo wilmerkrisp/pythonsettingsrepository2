@@ -154,7 +154,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="cm map add many" value="$s$.update({1:&quot;a&quot;,2:&quot;b&quot;$END$})" description="dict.update" toReformat="false" toShortenFQNames="true">
+  <template name="cm map add many 1" value="$s$.update({1:&quot;a&quot;,2:&quot;b&quot;$END$})" description="dict.update" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -203,6 +203,12 @@
     </context>
   </template>
   <template name="rl list find/index/count" value="s.index(b) ==error&#10;s.count(b)&#10;s.find(b)==-1&#10; $END$" description="find index count" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="cm map add many 2" value="$s$.update(uno=&quot;a&quot;, dos=&quot;b&quot;$END$)" description="dict.update" toReformat="false" toShortenFQNames="true">
+    <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
