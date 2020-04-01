@@ -85,7 +85,8 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newset immutable" value="$l1$=frozenset($END$)" description="frozenset" toReformat="false" toShortenFQNames="true">
+  <template name="newset immutable" value="$l1$=frozenset($list$)&#10;$END$" description="frozenset" toReformat="false" toShortenFQNames="true">
+    <variable name="list" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -141,6 +142,13 @@
     </context>
   </template>
   <template name="newnamedtuple immutable class (short)" value="Car = namedtuple('Car', 'attr1 attr2')&#10;#Car = namedtuple('Car', ['attr1', 'attr2'])&#10;c1=Car(1,2)&#10;print(c1)&#10;$END$" description="namedtuple()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="newlist deduplicate elements" value="$l1$=set($list$)&#10;$END$" description="set" toReformat="false" toShortenFQNames="true">
+    <variable name="list" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
