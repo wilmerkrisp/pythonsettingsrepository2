@@ -44,7 +44,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newclass  iterator" value="mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9]&#10;&#10;&#10;class MyIterator:&#10;    &quot;&quot;&quot; multiple iterable class &quot;&quot;&quot;&#10;    def __init__(self, wrapped):&#10;        self.wrapped = wrapped&#10;&#10;    def __iter__(self):&#10;        offset = 0&#10;        while offset &lt; len(self.wrapped):&#10;            item = self.wrapped[offset]&#10;            offset += 2&#10;            yield item&#10;&#10;&#10;print(list(MyIterator(mylist)))" description="__iter__" toReformat="false" toShortenFQNames="true">
+  <template name="class  iterator" value="mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9]&#10;&#10;&#10;class MyIterator:&#10;    &quot;&quot;&quot; multiple iterable class &quot;&quot;&quot;&#10;    def __init__(self, wrapped):&#10;        self.wrapped = wrapped&#10;&#10;    def __iter__(self):&#10;        offset = 0&#10;        while offset &lt; len(self.wrapped):&#10;            item = self.wrapped[offset]&#10;            offset += 2&#10;            yield item&#10;&#10;&#10;print(list(MyIterator(mylist)))" description="NEW  __iter__" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -55,7 +55,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newclass sequence" value="class sequencee():&#10;    &quot;&quot;&quot; sequence class&#10;    &quot;&quot;&quot;&#10;&#10;    def __init__(self, wrapped):&#10;        if not wrapped: raise ValueError(&quot;Constructor's argument must not be empty.&quot;)&#10;        #assert isinstance(wrapped, list)&#10;&#10;        self.__wrapped = wrapped&#10;&#10;    def __len__(self):&#10;        return len(self.__wrapped)&#10;&#10;    def __getitem__(self, item):&#10;        return self.__getitem__(item)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__wrapped}&quot;&#10;&#10;&#10;obj1 = sequencee(&quot;test&quot;)&#10;print(obj1)" description="__len____getitem__" toReformat="false" toShortenFQNames="true">
+  <template name="class sequence" value="class sequencee():&#10;    &quot;&quot;&quot; sequence class&#10;    &quot;&quot;&quot;&#10;&#10;    def __init__(self, wrapped):&#10;        if not wrapped: raise ValueError(&quot;Constructor's argument must not be empty.&quot;)&#10;        #assert isinstance(wrapped, list)&#10;&#10;        self.__wrapped = wrapped&#10;&#10;    def __len__(self):&#10;        return len(self.__wrapped)&#10;&#10;    def __getitem__(self, item):&#10;        return self.__getitem__(item)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__wrapped}&quot;&#10;&#10;&#10;obj1 = sequencee(&quot;test&quot;)&#10;print(obj1)" description="NEW  __len____getitem__" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

@@ -1,111 +1,111 @@
 <templateSet group="_VV_container__collection">
-  <template name="newdict immutable" value="$l1$=( (1:&quot;a&quot;), (2:&quot;b&quot;), $END$)" description="tuple" toReformat="false" toShortenFQNames="true">
+  <template name="map immutable" value="$l1$=( (1:&quot;a&quot;), (2:&quot;b&quot;), $END$)" description="NEW  tuple" toReformat="false" toShortenFQNames="true">
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newlist enumerate" value="$l1$= enumerate($l$) $END$" description="coll with indexes" toReformat="false" toShortenFQNames="true">
+  <template name="list enumerate" value="$l1$= enumerate($l$) $END$" description="NEW  coll with indexes" toReformat="false" toShortenFQNames="true">
     <variable name="l" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newlist immutable" value="$l1$=($END$)" description="tuple" toReformat="false" toShortenFQNames="true">
+  <template name="list immutable" value="$l1$=($END$)" description="NEW  tuple" toReformat="false" toShortenFQNames="true">
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newlist immutableList-&gt;list" value="$s1$=list($s$)" description="tuple-&gt;list" toReformat="false" toShortenFQNames="true">
+  <template name="list immutableList-&gt;list" value="$s1$=list($s$)" description="NEW  tuple-&gt;list" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="s1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newlist list-&gt;immutableList" value="$s1$=tuple($s$)" description="list-&gt;tuple" toReformat="false" toShortenFQNames="true">
+  <template name="list list-&gt;immutableList" value="$s1$=tuple($s$)" description="NEW  list-&gt;tuple" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="s1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newlist mutable" value="$l1$=[$END$]" description="list" toReformat="false" toShortenFQNames="true">
+  <template name="list mutable" value="$l1$=[$END$]" description="NEW  list" toReformat="false" toShortenFQNames="true">
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newlist range" value="$l1$= range(5,-5,-1) $END$" description="range lazy" toReformat="false" toShortenFQNames="true">
+  <template name="list range" value="$l1$= range(5,-5,-1) $END$" description="NEW  range lazy" toReformat="false" toShortenFQNames="true">
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newmap dict-&gt;immutableDict" value="$s1$=tuple($s$.items())" description="dict-&gt;tuple" toReformat="false" toShortenFQNames="true">
+  <template name="map dict-&gt;immutableDict" value="$s1$=tuple($s$.items())" description="NEW  dict-&gt;tuple" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="s1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newmap immutableDict-&gt;dict" value="$s1$=dict($s$)" description="tuple-&gt;dict" toReformat="false" toShortenFQNames="true">
+  <template name="map immutableDict-&gt;dict" value="$s1$=dict($s$)" description="NEW  tuple-&gt;dict" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="s1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newmap mutable" value="$l1$={1:&quot;a&quot;, 2:&quot;b&quot;, $END$}" description="dict" toReformat="false" toShortenFQNames="true">
+  <template name="map mutable" value="$l1$={1:&quot;a&quot;, 2:&quot;b&quot;, $END$}" description="NEW  dict" toReformat="false" toShortenFQNames="true">
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newmap mutable stringkeys" value="$l1$={uno=&quot;one&quot;,dos=&quot;two&quot; $END$}" description="dict(uno=&quot;one&quot;)" toReformat="false" toShortenFQNames="true">
+  <template name="map mutable stringkeys" value="$l1$={uno=&quot;one&quot;,dos=&quot;two&quot; $END$}" description="NEW  dict(uno=&quot;one&quot;)" toReformat="false" toShortenFQNames="true">
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newnamedtuple temp" value="def ntuple(**params):&#10;    return namedtuple(&quot;NT&quot;,sorted(dn := dict(params) ))(**dn)&#10;&#10;tn2=ntuple(odin=1,dva=2)&#10;print(tn2)&#10;$END$" description="ntuple(odin=1,dva=2)" toReformat="false" toShortenFQNames="true">
+  <template name="namedtuple temp" value="def ntuple(**params):&#10;    return namedtuple(&quot;NT&quot;,sorted(dn := dict(params) ))(**dn)&#10;&#10;tn2=ntuple(odin=1,dva=2)&#10;print(tn2)&#10;$END$" description="NEW  ntuple(odin=1,dva=2)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newnamedtuple dict -&gt; namedtuple" value="dn=dict(uno=1,dos=2) $END$&#10;print(&quot;DICT1 &quot;,dn)&#10;tn=namedtuple(&quot;VO&quot;,sorted(dn))(**dn)&#10;print(&quot;DICT2 &quot;, tn )" description="namedtuple" toReformat="false" toShortenFQNames="true">
+  <template name="namedtuple dict -&gt; namedtuple" value="dn=dict(uno=1,dos=2) $END$&#10;print(&quot;DICT1 &quot;,dn)&#10;tn=namedtuple(&quot;VO&quot;,sorted(dn))(**dn)&#10;print(&quot;DICT2 &quot;, tn )" description="NEW  namedtuple" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newnamedtuple namedtuple -&gt; dict" value="tn._asdict()&#10;$END$" description="namedtuple._asdict" toReformat="false" toShortenFQNames="true">
+  <template name="namedtuple namedtuple -&gt; dict" value="tn._asdict()&#10;$END$" description="NEW  namedtuple._asdict" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newset immutable" value="$l1$=frozenset($list$)&#10;$END$" description="frozenset" toReformat="false" toShortenFQNames="true">
+  <template name="set immutable" value="$l1$=frozenset($list$)&#10;$END$" description="NEW  frozenset" toReformat="false" toShortenFQNames="true">
     <variable name="list" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newset immutableSet-&gt;set" value="$s1$=set($s$)" description="frozenset-&gt;set" toReformat="false" toShortenFQNames="true">
+  <template name="set immutableSet-&gt;set" value="$s1$=set($s$)" description="NEW  frozenset-&gt;set" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="s1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newset mutable" value="$l1$=set($END$)" description="set" toReformat="false" toShortenFQNames="true">
+  <template name="set mutable" value="$l1$=set($END$)" description="NEW  set" toReformat="false" toShortenFQNames="true">
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newset set-&gt;immutableSet" value="$s1$=frozenset($s$)" description="set-&gt;frozenset" toReformat="false" toShortenFQNames="true">
+  <template name="set set-&gt;immutableSet" value="$s1$=frozenset($s$)" description="NEW  set-&gt;frozenset" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="s1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -127,26 +127,26 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newlist copy shallow" value="$copy$=$l$[:]" description="list[:]" toReformat="false" toShortenFQNames="true">
+  <template name="list copy shallow" value="$copy$=$l$[:]" description="NEW  list[:]" toReformat="false" toShortenFQNames="true">
     <variable name="l" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="copy" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newlist copy deep" value="from copy import *&#10;$copy$=deepcopy($l$)&#10;" description="deepcopy(list)" toReformat="false" toShortenFQNames="true">
+  <template name="list copy deep" value="from copy import *&#10;$copy$=deepcopy($l$)&#10;" description="NEW  deepcopy(list)" toReformat="false" toShortenFQNames="true">
     <variable name="l" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="copy" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newnamedtuple immutable class (short)" value="Car = namedtuple('Car', 'attr1 attr2')&#10;#Car = namedtuple('Car', ['attr1', 'attr2'])&#10;c1=Car(1,2)&#10;print(c1)&#10;$END$" description="namedtuple()" toReformat="false" toShortenFQNames="true">
+  <template name="namedtuple immutable class (short)" value="Car = namedtuple('Car', 'attr1 attr2')&#10;#Car = namedtuple('Car', ['attr1', 'attr2'])&#10;c1=Car(1,2)&#10;print(c1)&#10;$END$" description="NEW  namedtuple()" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newlist deduplicate elements" value="$l1$=set($list$)&#10;$END$" description="set" toReformat="false" toShortenFQNames="true">
+  <template name="list deduplicate elements" value="$l1$=set($list$)&#10;$END$" description="NEW  set" toReformat="false" toShortenFQNames="true">
     <variable name="list" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
