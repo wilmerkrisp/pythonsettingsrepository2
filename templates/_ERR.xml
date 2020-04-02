@@ -1,55 +1,55 @@
 <templateSet group="_ERR">
-  <template name="newerr try" value="try:&#10;    $END$&#10;except ValueError as error:&#10;    print(f&quot;Exception: {error} {error.args}&quot;)" description="try-except-else" toReformat="false" toShortenFQNames="true">
+  <template name="err try" value="try:&#10;    $END$&#10;except ValueError as error:&#10;    print(f&quot;Exception: {error} {error.args}&quot;)" description="try-except-else" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr raise" value="raise ValueError(&quot;Argument must not be empty.&quot;) " description="raise error" toReformat="false" toShortenFQNames="true">
+  <template name="err raise" value="raise ValueError(&quot;Argument must not be empty.&quot;) " description="raise error" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr class" value="class MyError(Exception):..." description="class exception" toReformat="false" toShortenFQNames="true" />
-  <template name="newerr assert" value="assert True, &quot;If not OK&quot;" description="class exception" toReformat="false" toShortenFQNames="true">
+  <template name="err class" value="class MyError(Exception):..." description="class exception" toReformat="false" toShortenFQNames="true" />
+  <template name="err assert" value="assert True, &quot;If not OK&quot;" description="class exception" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr full" value="&quot;&quot;&quot; https://docs.python.org/3/library/exceptions.html&#10;      +-- StopIteration&#10;      +-- StopAsyncIteration&#10;      +-- ArithmeticError&#10;      |    +-- FloatingPointError&#10;      |    +-- OverflowError&#10;      |    +-- ZeroDivisionError&#10;      +-- AssertionError&#10;      +-- AttributeError&#10;      +-- BufferError&#10;      +-- EOFError&#10;      +-- ImportError&#10;      |    +-- ModuleNotFoundError&#10;      +-- LookupError&#10;      |    +-- IndexError&#10;      |    +-- KeyError&#10;      +-- MemoryError&#10;      +-- NameError&#10;      |    +-- UnboundLocalError&#10;      +-- OSError&#10;      |    +-- BlockingIOError&#10;      |    +-- ChildProcessError&#10;      |    +-- ConnectionError&#10;      |    |    +-- BrokenPipeError&#10;      |    |    +-- ConnectionAbortedError&#10;      |    |    +-- ConnectionRefusedError&#10;      |    |    +-- ConnectionResetError&#10;      |    +-- FileExistsError&#10;      |    +-- FileNotFoundError&#10;      |    +-- InterruptedError&#10;      |    +-- IsADirectoryError&#10;      |    +-- NotADirectoryError&#10;      |    +-- PermissionError&#10;      |    +-- ProcessLookupError&#10;      |    +-- TimeoutError&#10;      +-- ReferenceError&#10;      +-- RuntimeError&#10;      |    +-- NotImplementedError&#10;      |    +-- RecursionError&#10;      +-- SyntaxError&#10;      |    +-- IndentationError&#10;      |         +-- TabError&#10;      +-- SystemError&#10;      +-- TypeError&#10;      +-- ValueError&#10;      |    +-- UnicodeError&#10;      |         +-- UnicodeDecodeError&#10;      |         +-- UnicodeEncodeError&#10;      |         +-- UnicodeTranslateError&#10;      +-- Warning&#10;           +-- DeprecationWarning&#10;           +-- PendingDeprecationWarning&#10;           +-- RuntimeWarning&#10;           +-- SyntaxWarning&#10;           +-- UserWarning&#10;           +-- FutureWarning&#10;           +-- ImportWarning&#10;           +-- UnicodeWarning&#10;           +-- BytesWarning&#10;           +-- ResourceWarning&#10;&quot;&quot;&quot;&#10;try:&#10;    $END$&#10;except ValueError as error:&#10;    print(f&quot;Exception: {error} {error.args}&quot;)&#10;else:&#10;    print(&quot;success&quot;)&#10;finally:&#10;    print(&quot;the end&quot;)  " description="try-except-else" toReformat="false" toShortenFQNames="true">
+  <template name="err full" value="&quot;&quot;&quot; https://docs.python.org/3/library/exceptions.html&#10;      +-- StopIteration&#10;      +-- StopAsyncIteration&#10;      +-- ArithmeticError&#10;      |    +-- FloatingPointError&#10;      |    +-- OverflowError&#10;      |    +-- ZeroDivisionError&#10;      +-- AssertionError&#10;      +-- AttributeError&#10;      +-- BufferError&#10;      +-- EOFError&#10;      +-- ImportError&#10;      |    +-- ModuleNotFoundError&#10;      +-- LookupError&#10;      |    +-- IndexError&#10;      |    +-- KeyError&#10;      +-- MemoryError&#10;      +-- NameError&#10;      |    +-- UnboundLocalError&#10;      +-- OSError&#10;      |    +-- BlockingIOError&#10;      |    +-- ChildProcessError&#10;      |    +-- ConnectionError&#10;      |    |    +-- BrokenPipeError&#10;      |    |    +-- ConnectionAbortedError&#10;      |    |    +-- ConnectionRefusedError&#10;      |    |    +-- ConnectionResetError&#10;      |    +-- FileExistsError&#10;      |    +-- FileNotFoundError&#10;      |    +-- InterruptedError&#10;      |    +-- IsADirectoryError&#10;      |    +-- NotADirectoryError&#10;      |    +-- PermissionError&#10;      |    +-- ProcessLookupError&#10;      |    +-- TimeoutError&#10;      +-- ReferenceError&#10;      +-- RuntimeError&#10;      |    +-- NotImplementedError&#10;      |    +-- RecursionError&#10;      +-- SyntaxError&#10;      |    +-- IndentationError&#10;      |         +-- TabError&#10;      +-- SystemError&#10;      +-- TypeError&#10;      +-- ValueError&#10;      |    +-- UnicodeError&#10;      |         +-- UnicodeDecodeError&#10;      |         +-- UnicodeEncodeError&#10;      |         +-- UnicodeTranslateError&#10;      +-- Warning&#10;           +-- DeprecationWarning&#10;           +-- PendingDeprecationWarning&#10;           +-- RuntimeWarning&#10;           +-- SyntaxWarning&#10;           +-- UserWarning&#10;           +-- FutureWarning&#10;           +-- ImportWarning&#10;           +-- UnicodeWarning&#10;           +-- BytesWarning&#10;           +-- ResourceWarning&#10;&quot;&quot;&quot;&#10;try:&#10;    $END$&#10;except ValueError as error:&#10;    print(f&quot;Exception: {error} {error.args}&quot;)&#10;else:&#10;    print(&quot;success&quot;)&#10;finally:&#10;    print(&quot;the end&quot;)  " description="try-except-else" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr assert isinstance" value="assert isinstance($var$,int)" description="isinstance" toReformat="false" toShortenFQNames="true">
+  <template name="err assert isinstance" value="assert isinstance($var$,int)" description="isinstance" toReformat="false" toShortenFQNames="true">
     <variable name="var" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr assert is function" value="assert callable($var$)&#10;" description="callable" toReformat="false" toShortenFQNames="true">
+  <template name="err assert is function" value="assert callable($var$)&#10;" description="callable" toReformat="false" toShortenFQNames="true">
     <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr assert has attribute" value="assert hasattr($var$,&quot;method1&quot;) #также проверяет наличие виртуальных атрибутов&#10;" description="hasattr" toReformat="false" toShortenFQNames="true">
+  <template name="err assert has attribute" value="assert hasattr($var$,&quot;method1&quot;) #также проверяет наличие виртуальных атрибутов&#10;" description="hasattr" toReformat="false" toShortenFQNames="true">
     <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr assert issubclass" value="assert issubclass($var$,(object,str))" description="issubclass" toReformat="false" toShortenFQNames="true">
+  <template name="err assert issubclass" value="assert issubclass($var$,(object,str))" description="issubclass" toReformat="false" toShortenFQNames="true">
     <variable name="var" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr if raise" value="if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;assert isinstance(arg,int)&#10;if result is NotImplemented:&#10;    return result" description="check input arguments" toReformat="false" toShortenFQNames="true">
+  <template name="err if raise" value="if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;assert isinstance(arg,int)&#10;if result is NotImplemented:&#10;    return result" description="check input arguments" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="newerr method deprecated" value="warn(&quot;Dont use the legacy method&quot;, DeprecationWarning) # уже запрещено&#10;warn(&quot;In the future the method will be prohibited&quot;, PendingDeprecationWarning) #  - будет запрещено в будущем&#10;warn(&quot;In the future the method will be changed&quot;, FutureWarning)  # метод будет изменен в будущем" description="warn" toReformat="false" toShortenFQNames="true">
+  <template name="err method deprecated" value="warn(&quot;Dont use the legacy method&quot;, DeprecationWarning) # уже запрещено&#10;warn(&quot;In the future the method will be prohibited&quot;, PendingDeprecationWarning) #  - будет запрещено в будущем&#10;warn(&quot;In the future the method will be changed&quot;, FutureWarning)  # метод будет изменен в будущем" description="warn" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
