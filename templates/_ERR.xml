@@ -54,4 +54,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="err warning" value="warn(&quot;Input argument is empty&quot;, UserWarning) " description="UserWarning" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
