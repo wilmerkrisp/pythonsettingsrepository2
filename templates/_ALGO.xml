@@ -1,0 +1,20 @@
+<templateSet group="_ALGO">
+  <template name="for WHILE  POP (GOOD dict iterate and delete element)" value="while $d0$:&#10;    print ($d0$.popitem())&#10;$END$    " description="while POPitem" toReformat="false" toShortenFQNames="true">
+    <variable name="d0" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for WHILE POP + result" value="result  = []&#10;while $left$ :&#10;    fst=$left$[0]&#10;    lst=$left$[-1]&#10;    result[:0] = [$left$.pop()]  &#10;&#10;$END$    " description="while POPitem" toReformat="false" toShortenFQNames="true">
+    <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for WHILE POPLEFT + result" value="result  = []&#10;arr=deque($left$)&#10;while  :&#10;    fst=arr[0]&#10;    lst=arr[-1]&#10;    result+= [arr.popleft()]  &#10;&#10;$END$&#10;  " description="while POPLEFTitem" toReformat="false" toShortenFQNames="true">
+    <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
