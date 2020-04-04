@@ -59,4 +59,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="err if len==1 return" value="if len($var$) == 1:&#10;    return $var$&#10;$END$    " description="check empty collection" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
