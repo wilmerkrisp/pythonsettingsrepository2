@@ -32,4 +32,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="for FOR LIST" value="for i in range(0,len($P$)):&#10;    print($P$[i])" description="for i in range(len)" toReformat="false" toShortenFQNames="true">
+    <variable name="P" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

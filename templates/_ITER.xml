@@ -24,7 +24,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for FOR  with index" value="arr=range(1,10)&#10;for (i,e) in enumerate(arr):  print (f&quot;{i}={e}&quot;)" description="for_in enumerate" toReformat="false" toShortenFQNames="true">
+  <template name="for FOR  with INDEX" value="arr=range(1,10)&#10;for (i,e) in enumerate(arr):  print (f&quot;{i}={e}&quot;)" description="for_in enumerate" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
