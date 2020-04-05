@@ -19,7 +19,8 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for GEN  new list" value="[х + 1 for х in L if True]" description="[ for_in_if ]" toReformat="false" toShortenFQNames="true">
+  <template name="for GEN  new list" value="[i + 1$END$ for i in $L$ if True]" description="[ for_in_if ]" toReformat="false" toShortenFQNames="true">
+    <variable name="L" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
