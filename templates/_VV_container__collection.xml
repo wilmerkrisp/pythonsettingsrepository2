@@ -153,4 +153,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="list SWAP elements in list" value="$arr$[i], $arr$[j] = $arr$[j], $arr$[i]" toReformat="false" toShortenFQNames="true">
+    <variable name="arr" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

@@ -1,5 +1,5 @@
 <templateSet group="_FUNCS">
-  <template name="function GOOD standalone" value="def $name$(x,y):&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;    if not x or not y: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;    assert isinstance(x,str) and isinstance(y,str)&#10;    &#10;    print (f&quot;{x} {y}&quot;)&#10;    &#10;    assert x and y , &quot;Check invariant - result is not empty&quot;&#10; &#10;$name$(x=1,y=2)&#10;$END$" description="def function SIMPIEST" toReformat="false" toShortenFQNames="true">
+  <template name="function GOOD standalone" value="def $name$(x,y):&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;    if not x or not y: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;    assert isinstance(x,str) and isinstance(y,str)&#10;    &#10;    print (f&quot;{x} {y}&quot;)&#10;    &#10;    assert x and y , &quot;Check invariant - result is not empty&quot;&#10;&#10;$name$(x=1,y=2)&#10;$END$" description="def function SIMPIEST" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -61,6 +61,12 @@
     </context>
   </template>
   <template name="function GEN simpliest" value="#генераторные функции это одноразовый итератор&#10;def $name$():&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;    yield &quot;one&quot;&#10;    yield &quot;two&quot;&#10;    yield &quot;three&quot;&#10; &#10;for i in $name$(): print(i)&#10;&#10;$END$" description="def yield  yield yield" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function GOOD LIST input argument" value="##############################################################################################################################################################&#10;################# $name$ #####################################################################################################################################&#10;##############################################################################################################################################################&#10;&#10;def $name$(arr):&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;    assert arr&#10;    assert isinstance(arr, list)&#10;&#10;    if len(arr) &lt;2:&#10;        return []&#10;    $END$    &#10;    print (f&quot;$name$: {arr} &quot;)&#10;    &#10;    assert $name$ , &quot;Check invariant - result is not empty&quot;&#10;    return []&#10;&#10;def main_$name$():&#10;    arr1 = [5, 4, 1, 8, 7, 2, 6, 3]&#10;    print(&quot;MAIN $name$: &quot;,$name$(arr1))&#10;   &#10;main_$name$()" description="def function SIMPIEST" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
