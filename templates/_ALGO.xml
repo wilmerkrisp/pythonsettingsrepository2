@@ -22,13 +22,18 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="fun  graphic functions" value="import matplotlib.pyplot as plt&#10;from math import *&#10;&#10;F1 = [x ** 0.5 for x in range(1, 100)]&#10;F2 = [2 ** (log(x)) for x in range(1, 100)]&#10;F3 = [x ** (5/3) for x in range(1, 100)]&#10;&#10;fig, ax = plt.subplots()&#10;ax.plot(F1,color='black')&#10;ax.plot(F2,color='red')&#10;ax.plot(F3)&#10;plt.show()" description="" toReformat="false" toShortenFQNames="true">
+  <template name="fun  graphic functions DRAW" value="import matplotlib.pyplot as plt&#10;from math import *&#10;&#10;F1 = [x ** 0.5 for x in range(1, 100)]&#10;F2 = [2 ** (log(x)) for x in range(1, 100)]&#10;F3 = [x ** (5/3) for x in range(1, 100)]&#10;&#10;fig, ax = plt.subplots()&#10;ax.plot(F1,color='black')&#10;ax.plot(F2,color='red')&#10;ax.plot(F3)&#10;plt.show()" description="matplotlib" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
   <template name="for FOR LIST" value="for i in range(0,len($P$)):&#10;    print($P$[i])" description="for i in range(len)" toReformat="false" toShortenFQNames="true">
     <variable name="P" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fun undirected graph DRAW" value="import networkx as nx&#10;import matplotlib.pyplot as plt&#10;&#10;def draw_graph():&#10;    G = nx.Graph()&#10;    G.add_node(&quot;A&quot;)&#10;    G.add_node(&quot;B&quot;)&#10;    G.add_node(&quot;C&quot;)&#10;    G.add_node(&quot;D&quot;)&#10;    G.add_node(&quot;E&quot;)&#10;    G.add_node(&quot;F&quot;)&#10;    G.add_node(&quot;G&quot;)&#10;    G.add_edge(&quot;A&quot;, &quot;B&quot;)&#10;    G.add_edge(&quot;B&quot;, &quot;C&quot;)&#10;    G.add_edge(&quot;C&quot;, &quot;E&quot;)&#10;    G.add_edge(&quot;C&quot;, &quot;F&quot;)&#10;    G.add_edge(&quot;D&quot;, &quot;E&quot;)&#10;    G.add_edge(&quot;F&quot;, &quot;G&quot;)&#10;    plt.figure(figsize=(8, 8))&#10;    nx.draw(G)&#10;&#10;draw_graph()" description="networkx" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
