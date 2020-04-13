@@ -72,4 +72,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="for GEN  new map SUPER" value="[k:v $END$ for k,v in $L$.items() if True]" description="[ for_in_if ]" toReformat="false" toShortenFQNames="true">
+    <variable name="L" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
