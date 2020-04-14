@@ -11,11 +11,6 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda 1" value="y=lambda x:x+1" description="my lambda" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
   <template name="function multiple results" value="def $name$(x,y):&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;    if not x or not y: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;    assert isinstance(x,str) and isinstance(y,str)&#10;    &#10;    assert x and y , &quot;Check invariant - result is not empty&quot;&#10;    return x,y&#10; &#10;a,b=$name$(x=1,y=2)&#10;print(a,b)&#10;$END$" description="return x,y" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -33,11 +28,6 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda 2 with default args" value="y=lambda x=11,y=12: x+y&#10;" description="my lambda" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
   <template name="function GEN yield with for" value="#генераторные функции это одноразовый итератор&#10;def $name$(n):&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;     for i in range(n):&#10;        yield i&#10; &#10;for i in $name$(10): print(i)&#10;&#10;$END$" description="def yield (lazy iterator)" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -46,11 +36,6 @@
   </template>
   <template name="function NEW-SET-CALL pattern" value="def $name$():&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;    print (f&quot;{myfnn.x} {myfnn.y}&quot;)&#10; &#10;$name$.x=[1]&#10;$name$.y=['a']&#10;$name$()&#10;$END$" description="SPECIAL finction attributes" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="lambda 3 without params" value="y=lambda: True" description="my lambda" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -68,11 +53,6 @@
   </template>
   <template name="function GOOD LIST input argument" value="##############################################################################################################################################################&#10;################# $name$ #####################################################################################################################################&#10;##############################################################################################################################################################&#10;&#10;def $name$(arr):&#10;    &quot;&quot;&quot; $name$ &quot;&quot;&quot;&#10;    if not arr: warn(&quot;Input argument is empty&quot;, UserWarning) &#10;    assert isinstance(arr, list)&#10;&#10;    if len(arr) &lt;2:&#10;        return []&#10;    $END$    &#10;    print (f&quot;$name$: {arr} &quot;)&#10;    &#10;    assert $name$ , &quot;Check invariant - result is not empty&quot;&#10;    return []&#10;&#10;def main_$name$():&#10;    arr1 = [5, 4, 1, 8, 7, 2, 6, 3]&#10;    print(&quot;MAIN $name$: &quot;,$name$(arr1))&#10;   &#10;main_$name$()" description="def function SIMPIEST" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="lambda list assignment" value="add_len = lambda y, x:lengths.__setitem__(y, lengths[x] + 1)" description="my lambda" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
