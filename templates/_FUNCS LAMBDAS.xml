@@ -14,12 +14,22 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda list assignment" value="add_len = lambda y, x:lengths.__setitem__(y, lengths[x] + 1)" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
+  <template name="lambda list assignment 1" value="add_len = lambda y, x:lengths.__setitem__(y, lengths[x] + 1)" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda list add" value="will_process = lambda vertex: q.__iadd__([vertex])" description="my  list+=x" toReformat="false" toShortenFQNames="true">
+  <template name="lambda list add 2" value="will_process = lambda vertex: q.__iadd__([vertex])" description="my  list+=x" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="lambda list add 1" value="will_process = lambda vertex: q.append(vertex)" description="my  list+=x" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="lambda dict assignment 1" value="set_counter = lambda x, y:connectings.update({y:counter})" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
