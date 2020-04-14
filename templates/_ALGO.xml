@@ -66,4 +66,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function GRAPHundirected  weak connected conponents" value="def undirected_connected_components2(graph):&#10;    &quot;&quot;&quot; undirected_connected_components &quot;&quot;&quot;&#10;    if not graph: warn(&quot;Input argument is empty&quot;, UserWarning)&#10;    assert isinstance(graph, dict)&#10;    l = len(graph)&#10;    if l &lt; 2:  return {}&#10;&#10;    processed, connectings, counter = set(), {}, 0&#10;    set_counter = lambda x, y:connectings.__setitem__(y, counter)&#10;&#10;    for w in graph:&#10;        if w in processed: continue&#10;        counter += 1&#10;        processed |= bfs(graph, w, set_counter, processed)&#10;        print(&quot;PROCESSED=&quot;, processed)&#10;&#10;    return connectings&#10;&#10; " description="lens of verticies" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
