@@ -213,4 +213,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="um map add_new or update_if_exists" value="value_ = $s$.setdefault(key_, [])&#10;value_ += [num2]" description="setdefault and update" toReformat="false" toShortenFQNames="true">
+    <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
