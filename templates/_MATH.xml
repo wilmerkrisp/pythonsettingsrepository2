@@ -9,7 +9,8 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for SORT by key" value="P.sort(key=lambda x:x[0])" description="sort(key=)" toReformat="false" toShortenFQNames="true">
+  <template name="for SORT by key LIST" value="$P$.sort(key=lambda x:x[0])" description="sort(key=)" toReformat="false" toShortenFQNames="true">
+    <variable name="P" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
@@ -20,6 +21,11 @@
     </context>
   </template>
   <template name="if ODD or EVEN  middle of integers" value="middle =  ((b-a)//2)-1 if (b-a)%2==0 else (b-a)//2" description="if (b-a)%2==0" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for SORT by value DICT" value=" meta1=sorted(meta.items(), key=lambda e:e[1])" description="sorted(items()  key=lambda)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
