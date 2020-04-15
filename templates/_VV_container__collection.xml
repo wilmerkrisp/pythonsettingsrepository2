@@ -165,4 +165,14 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="list QUEUE" value="queue_=[]&#10;queue_[:0] = [12]   # push&#10;v = queue_.pop()    # pop" description="NEW  deepcopy(list)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="list STACK" value="stack_=[]&#10;stack_+=[vertex] # push&#10;v = stack_.pop() # pop" description="NEW  deepcopy(list)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
