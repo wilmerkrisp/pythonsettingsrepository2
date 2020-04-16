@@ -165,17 +165,22 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list QUEUE" value="queue_=[]&#10;queue_[:0] = [12]   # push&#10;v = queue_.pop()    # pop" description="NEW  deepcopy(list)" toReformat="false" toShortenFQNames="true">
+  <template name="list QUEUE" value="queue_=[]&#10;queue_[:0] = [12]   # push&#10;v = queue_.pop()    # pop" description="NEW  []" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list STACK" value="stack_=[]&#10;stack_+=[vertex] # push&#10;v = stack_.pop() # pop" description="NEW  deepcopy(list)" toReformat="false" toShortenFQNames="true">
+  <template name="list STACK" value="stack_=[]&#10;stack_+=[vertex] # push&#10;v = stack_.pop() # pop" description="NEW  []" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
   <template name="map WITH DEFAULT  VALUES" value="# все создаваемые entry будут иметь value по-умолчанию (например -массив )&#10;dd=defaultdict(list) &#10;dd=defaultdict(lambda: []) &#10;dd[1]+=[1,2]&#10;print(dd)" description="defaultdict( all default values=[] )" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="list HEAP" value="heap_=[]&#10;heappush(heap_, (5, 'write code'))&#10;v =  heappop(heap_)     # pop возвращает наименьший элемент&#10;v= heap_[0]             # это самый маленький элемент, без удаления &#10; &#10;#heap_=heapify(list)" description="NEW  [] priority queue" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

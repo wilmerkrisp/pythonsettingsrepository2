@@ -25,7 +25,17 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for SORT by value DICT" value=" meta1=sorted(meta.items(), key=lambda e:e[1])" description="sorted(items()  key=lambda)" toReformat="false" toShortenFQNames="true">
+  <template name="for SORT by value DICT" value="meta1=sorted(meta.items(), key=lambda e:e[1])" description="sorted(items()  key=lambda)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for SORT by value DICT 2" value="nsmallest(len(result), result.items(), key=lambda e:e[1])" description="nsmallest" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for SORT by value DICT get only keys" value="result2 = [k for k, v in sorted(result.items(), key=lambda e:e[1])]" description="sorted(items()  key=lambda)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
