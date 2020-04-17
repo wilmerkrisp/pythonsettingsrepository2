@@ -4,7 +4,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for  MIN by key" value="min([pt1, pt2, pt3], key=lambda x:x[0])" description="min(key=)" toReformat="false" toShortenFQNames="true">
+  <template name="for MIN by key(of iterable object)" value="min([pt1, pt2, pt3], key=lambda x:x[0])" description="min(key=)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -41,6 +41,11 @@
     </context>
   </template>
   <template name="fuct counter NEXT INTEGER NUMBER" value="counter = itertools.count()     # unique sequence count&#10;count = next(counter)" description="itertools.count" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="for MIN by key DICT" value="costs = dict(a=1)#dict(a=1,b=2,c=3)&#10;processed ={&quot;a&quot;}&#10;vertex, _ = min(costs.items(), key=lambda e:e[1] if e[0] not in processed else inf)&#10;print (vertex)" description="min(key=)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
