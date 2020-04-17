@@ -185,4 +185,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="map HEAP" value="class Entry():&#10;    def __init__(self, key, value):&#10;        self.key = key&#10;        self.value = value&#10;&#10;    def __lt__(self, other):&#10;        return self.value &lt; other.value&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.key}-{self.value}&quot;&#10;&#10;heap, heap_dict = [], {}&#10;&#10;def push(k, v):&#10;    entry = Entry(v, k)  # ordering element goes first&#10;    heappush(heap, entry)&#10;    heap_dict[k] = entry&#10;&#10;def pop(): return heappop(heap)&#10;&#10;push(5, 10)&#10;push(6, 9)&#10;print(&quot;heap=&quot;, heap)&#10;print(&quot;heap=&quot;, pop())" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

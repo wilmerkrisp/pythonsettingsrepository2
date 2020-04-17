@@ -61,11 +61,18 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class RECORD pattern" value="class $name$():&#10;    def __init__(self,$one$,$two$,$three$):&#10;        self.$one$=$one$&#10;        self.$two$=$two$&#10;        self.$three$=$three$&#10; &#10;obj1=$name$(1,2,3)&#10;$END$" description="simpienst class" toReformat="false" toShortenFQNames="true">
+  <template name="class RECORD pattern 2" value="class $name$():&#10;    def __init__(self,$one$,$two$,$three$):&#10;        self.$one$=$one$&#10;        self.$two$=$two$&#10;        self.$three$=$three$&#10; &#10;obj1=$name$(1,2,3)&#10;$END$" description="simpienst class" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="one" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="two" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="three" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="class RECORD pattern 1" value="class Entry$END$():&#10;    def __init__(self, $key$, $value$):&#10;        self.$key$ = $key$&#10;        self.$value$ = $value$&#10;&#10;    def __lt__(self, other):&#10;        return self.$value$ &lt; other.$value$&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.$key$}-{self.$value$}&quot;" description="simpienst class" toReformat="false" toShortenFQNames="true">
+    <variable name="key" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
