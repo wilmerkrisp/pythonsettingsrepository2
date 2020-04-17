@@ -61,4 +61,13 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="class RECORD pattern" value="class $name$():&#10;    def __init__(self,$one$,$two$,$three$):&#10;        self.$one$=$one$&#10;        self.$two$=$two$&#10;        self.$three$=$three$&#10; &#10;obj1=$name$(1,2,3)&#10;$END$" description="simpienst class" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="one" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="two" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="three" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
