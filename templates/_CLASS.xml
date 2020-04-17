@@ -70,7 +70,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class RECORD pattern 1" value="class Entry$END$():&#10;    def __init__(self, $key$, $value$):&#10;        self.$key$ = $key$&#10;        self.$value$ = $value$&#10;&#10;    def __lt__(self, other):&#10;        return self.$value$ &lt; other.$value$&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.$key$}-{self.$value$}&quot;" description="simpienst class" toReformat="false" toShortenFQNames="true">
+  <template name="class RECORD pattern 1" value="class Entry$END$():&#10;    def __init__(self, $key$=None, $value$=None):&#10;        self.$key$ = $key$&#10;        self.$value$ = $value$&#10;&#10;    def __lt__(self, other):&#10;        return self.$value$ &lt; other.$value$&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.$key$}-{self.$value$}&quot;" description="simpienst class" toReformat="false" toShortenFQNames="true">
     <variable name="key" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
