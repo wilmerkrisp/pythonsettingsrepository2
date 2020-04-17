@@ -190,4 +190,20 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="set intersect" value="$l1$=$list$&amp;$list2$&#10;$END$" description="{a,b}&amp;{c,d}  только элементы которые есть в обоих множествах" toReformat="false" toShortenFQNames="true">
+    <variable name="list" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="list2" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="set MINUS" value="$l1$=$list$-$list2$&#10;$END$" description="{a,b}-{c,d}  вычесть из одного мнодества другое" toReformat="false" toShortenFQNames="true">
+    <variable name="list" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="list2" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
