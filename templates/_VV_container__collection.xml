@@ -185,7 +185,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map HEAP" value="class Entry():&#10;    def __init__(self, key, value):&#10;        self.key = key&#10;        self.value = value&#10;&#10;    def __lt__(self, other):&#10;        return self.value &lt; other.value&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.key}-{self.value}&quot;&#10;&#10;heap, heap_dict = [], {}&#10;&#10;def push(k, v):&#10;    entry = Entry(v, k)  # ordering element goes first&#10;    heappush(heap, entry)&#10;    heap_dict[k] = entry&#10;&#10;def pop(): return heappop(heap)&#10;&#10;push(5, 10)&#10;push(6, 9)&#10;print(&quot;heap=&quot;, heap)&#10;print(&quot;heap=&quot;, pop())" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
+  <template name="map HEAP with class for entry" value="class Entry():&#10;    def __init__(self, key, value):&#10;        self.key = key&#10;        self.value = value&#10;&#10;    def __lt__(self, other):&#10;        return self.value &lt; other.value&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.key}-{self.value}&quot;&#10;&#10;heap, heap_dict = [], {}&#10;&#10;def push(k, v):&#10;    entry = Entry(v, k)  # ordering element goes first&#10;    heappush(heap, entry)&#10;    heap_dict[k] = entry&#10;&#10;def pop(): return heappop(heap)&#10;&#10;push(5, 10)&#10;push(6, 9)&#10;print(&quot;heap=&quot;, heap)&#10;print(&quot;heap=&quot;, pop())" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -202,6 +202,11 @@
     <variable name="list" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="list2" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="map HEAP with deletion operation" value="pq = []                         # list of entries arranged in a heap&#10;entry_finder = {}               # mapping of VALUES to entries&#10;REMOVED = '&lt;removed-task&gt;'      # placeholder for a removed task&#10;&#10;&#10;def heap_add(key,value):&#10;    'Add a new VALUE or update the priority of an existing task'&#10;    if value in entry_finder:&#10;        heap_remove(value)&#10;    entry = [key, value]&#10;    entry_finder[value] = entry&#10;    heappush(pq, entry)&#10;&#10;def heap_remove(value):&#10;    'Mark an existing VALUE as REMOVED.  Raise KeyError if not found.'&#10;    entry = entry_finder.pop(value)&#10;    entry[-1] = REMOVED&#10;&#10;def heap_entry(value):&#10;    return entry_finder[value]&#10;&#10;def heap_peek():&#10;    return pq[0]&#10;&#10;def heap_pop():&#10;    'Remove and return the lowest priority VALUE. Raise KeyError if empty.'&#10;    while pq:&#10;        priority, value = heappop(pq)&#10;        if value is not REMOVED:&#10;            del entry_finder[value] # так как это операция pop то удалим также из словаря&#10;            return value&#10;    raise KeyError('pop from an empty priority queue')&#10;&#10;&#10;heap_add(30,&quot;c&quot;)&#10;heap_add(20,&quot;b&quot;)&#10;heap_add(10,&quot;a&quot;)&#10;print(pq)&#10;heap_add(1,&quot;c&quot;)&#10;print(pq)" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
