@@ -4,7 +4,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE  C-style" value="k=10&#10;fnn=1&#10;while ((i:=fnn)!=-1):&#10;    k-=1&#10;    fnn = -1 if k==0 else k&#10;    print(&quot;iter&quot;,i)" description="my while (i:=)" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE  C-style by INT-INDEX" value="k=10&#10;fnn=1&#10;while ((i:=fnn)!=-1):&#10;    k-=1&#10;    fnn = -1 if k==0 else k&#10;    print(&quot;iter&quot;,i)" description="my while (i:=)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
