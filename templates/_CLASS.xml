@@ -77,4 +77,16 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="class mutable SUPER new-call pattern" value="# __init__, __repr__, __str__ и __eq__ &#10;&#10;@dataclass&#10;class $name$:&#10;    title: str = &quot;Unknown&quot;&#10;    author: str = &quot;Unknown author&quot;&#10;&#10;&#10;obj1=$name$(&quot;one&quot;,&quot;two&quot;)&#10;&#10;$END$&#10;&#10; " description="@dataclass" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="class immutable SUPER" value="# __init__, __repr__, __str__ и __eq__ &#10;# __lt__, __le__, __gt__ и __ge__     &#10;#       order=True   &#10;#       value: Any = field(compare=False)&#10;# __hash__()&#10;#       unsafe_hash=True &#10;#       title: str = &quot;Unknown&quot; = field(hash=False)&#10;&#10;@dataclass(frozen=True, order=True, unsafe_hash=True)&#10;class $name$:&#10;    title: str = &quot;Unknown&quot;&#10;    author: str = &quot;Unknown author&quot;&#10;&#10;&#10;obj1=$name$(&quot;one&quot;,&quot;two&quot;)&#10;&#10;$END$&#10;&#10; " description="@dataclass" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
