@@ -56,4 +56,14 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="func log" value="log(x,10)" description="log2 log10" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="func округление" value="trunc/floor/round  усечение и округление&#10;" description="trunc/floor/round" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
