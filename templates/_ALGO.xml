@@ -17,7 +17,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="func readfile 1val" value="def file_to_array(filename):&#10;    result = []&#10;    for line in open(filename):&#10;        str=line.strip()&#10;        if not str:&#10;            continue&#10;        num=int(str)&#10;        assert isinstance(num,int), f&quot;NUM={num}&quot;&#10;        result.append(num)&#10;    print(&quot;Integers readed:&quot;,len(result) )&#10;    return result&#10;&#10;&#10;ARR4 = file_to_array(r'C:\Users\trans\Downloads\IntegerArray.txt')&#10;print(&quot;ARR4&gt;&gt;&quot;,ARR4[:3])&#10;&#10;&#10;&#10; " description="for line in open(filename)" toReformat="false" toShortenFQNames="true">
+  <template name="func FILE read 1val" value="def file_to_array(filename):&#10;    result = []&#10;    for line in open(filename):&#10;        str=line.strip()&#10;        if not str:&#10;            continue&#10;        num=int(str)&#10;        assert isinstance(num,int), f&quot;NUM={num}&quot;&#10;        result.append(num)&#10;    print(&quot;Integers readed:&quot;,len(result) )&#10;    return result&#10;&#10;&#10;ARR4 = file_to_array(r'C:\Users\trans\Downloads\IntegerArray.txt')&#10;print(&quot;ARR4&gt;&gt;&quot;,ARR4[:3])&#10;&#10;&#10;&#10; " description="for line in open(filename)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -179,7 +179,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="func readfile 2val" value="def $file_to_array$(filename):&#10;    result = []&#10;    skip_first=True&#10;    for line in open(filename):&#10;        str = line.strip()&#10;        if not str: continue&#10;&#10;        if skip_first: skip_first=False; continue&#10;        w_, l_ = str.strip().split(&quot; &quot;)&#10;        w, l = int(w_.strip()), int(l_.strip())&#10;        assert isinstance(w, int), f&quot;NUM1={w}&quot;&#10;        assert isinstance(l, int), f&quot;NUM2={l}&quot;&#10;        result.append((w,l))&#10;    print(&quot;Integers readed:&quot;, len(result))&#10;    return result&#10;&#10;&#10;arr = $file_to_array$(r'C:\Users\trans\Downloads\IntegerArray.txt')&#10;print(&quot;ARR4&gt;&gt;&quot;,arr)" description="for line in open(filename)" toReformat="false" toShortenFQNames="true">
+  <template name="func FILE read 2val" value="def $file_to_array$(filename):&#10;    result = []&#10;    skip_first=True&#10;    for line in open(filename):&#10;        str = line.strip()&#10;        if not str: continue&#10;&#10;        if skip_first: skip_first=False; continue&#10;        w_, l_ = str.strip().split(&quot; &quot;)&#10;        w, l = int(w_.strip()), int(l_.strip())&#10;        assert isinstance(w, int), f&quot;NUM1={w}&quot;&#10;        assert isinstance(l, int), f&quot;NUM2={l}&quot;&#10;        result.append((w,l))&#10;    print(&quot;Integers readed:&quot;, len(result))&#10;    return result&#10;&#10;&#10;arr = $file_to_array$(r'C:\Users\trans\Downloads\IntegerArray.txt')&#10;print(&quot;ARR4&gt;&gt;&quot;,arr)" description="for line in open(filename)" toReformat="false" toShortenFQNames="true">
     <variable name="file_to_array" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
