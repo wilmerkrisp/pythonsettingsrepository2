@@ -1,5 +1,5 @@
 <templateSet group="_ALGO">
-  <template name="formap WHILE POP (GOOD dict iterate and delete element)" value="while $d0$:&#10;    print ($d0$.popitem())&#10;$END$    " description="while list: popitem()" toReformat="false" toShortenFQNames="true">
+  <template name="formap WHILE POP (GOOD dict iterate and delete element)" value="while $d0$:&#10;    print ($d0$.popitem())&#10;$END$    " description="while dict: popitem()" toReformat="false" toShortenFQNames="true">
     <variable name="d0" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -11,7 +11,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POPLEFT DEQUEUE" value="result  = []&#10;arr=deque($left$)&#10;while arr :&#10;    fst=arr[0]&#10;    lst=arr[-1]&#10;    result+= [arr.popleft()]  &#10;&#10;$END$&#10;  " description="while queue: popleft()" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POPLEFT DEQUEUE" value="result  = []&#10;arr=deque($left$)&#10;while arr :&#10;    fst=arr[0]&#10;    lst=arr[-1]&#10;    result+= [arr.popleft()]  &#10;&#10;$END$&#10;  " description="while dequeue: popleft()" toReformat="false" toShortenFQNames="true">
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -128,7 +128,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap WHILE pop C-STYLE  PARENT_TABLE" value="result=[]    &#10;next_vertex = start_vertex&#10;result += start_vertex&#10;while next_vertex := $d0$.pop(next_vertex, None):&#10;    result += next_vertex    &#10;    &#10;$END$    " description="while next=pop(next):   # iterate over network" toReformat="false" toShortenFQNames="true">
+  <template name="formap WHILE pop C-STYLE  PARENT_TABLE pop" value="result=[]    &#10;next_vertex = start_vertex&#10;result += start_vertex&#10;while next_vertex := $d0$.pop(next_vertex, None):&#10;    result += next_vertex    &#10;    &#10;$END$    " description="while next=pop(next):   # iterate over network" toReformat="false" toShortenFQNames="true">
     <variable name="d0" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -146,7 +146,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POP HEAP" value="while i := heappop($left$) if $left$ else None:&#10;    print(i)&#10;    &#10;$END$&#10;  " description="while queue: popleft()" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POP HEAP" value="while i := heappop($left$) if $left$ else None:&#10;    print(i)&#10;    &#10;$END$&#10;  " description="while heappop:" toReformat="false" toShortenFQNames="true">
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -201,6 +201,12 @@
     </context>
   </template>
   <template name="function GRAPHundirected  MST1" value="def mst1_prima(graph, start_vertex=None):&#10;    &quot;&quot;&quot; mst based on dijkstra return  MST-graph  &quot;&quot;&quot;&#10;    if not graph: warn(&quot;Input argument is empty&quot;, UserWarning)&#10;    assert isinstance(graph, dict)&#10;    l = len(graph)&#10;    if l &lt; 2: return []&#10;&#10;&#10;    costs, parents, start_vertex, result = {k:inf for k, v in graph.items()}, {}, start_vertex or next(iter(graph)), []&#10;    costs[start_vertex] = 0&#10;    heap = Heap([[v, k] for k, v in costs.items()])&#10;&#10;    print(&quot;heap:&quot;, heap)&#10;&#10;    print(&quot;start form=&quot;, start_vertex)&#10;    while v := heap.pop():&#10;        for n, c in graph[v].items():&#10;            if n not in heap.entry_finder: continue&#10;            new_cost = c # единственное отличие от алгоритма Дейкстры&#10;            if new_cost &lt; costs[n]:&#10;                costs[n] = new_cost&#10;                parents[n] = v&#10;                heap.push(new_cost, n)&#10;&#10;        print(f&quot;dfs process v={v}&quot;)&#10;&#10;&#10;    return parents&#10;&#10;&#10;def mst1_prima_main():&#10;    graph_directed = dict(a=['b', 'c'], b=['c', 'd'], c=['d'], d=[])&#10;    graph_weighed = dict(s=dict(v=1, w=4), v=dict(t=6, w=2), w=dict(t=3), t=dict())&#10;    graph_mst = dict(a=dict(b=1, c=4, d=3), b=dict(a=1, d=2), c=dict(a=4, d=5), d=dict(b=2, c=5, a=3))&#10;&#10;    input_ = graph_mst&#10;&#10;    print(&quot;MAIN bfs1: &quot;, mst1_prima(input_, 'a'))&#10;    print(&quot;MAIN bfs2: &quot;, mst1_prima(input_, 'd'))&#10;    draw_graph(input_)&#10;&#10;&#10;mst1_prima_main()" description="Prima's algo minimum spanning tree O=V+E*log V" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="formap WHILE pop C-STYLE  PARENT_TABLE iter" value="next_vertex = start_vertex&#10;while next_parent := $d0$.get(next_vertex):  # get=None if absent&#10;    if next_vertex == next_parent: return next_parent&#10;    next_vertex = next_parent&#10;         &#10;$END$    " description="while next=get(next):   # iterate over network" toReformat="false" toShortenFQNames="true">
+    <variable name="d0" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
