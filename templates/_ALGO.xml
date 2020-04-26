@@ -128,7 +128,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap WHILE pop C-STYLE  PARENTTABLE" value="result=[]    &#10;next_vertex = start_vertex&#10;result += start_vertex&#10;while next_vertex := $d0$.pop(next_vertex, None):&#10;    result += next_vertex    &#10;    &#10;$END$    " description="while next=pop(next):   # iterate over network" toReformat="false" toShortenFQNames="true">
+  <template name="formap WHILE pop C-STYLE  PARENT_TABLE" value="result=[]    &#10;next_vertex = start_vertex&#10;result += start_vertex&#10;while next_vertex := $d0$.pop(next_vertex, None):&#10;    result += next_vertex    &#10;    &#10;$END$    " description="while next=pop(next):   # iterate over network" toReformat="false" toShortenFQNames="true">
     <variable name="d0" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
