@@ -40,7 +40,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class  iterator" value="mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9]&#10;&#10;&#10;class MyIterator:&#10;    &quot;&quot;&quot; multiple iterable class &quot;&quot;&quot;&#10;    def __init__(self, wrapped):&#10;        self.wrapped = wrapped&#10;&#10;    def __iter__(self):&#10;        offset = 0&#10;        while offset &lt; len(self.wrapped):&#10;            item = self.wrapped[offset]&#10;            offset += 2&#10;            yield item&#10;&#10;&#10;print(list(MyIterator(mylist)))" description="NEW  __iter__" toReformat="false" toShortenFQNames="true">
+  <template name="class iterator" value="mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9]&#10;&#10;&#10;class MyIterator:&#10;    &quot;&quot;&quot; multiple iterable class &quot;&quot;&quot;&#10;    def __init__(self, wrapped):&#10;        self.wrapped = wrapped&#10;&#10;    def __iter__(self):&#10;        offset = 0&#10;        while offset &lt; len(self.wrapped):&#10;            item = self.wrapped[offset]&#10;            offset += 2&#10;            yield item&#10;&#10;&#10;print(list(MyIterator(mylist)))" description="NEW  __iter__" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
