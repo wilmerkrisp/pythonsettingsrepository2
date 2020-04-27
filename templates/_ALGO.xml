@@ -87,7 +87,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="function GRAPHundirected  shortest paths" value="def shortest_path2(graph):&#10;    &quot;&quot;&quot; shortest_path &quot;&quot;&quot;&#10;    if not graph: warn(&quot;Input argument is empty&quot;, UserWarning)&#10;    assert isinstance(graph, dict)&#10;&#10;    l = len(graph)&#10;    if l &lt; 2:  return {}&#10;&#10;    lens = defaultdict(lambda:inf)&#10;    start_vertex, lens[start_vertex] = 1, 0&#10;&#10;    traversed, _ = bfs(graph, start_vertex)&#10;    for v, e in traversed: lens[e] = lens[v] + 1&#10;&#10;    return lens&#10;&#10; " description="lens of verticies" toReformat="false" toShortenFQNames="true">
+  <template name="function GRAPHundirected  shortest paths" value="def shortest_path2(graph,start_vertex):&#10;    &quot;&quot;&quot; shortest_path &quot;&quot;&quot;&#10;    if not graph: warn(&quot;Input argument is empty&quot;, UserWarning)&#10;    assert isinstance(graph, dict)&#10;&#10;    l = len(graph)&#10;    if l &lt; 2:  return {}&#10;&#10;    lens = defaultdict(lambda:inf)&#10;    lens[start_vertex] =  0&#10;&#10;    traversed, _ = dfs(graph, start_vertex)&#10;    for v, e in traversed: lens[e] = lens[v] + 1&#10;&#10;    return lens&#10;&#10; " description="lens of verticies" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
