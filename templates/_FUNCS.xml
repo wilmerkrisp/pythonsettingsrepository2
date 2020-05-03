@@ -57,4 +57,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function SUPER standalone FOR ALGO" value="##############################################################################################################################################################&#10;################# $bfs$ #####################################################################################################################################&#10;##############################################################################################################################################################&#10;&#10;&#10;def $bfs$(data):&#10;    &quot;&quot;&quot; $bfs$ return result&quot;&quot;&quot;&#10;    result=[]&#10; &#10;    return result&#10;&#10;&#10;def main_$bfs$():&#10;    data1 = {&#10;        1:[2, 3],&#10;        2:[1, 3, 4],&#10;        3:[1, 2, 4],&#10;        4:[2, 3]}&#10;&#10;    input_=data1&#10;    result=$bfs$(input_)&#10;    print(&quot;MAIN $bfs$: &quot;, result)&#10;     &#10;&#10;main_$bfs$()" description="funct+main" toReformat="false" toShortenFQNames="true">
+    <variable name="bfs" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
