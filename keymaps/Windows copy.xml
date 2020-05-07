@@ -121,6 +121,11 @@
   </action>
   <action id="ModifyObject" />
   <action id="Move" />
+  <action id="NewElement">
+    <keyboard-shortcut first-keystroke="alt insert" />
+    <keyboard-shortcut first-keystroke="alt n" />
+    <keyboard-shortcut first-keystroke="ctrl n" />
+  </action>
   <action id="NextDiff" />
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="ctrl alt l" />
