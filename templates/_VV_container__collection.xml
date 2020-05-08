@@ -221,7 +221,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list new list of lists [ [] ]" value="table_vesi = [[[] for _ in range(len(vesi) + 1)] for _ in range(bagpack_capasity + 1)]" description="[ [for_in] for_in ]" toReformat="false" toShortenFQNames="true">
+  <template name="list new list of lists [ [] ]" value="table_vesi = [[[] for _ in range(len(vesi) + 1)] for _ in range(bagpack_capasity + 1)]&#10;    &#10;l = len(graph)&#10;table_vesi = [[inf for _ in range(l)] for _ in range(l)]" description="[ [for_in] for_in ]" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="map new DICT of DICTs" value="result = defaultdict(lambda:defaultdict(lambda:inf))&#10;parents = defaultdict(lambda:defaultdict(lambda:None))" description="defaultdict(defaultdict)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
