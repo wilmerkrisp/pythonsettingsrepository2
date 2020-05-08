@@ -246,4 +246,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="for print inner list MATRIX TABLE" value="# печать матрицы&#10;for y in result:&#10;    for x in y:&#10;        print(x, end=&quot;\t&quot;)&#10;    print(&quot;\n&quot;)" description="for for print" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
