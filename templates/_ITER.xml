@@ -56,11 +56,6 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for ALL COMBINATIONS" value="# from itertools import *&#10;arr1 = &quot;abcd&quot;&#10;arr2 = [1, 2, 3, 4]&#10;for x, y in product(arr1,arr2):&#10;    print (x,y)" description="itertools.product" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
   <template name="for RAISE from two cycles" value="try:&#10;    for ii in range(1, 10):&#10;        for jj in range(100, 110):&#10;            print(f&quot;{ii}-{jj}&quot;)&#10;            if ii == 4 and jj == 105: raise StopIteration&#10;except StopIteration:&#10;    print(&quot;exit from cycle&quot;)" description="try for raise" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
