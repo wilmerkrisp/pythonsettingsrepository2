@@ -86,4 +86,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="func find nearest clothest value" value="idx, val = min(enumerate(points), key=lambda idx_pt:abs(idx_pt[1][0] - to_point[0]))" description="в списке найти значение наиболее близкое к заданному" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
