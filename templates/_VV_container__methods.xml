@@ -224,4 +224,14 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="cl list add many (chain)" value="arr1 = [1, 2]&#10;arr2 = [&quot;a&quot;, &quot;b&quot;]&#10;print(list(chain(arr1,arr2)))&#10;# [1, 2, 'a', 'b']" description="chain(arr1,arr2)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="cl list add many (chain aka flatMap)" value="print(list(chain.from_iterable(['ab', 'cd']))) &#10;# ['a', 'b', 'c', 'd']" description="chain.from_iterable(['ab', 'cd']) одновременно распаковывает внутренние итераторы во внешний" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
