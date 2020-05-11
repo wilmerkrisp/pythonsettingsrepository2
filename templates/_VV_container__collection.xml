@@ -231,4 +231,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="set intersect (super)" value="range_ = set(range(len(pts))) &amp; set(range(idx - 3, idx + 5)) - {idx}&#10;pts_d = map(pts.__getitem__, range_)&#10;&#10;    &#10;# take 4 left points, if possible&#10;cnt = 4&#10;while (cnt := cnt - 1) &gt;= 0 and idx1 &gt; 0:&#10;    idx1 -= 1&#10;&#10;# take 4 right points, if possible&#10;cnt = 4&#10;while (cnt := cnt - 1) &gt;= 0 and idx2 &lt; len(pts) - 1:&#10;    idx2 += 1&#10;pts_delta = pts[idx1: idx] + pts[idx + 1:idx2 + 1]" description="set(range(len(pts))) &amp; set(range(idx - 3, idx + 5))   вместо инкрементальных приращений индекса" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
