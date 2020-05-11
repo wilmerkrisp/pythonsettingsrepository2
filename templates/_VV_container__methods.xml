@@ -207,7 +207,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="cm map add many 2" value="$s$.update(uno=&quot;a&quot;, dos=&quot;b&quot;$END$)" description="dict.update" toReformat="false" toShortenFQNames="true">
+  <template name="cm map add many 2" value="$s$.update(uno=&quot;a&quot;, dos=&quot;b&quot;$END$)" description="dict.update(uno=1, dos=2)" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -235,6 +235,12 @@
     </context>
   </template>
   <template name="rl list get one noErrorIfAbsent" value="get_or_default = lambda list_, idx, default: list_[idx] if idx &gt;= 0 and idx &lt; len(list_) else default # ! но тогда придется забыть об отрицательных индексах = доступ от конца&#10;compute_or_default = lambda list_, idx, compute, default:compute(list_[idx]) if idx &gt;= 0 and idx &lt; len(list_) else default&#10;# distance_or_inf= lambda list_, idx: distance([to_point,list_[idx]]) if idx &gt;= 0 and idx &lt; len(list_) else inf" description="get/compute or default value" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="cm map add many (super)" value="$s$|={1:&quot;a&quot;,2:&quot;b&quot;$END$}" description="map|={}" toReformat="false" toShortenFQNames="true">
+    <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
