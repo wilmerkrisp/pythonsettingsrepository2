@@ -219,4 +219,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="cm map add many 3  / map chain" value="m1 = {'music': 'bach', 'art': 'rembrandt'}&#10;m2 = {'art': 'van gogh', 'opera': 'carmen'}&#10;list(ChainMap(m1, m2))&#10;['music', 'art', 'opera']" description="map1+map2 склеить несколько словарей ChainMap(m1, m2)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
