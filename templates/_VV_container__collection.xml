@@ -236,7 +236,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map new cache" value="cache = {}&#10;def someproc(val1,val2):&#10;    if seen := cache.get((val1, val2)): return seen&#10;    #get result&#10;    cache[(val1, val2)] = result&#10;    return result&#10;&#10; " description="f seen := cache.get((val1, val2)): return seen" toReformat="false" toShortenFQNames="true">
+  <template name="map new CACHE" value="cache = {}&#10;def someproc(val1,val2):&#10;    if seen := cache.get((val1, val2)): return seen&#10;    #get result&#10;    cache[(val1, val2)] = result&#10;    return result&#10;&#10; " description="f seen := cache.get((val1, val2)): return seen" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
