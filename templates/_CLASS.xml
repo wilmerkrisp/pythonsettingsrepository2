@@ -38,13 +38,13 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class static methods" value="class $name$():&#10;    &quot;&quot;&quot; class $name$ &quot;&quot;&quot;&#10;&#10;    @staticmethod&#10;    def method1(arg):&#10;        &quot;&quot;&quot;static method1 &quot;&quot;&quot;&#10;        if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;        assert isinstance(arg,str)&#10;        &#10;        print (f&quot;method1:{arg}&quot;)&#10;        &#10;        assert arg , &quot;Check invariant - result is not empty&quot;&#10;&#10; &#10;&#10;$name$.method1(&quot;12&quot;)&#10;$END$" description="my class" toReformat="false" toShortenFQNames="true">
+  <template name="class static methods" value="class $name$():&#10;    &quot;&quot;&quot; class $name$ &quot;&quot;&quot;&#10;&#10;    # DEPRECATED @staticmethod&#10;    def method1(arg):&#10;        &quot;&quot;&quot;static method1 &quot;&quot;&quot;&#10;        if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;        assert isinstance(arg,str)&#10;        &#10;        print (f&quot;method1:{arg}&quot;)&#10;        &#10;        assert arg , &quot;Check invariant - result is not empty&quot;&#10;&#10; &#10;&#10;$name$.method1(&quot;12&quot;)&#10;$END$" description="my class" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="method static" value="@staticmethod&#10;def method1(arg):&#10;    &quot;&quot;&quot; static method &quot;&quot;&quot;&#10;    if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;    assert isinstance(arg,str)&#10;     &#10;    print (f&quot;method1:{arg}&quot;)&#10;    &#10;    assert arg , &quot;Check invariant - result is not empty&quot;" description="method with raise and assert" toReformat="false" toShortenFQNames="true">
+  <template name="method static" value="# DEPRECATED @staticmethod&#10;def method1(arg):&#10;    &quot;&quot;&quot; static method &quot;&quot;&quot;&#10;    if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;    assert isinstance(arg,str)&#10;     &#10;    print (f&quot;method1:{arg}&quot;)&#10;    &#10;    assert arg , &quot;Check invariant - result is not empty&quot;" description="method with raise and assert" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
