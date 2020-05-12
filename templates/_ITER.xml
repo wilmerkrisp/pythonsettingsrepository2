@@ -30,7 +30,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for GEN new list FOR-FOR" value="nlist = [(i,j) for i in range(1,10) for j in range(1,10) ] # i-outer cycle, j inner cycle&#10;print(&quot;&gt;&gt;&quot;,nlist )" description="[ for_in for_in ]" toReformat="false" toShortenFQNames="true">
+  <template name="DEPRECATED for GEN new list FOR-FOR" value="nlist = [(i,j) for i in range(1,10) for j in range(1,10) ] # i-outer cycle, j inner cycle&#10;print(&quot;&gt;&gt;&quot;,nlist )" description="[ for_in for_in ]" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -73,7 +73,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap GEN new list FOR-FOR" value="graph = dict(a=dict(b=1, c=4, d=3), b=dict(a=1, d=2), c=dict(a=4, d=5), d=dict(b=2, c=5, a=3))&#10;costs = [(v1,v2,cost) for v1, dict1 in graph.items() for v2, cost in dict1.items()] # graph - outer cycle, dict1.items - inner cycle&#10;print(&quot;&gt;&gt;&quot;,costs )" description="[ for_in for_in ]" toReformat="false" toShortenFQNames="true">
+  <template name="formap GEN new list FOR-FOR" value="graph = dict(a=dict(b=1, c=4, d=3), b=dict(a=1, d=2), c=dict(a=4, d=5), d=dict(b=2, c=5, a=3))&#10;costs=[]&#10;for v1, edges in graph.items():&#10;    for v2, cost in edges.items():&#10;        costs+=[(v1,v2,cost)]&#10;        &#10;# DEPRECATED costs = [(v1,v2,cost) for v1, dict1 in graph.items() for v2, cost in dict1.items()] # graph - outer cycle, dict1.items - inner cycle&#10;print(&quot;&gt;&gt;&quot;,costs )" description="[ for_in for_in ]" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
