@@ -26,7 +26,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="if default" value="v = x or defualt $END$" description="x OR default" toReformat="false" toShortenFQNames="true">
+  <template name="DEPRECATED if default" value="v = x or defualt $END$" description="x OR default" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
