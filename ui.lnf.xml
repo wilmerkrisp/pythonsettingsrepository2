@@ -4,6 +4,7 @@
     <option name="CONSOLE_CYCLE_BUFFER_SIZE_KB" value="10024" />
     <option name="DISABLE_MNEMONICS" value="true" />
     <option name="EDITOR_TAB_LIMIT" value="25" />
+    <option name="MAX_LOOKUP_LIST_HEIGHT" value="31" />
     <option name="OPEN_TABS_AT_THE_END" value="true" />
     <option name="OVERRIDE_CONSOLE_CYCLE_BUFFER_SIZE" value="true" />
     <option name="USE_SMALL_LABELS_ON_TABS" value="true" />
