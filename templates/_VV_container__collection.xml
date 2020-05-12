@@ -175,7 +175,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map WITH DEFAULT  VALUES" value="# все создаваемые entry будут иметь value по-умолчанию (например -массив )&#10;dd=defaultdict(list) &#10;dd=defaultdict(lambda: []) &#10;dd[1]+=[1,2]&#10;print(dd)" description="defaultdict( all default values=[] )" toReformat="false" toShortenFQNames="true">
+  <template name="map WITH DEFAULT  VALUES" value="# все создаваемые entry будут иметь value по-умолчанию (например -массив )&#10;# !! предостережение - каждое получение ненайденного элемента создает его &#10;dd=defaultdict(list) &#10;dd=defaultdict(lambda: []) &#10;dd[1]+=[1,2]&#10;print(dd)" description="defaultdict( all default values=[] )" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -226,7 +226,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map new DICT of DICTs" value="result = defaultdict(lambda:defaultdict(lambda:inf))&#10;parents = defaultdict(lambda:defaultdict(lambda:None))" description="defaultdict(defaultdict)" toReformat="false" toShortenFQNames="true">
+  <template name="map new DICT of DICTs" value="result = defaultdict(lambda:defaultdict(lambda:inf))&#10;parents = defaultdict(lambda:defaultdict(lambda:None))&#10;# !! предостережение - каждое получение ненайденного элемента создает его " description="defaultdict(defaultdict)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
