@@ -55,13 +55,13 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class mutable new-set-call pattern" value="class $name$(object):&#10;    &quot;&quot;&quot; new-set-call pattern of class &quot;&quot;&quot;&#10;&#10;    def __init__(self):&#10;        self.one=None&#10;        self.two=None&#10;&#10;    def method1(self,arg):&#10;        &quot;&quot;&quot; method1 &quot;&quot;&quot;&#10;        if not self.one or not self.two: raise ValueError(&quot;Object properties must not be empty.&quot;)&#10;        if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;)            &#10;        assert isinstance(arg,str)&#10;        assert isinstance(self.one,str)&#10;        assert isinstance(arg,self.two)&#10;        &#10;        print (f&quot;method1:{arg}&quot;)&#10;        &#10;        assert arg , &quot;Check invariant - result is not empty&quot;&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__one} {self.__two}&quot;&#10;&#10;&#10;obj1=$name$()&#10;obj1.one=&quot;11&quot;&#10;obj.two=&quot;12&quot;&#10;obj1.method1(&quot;13&quot;)&#10;$END$" description="new-set-call pattern" toReformat="false" toShortenFQNames="true">
+  <template name="class mutable new-set-call pattern" value="#допускается использование открытых свойств для простых классов-данных&#10;&#10;class $name$(object):&#10;    &quot;&quot;&quot; new-set-call pattern of class &quot;&quot;&quot;&#10;&#10;    def __init__(self):&#10;        self.one=None&#10;        self.two=None&#10;&#10;    def method1(self,arg):&#10;        &quot;&quot;&quot; method1 &quot;&quot;&quot;&#10;        if not self.one or not self.two: raise ValueError(&quot;Object properties must not be empty.&quot;)&#10;        if not arg: raise ValueError(&quot;Method input argument must not be empty.&quot;)            &#10;        assert isinstance(arg,str)&#10;        assert isinstance(self.one,str)&#10;        assert isinstance(arg,self.two)&#10;        &#10;        print (f&quot;method1:{arg}&quot;)&#10;        &#10;        assert arg , &quot;Check invariant - result is not empty&quot;&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__one} {self.__two}&quot;&#10;&#10;&#10;obj1=$name$()&#10;obj1.one=&quot;11&quot;&#10;obj.two=&quot;12&quot;&#10;obj1.method1(&quot;13&quot;)&#10;$END$" description="new-set-call pattern" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class RECORD pattern 2" value="class $name$(object):&#10;&#10;    def __init__(self,$one$,$two$,$three$):&#10;        self.$one$=$one$&#10;        self.$two$=$two$&#10;        self.$three$=$three$&#10; &#10;&#10;obj1=$name$(1,2,3)&#10;$END$" description="simpienst class" toReformat="false" toShortenFQNames="true">
+  <template name="class RECORD pattern 2" value="#допускается использование открытых свойств для простых классов-данных&#10;&#10;class $name$(object):&#10;&#10;    def __init__(self,$one$,$two$,$three$):&#10;        self.$one$=$one$&#10;        self.$two$=$two$&#10;        self.$three$=$three$&#10; &#10;&#10;obj1=$name$(1,2,3)&#10;$END$" description="simpienst class" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="one" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="two" expression="" defaultValue="" alwaysStopAt="true" />
@@ -70,7 +70,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class RECORD pattern 1" value="class Entry$END$(object):&#10;&#10;    def __init__(self, $key$=None, $value$=None):&#10;        self.$key$ = $key$&#10;        self.$value$ = $value$&#10;&#10;    def __lt__(self, other):&#10;        return self.$value$ &lt; other.$value$&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.$key$}-{self.$value$}&quot;" description="simpienst class" toReformat="false" toShortenFQNames="true">
+  <template name="class RECORD pattern 1" value="#допускается использование открытых свойств для простых классов-данных&#10;&#10;class Entry$END$(object):&#10;&#10;    def __init__(self, $key$=None, $value$=None):&#10;        self.$key$ = $key$&#10;        self.$value$ = $value$&#10;&#10;    def __lt__(self, other):&#10;        return self.$value$ &lt; other.$value$&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.$key$}-{self.$value$}&quot;" description="simpienst class" toReformat="false" toShortenFQNames="true">
     <variable name="key" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
