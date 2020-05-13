@@ -1,10 +1,10 @@
 <templateSet group="_ITER">
-  <template name="for WHILE  esle" value="while d0:&#10;    print (d0.popitem())&#10;    if True: continue&#10;    if True: break&#10;else: #более структурированный способ перехвата случая с неудавшимся поиском.&#10;    print (&quot;final cycle&quot;)   " description="my while else break continue" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE  esle" value="while arr:&#10;    print (arr.popitem())&#10;    if True: continue&#10;    if True: break&#10;else: #более структурированный способ перехвата случая с неудавшимся поиском.&#10;    print (&quot;final cycle&quot;)   " description="my while else break continue" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE  C-style by INT-INDEX" value="k=10&#10;fnn=1&#10;while ((i:=fnn)!=-1):&#10;    k-=1&#10;    fnn = -1 if k==0 else k&#10;    print(&quot;iter&quot;,i)" description="my while (i:=)" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE  C-style by INT-INDEX" value="cnt=10&#10;fnn=1&#10;while ((obj:=fnn)!=-1):&#10;    cnt-=1&#10;    fnn = -1 if cnt==0 else cnt&#10;    print(&quot;iter&quot;,obj)" description="my while (i:=)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -25,7 +25,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for FOR  with INDEX" value="arr=range(1,10)&#10;for i,e in enumerate(arr):  print (f&quot;{i}={e}&quot;)" description="for_in enumerate" toReformat="false" toShortenFQNames="true">
+  <template name="for FOR  with INDEX" value="arr=range(1,10)&#10;for i,obj in enumerate(arr):  print (f&quot;{i}={obj}&quot;)" description="for_in enumerate" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -35,7 +35,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap MAP operations" value="l1=list(map(lambda x: x+1, range(1,10)))&#10;l2 = list(map(pow, range(1, 10),range(1, 10))) # у функции pow два аргумента&#10;l3=list(filter(lambda x: True, range(1,10)))&#10;&quot;&quot;&quot;&#10;reduce&#10;sum&#10;any&#10;all&#10;max&#10;min&#10;&quot;&quot;&quot;" description="list(map(lambda)" toReformat="false" toShortenFQNames="true">
+  <template name="formap MAP operations" value="list(map(lambda one: one+1, range(1,10)))&#10;list(map(pow, range(1, 10),range(1, 10))) # у функции pow два аргумента&#10;list(filter(lambda one: True, range(1,10)))&#10;&#10;&quot;&quot;&quot;&#10;reduce&#10;sum&#10;any&#10;all&#10;max&#10;min&#10;&quot;&quot;&quot;" description="list(map(lambda)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -51,12 +51,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class sequence" value="class sequencee():&#10;    &quot;&quot;&quot; sequence class&#10;    &quot;&quot;&quot;&#10;&#10;    def __init__(self, wrapped):&#10;        if not wrapped: raise ValueError(&quot;Constructor's argument must not be empty.&quot;)&#10;        #assert isinstance(wrapped, list)&#10;&#10;        self.__wrapped = wrapped&#10;&#10;    def __len__(self):&#10;        return len(self.__wrapped)&#10;&#10;    def __getitem__(self, item):&#10;        return self.__getitem__(item)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__wrapped}&quot;&#10;&#10;&#10;obj1 = sequencee(&quot;test&quot;)&#10;print(obj1)" description="NEW  __len____getitem__" toReformat="false" toShortenFQNames="true">
+  <template name="class sequence" value="class sequencee():&#10;    &quot;&quot;&quot; sequence class&#10;    &quot;&quot;&quot;&#10;&#10;    def __init__(self, wrapped):&#10;        if not wrapped: raise ValueError(&quot;Constructor's argument must not be empty.&quot;)&#10;        #assert isinstance(wrapped, list)&#10;&#10;        self.__wrapped = wrapped&#10;&#10;    def __len__(self):&#10;        return len(self.__wrapped)&#10;&#10;    def __getitem__(self, item):&#10;        return self.__getitem__(item)&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.__wrapped}&quot;&#10;&#10;&#10;obj = sequencee(&quot;test&quot;)&#10;print(obj1)" description="NEW  __len____getitem__" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for RAISE from two cycles" value="try:&#10;    for ii in range(1, 10):&#10;        for jj in range(100, 110):&#10;            print(f&quot;{ii}-{jj}&quot;)&#10;            if ii == 4 and jj == 105: raise StopIteration&#10;except StopIteration:&#10;    print(&quot;exit from cycle&quot;)" description="try for raise" toReformat="false" toShortenFQNames="true">
+  <template name="for RAISE from two cycles" value="try:&#10;    for i in range(1, 10):&#10;        for j in range(100, 110):&#10;            print(f&quot;{i}-{j}&quot;)&#10;            if i == 4 and j == 105: raise StopIteration&#10;except StopIteration:&#10;    print(&quot;exit from cycle&quot;)" description="try for raise" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -67,13 +67,13 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap GEN  new map SUPER" value="[k:v $END$ for k,v in $L$.items() if True]" description="[ for_in_if ]" toReformat="false" toShortenFQNames="true">
+  <template name="formap GEN  new map SUPER" value="[key:value $END$ for key,value in $L$.items() if True]" description="[ for_in_if ]" toReformat="false" toShortenFQNames="true">
     <variable name="L" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap GEN new list FOR-FOR" value="graph = dict(a=dict(b=1, c=4, d=3), b=dict(a=1, d=2), c=dict(a=4, d=5), d=dict(b=2, c=5, a=3))&#10;costs=[]&#10;for v1, edges in graph.items():&#10;    for v2, cost in edges.items():&#10;        costs+=[(v1,v2,cost)]&#10;        &#10;# DEPRECATED costs = [(v1,v2,cost) for v1, dict1 in graph.items() for v2, cost in dict1.items()] # graph - outer cycle, dict1.items - inner cycle&#10;print(&quot;&gt;&gt;&quot;,costs )" description="[ for_in for_in ]" toReformat="false" toShortenFQNames="true">
+  <template name="formap GEN new list FOR-FOR" value="graph = dict(a=dict(b=1, c=4, d=3), b=dict(a=1, d=2), c=dict(a=4, d=5), d=dict(b=2, c=5, a=3))&#10;costs=[]&#10;for vertex1, edges in graph.items():&#10;    for vertex2, cost in edges.items():&#10;        costs+=[(vertex1,vertex2,cost)]&#10;        &#10;# DEPRECATED costs = [(v1,v2,cost) for v1, dict1 in graph.items() for v2, cost in dict1.items()] # graph - outer cycle, dict1.items - inner cycle&#10;print(&quot;&gt;&gt;&quot;,costs )" description="[ for_in for_in ]" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

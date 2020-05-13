@@ -5,7 +5,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list enumerate" value="$l1$= enumerate($l$) $END$" description="NEW  coll with indexes" toReformat="false" toShortenFQNames="true">
+  <template name="list enumerate ADD INDEX TO COLLECTION ELEMENTS" value="$l1$= enumerate($l$) $END$" description="NEW  coll with indexes" toReformat="false" toShortenFQNames="true">
     <variable name="l" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="l1" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -112,7 +112,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list-&gt;str" value="print(&quot; &quot;.join(map(str,a)))&#10;#print(&quot; &quot;.join(str(i) for i in a))" description="" toReformat="false" toShortenFQNames="true">
+  <template name="list-&gt;str" value="print(&quot; &quot;.join(map(str,arr)))&#10;#print(&quot; &quot;.join(str(i) for i in arr))" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -141,7 +141,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="namedtuple immutable class (short)" value="Car = namedtuple('Car', 'attr1 attr2')&#10;#Car = namedtuple('Car', ['attr1', 'attr2'])&#10;c1=Car(1,2)&#10;print(c1)&#10;$END$" description="NEW  namedtuple()" toReformat="false" toShortenFQNames="true">
+  <template name="namedtuple immutable class (short)" value="Car = namedtuple('Car', 'attr1 attr2')&#10;#Car = namedtuple('Car', ['attr1', 'attr2'])&#10;car=Car(1,2)&#10;print(car)&#10;$END$" description="NEW  namedtuple()" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -170,7 +170,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list STACK" value="stack_=[]&#10;stack_+=[vertex] # push&#10;v = stack_.pop() # pop" description="NEW  []" toReformat="false" toShortenFQNames="true">
+  <template name="list STACK" value="stack_=[]&#10;stack_+=[vertex] # push&#10;obj = stack_.pop() # pop" description="NEW  []" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -180,12 +180,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list HEAP" value="heap_=[]&#10;heappush(heap_, (5, 'write code'))&#10;v =  heappop(heap_)     # pop возвращает наименьший элемент&#10;v= heap_[0]             # это самый маленький элемент, без удаления &#10; &#10;# heapify(list) - сам список будет МУТИРОВАН!!" description="NEW  [] priority queue" toReformat="false" toShortenFQNames="true">
+  <template name="list HEAP" value="heap_=[]&#10;heappush(heap_, (5, 'write code'))&#10;obj =  heappop(heap_)     # pop возвращает наименьший элемент&#10;obj = heap_[0]             # это самый маленький элемент, без удаления &#10; &#10;# heapify(list) - сам список будет МУТИРОВАН!!" description="NEW  [] priority queue" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list HEAPQ with class for entry 2" value="class Entry():&#10;    def __init__(self, key, value):&#10;        self.key = key&#10;        self.value = value&#10;&#10;    def __lt__(self, other):&#10;        return self.value &lt; other.value&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.key}-{self.value}&quot;&#10;&#10;heap, heap_dict = [], {}&#10;&#10;def push(k, v):&#10;    entry = Entry(v, k)  # ordering element goes first&#10;    heappush(heap, entry)&#10;    heap_dict[k] = entry&#10;&#10;def pop(): return heappop(heap)&#10;&#10;push(5, 10)&#10;push(6, 9)&#10;print(&quot;heap=&quot;, heap)&#10;print(&quot;heap=&quot;, pop())" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
+  <template name="list HEAPQ with class for entry 2" value="class Entry():&#10;    def __init__(self, key, value):&#10;        self.key = key&#10;        self.value = value&#10;&#10;    def __lt__(self, other):&#10;        return self.value &lt; other.value&#10;&#10;    def __repr__(self):&#10;        return f&quot;{self.key}-{self.value}&quot;&#10;&#10;&#10;heap, heap_dict = [], {}&#10;&#10;&#10;def push(key, value):&#10;    entry = Entry(value, key)  # ordering element goes first&#10;    heappush(heap, entry)&#10;    heap_dict[key] = entry&#10;&#10;def pop(): return heappop(heap)&#10;&#10;push(5, 10)&#10;push(6, 9)&#10;print(&quot;heap=&quot;, heap)&#10;print(&quot;heap=&quot;, pop())" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -206,7 +206,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list HEAPmyclass with deletion operation" value="class Heap():&#10;    &quot;&quot;&quot; class heap&#10;        new-call pattern&#10;        from heapq import *&#10;    &quot;&quot;&quot;&#10;    REMOVED = '&lt;removed-task&gt;'  # placeholder for a removed task&#10;&#10;    def __init__(self,list_):&#10;        self.pq = list_ or []  # list of entries arranged in a heap&#10;        self.entry_finder = { e[1]:e for e in self.pq}  # mapping of VALUES to entries&#10;        heapify(self.pq)&#10;&#10;    def push(self, key, value):&#10;        'Add a new VALUE or update the priority of an existing task'&#10;        if value in self.entry_finder:&#10;            self.remove(value)&#10;        entry = [key, value]&#10;        self.entry_finder[value] = entry&#10;        heappush(self.pq, entry)&#10;&#10;    def remove(self, value):&#10;        'Mark an existing VALUE as REMOVED.  Raise KeyError if not found.'&#10;        entry = self.entry_finder.pop(value)&#10;        entry[-1] = Heap.REMOVED&#10;&#10;    def entry(self, value):&#10;        return self.entry_finder[value]&#10;&#10;    def peek(self):&#10;        return self.pq[0]&#10;&#10;    def pop(self):&#10;        'Remove and return the lowest priority VALUE. Raise KeyError if empty.'&#10;        while self.pq:&#10;            priority, value = heappop(self.pq)&#10;            if value is not Heap.REMOVED:&#10;                del self.entry_finder[value]  # так как это операция pop то удалим также из словаря&#10;                return value&#10;        return None&#10;&#10;    def __repr__(self):&#10;        return f&quot;heap={self.pq} \n dict={self.entry_finder}&quot;" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
+  <template name="list HEAPmyclass with deletion operation" value="#from heapq import *&#10;&#10;class Heap():&#10;    &quot;&quot;&quot; Heap - priority queue.&#10;    &#10;    Each element is a tuple (key,value)&#10;    &quot;&quot;&quot;&#10;    &#10;    REMOVED = '&lt;removed-task&gt;'  # placeholder for a removed task&#10;&#10;    def __init__(self,list_):&#10;        if not list_&#10;            self.heap = []  # list of entries arranged in a heap&#10;        self.entry_finder = { e[1]:e for e in self.heap}  # mapping of VALUES to entries&#10;        heapify(self.heap)&#10;&#10;    def push(self, key, value):&#10;        &quot;&quot;&quot;Add a new VALUE or update the priority of an existing entry&quot;&quot;&quot;&#10;        if value in self.entry_finder:&#10;            self.remove(value)&#10;        entry = [key, value]&#10;        self.entry_finder[value] = entry&#10;        heappush(self.heap, entry)&#10;&#10;    def remove(self, value):&#10;        &quot;&quot;&quot;Mark an existing VALUE as REMOVED.  Raise KeyError if not found.&quot;&quot;&quot;&#10;        entry = self.entry_finder.pop(value)&#10;        entry[-1] = Heap.REMOVED&#10;&#10;    def find_entry(self, value):&#10;        &quot;&quot;&quot; find entry by value &quot;&quot;&quot;&#10;        return self.entry_finder[value]&#10;&#10;    def peek(self):&#10;        return self.heap[0]&#10;&#10;    def pop(self):&#10;        'Remove and return the lowest priority VALUE. Raise KeyError if empty.'&#10;        while self.heap:&#10;            priority, value = heappop(self.heap)&#10;            if value is not Heap.REMOVED:&#10;                del self.entry_finder[value]  # так как это операция pop то удалим также из словаря&#10;                return value&#10;        return None&#10;&#10;    def __repr__(self):&#10;        return f&quot;heap={self.heap} \n dict={self.entry_finder}&quot;" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -216,12 +216,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list HEAPQ with class for entry 1" value="from dataclasses import dataclass, field&#10;&#10;@dataclass(order=True)&#10;class Entry():&#10;    key: int&#10;    value: Any = field(compare=False)&#10;&#10;heap, heap_dict = [], {}&#10;&#10;def push(k, v):&#10;    entry = Entry(k, v)  # ordering element goes first&#10;    heappush(heap, entry)&#10;    heap_dict[k] = entry&#10;&#10;def pop(): return heappop(heap)&#10;&#10;push(5, 10)&#10;push(6, 9)&#10;print(&quot;heap=&quot;, heap)&#10;print(&quot;heap=&quot;, pop())" description="use @dataclass annotation" toReformat="false" toShortenFQNames="true">
+  <template name="list HEAPQ with class for entry 1" value="from dataclasses import dataclass, field&#10;&#10;@dataclass(order=True)&#10;class Entry():&#10;    key: int&#10;    value: Any = field(compare=False)&#10;&#10;heap, heap_dict = [], {}&#10;&#10;def push(key, value):&#10;    entry = Entry(key, value)  # ordering element goes first&#10;    heappush(heap, entry)&#10;    heap_dict[key] = entry&#10;&#10;def pop(): return heappop(heap)&#10;&#10;push(5, 10)&#10;push(6, 9)&#10;print(&quot;heap=&quot;, heap)&#10;print(&quot;heap=&quot;, pop())" description="use @dataclass annotation" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list new list of lists [ [] ]" value="lx,ly=10,5&#10;cols = [[0] * ly for _ in range(lx)]&#10;&#10;&quot;&quot;&quot;&#10;вложенные [ for for ]  запрещены&#10;&#10;table_vesi = [[[] for _ in range(len(vesi) + 1)] for _ in range(bagpack_capasity + 1)]&#10;    &#10;l = len(graph)&#10;table_vesi = [[inf for _ in range(l)] for _ in range(l)]&#10;&quot;&quot;&quot;" description="[ [for_in] for_in ]" toReformat="false" toShortenFQNames="true">
+  <template name="list new list of lists [ [] ]" value="len_x,len_y=10,5&#10;cols = [[0] * len_y for _ in range(len_x)]&#10;&#10;&quot;&quot;&quot;&#10;вложенные [ for for ]  запрещены&#10;&#10;table_vesi = [[[] for _ in range(len(vesi) + 1)] for _ in range(bagpack_capasity + 1)]&#10;    &#10;l = len(graph)&#10;table_vesi = [[inf for _ in range(l)] for _ in range(l)]&#10;&quot;&quot;&quot;" description="[ [for_in] for_in ]" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

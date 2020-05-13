@@ -16,12 +16,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="if oneline" value="if x&gt;y: print(x) $END$" description="my onelined operator" toReformat="false" toShortenFQNames="true">
+  <template name="if oneline" value="if one&gt;two: print(two) $END$" description="my onelined operator" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="if ternarn" value="v = x if True else y $END$" description="X if else Y" toReformat="false" toShortenFQNames="true">
+  <template name="if ternarn" value="itogo = one if True else two $END$" description="X if else Y" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

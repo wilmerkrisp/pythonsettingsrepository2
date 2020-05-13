@@ -1,20 +1,23 @@
 <templateSet group="_FUNCS LAMBDAS">
-  <template name="lambda 1" value="y=lambda x:x+1" description="my lambda" toReformat="false" toShortenFQNames="true">
+  <template name="lambda 1" value="lambda $one$: $one$+1" description="my lambda" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="one" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda 2 with default args" value="y=lambda x=11,y=12: x+y&#10;" description="my lambda" toReformat="false" toShortenFQNames="true">
+  <template name="lambda 2 with default args" value="lambda $one$=11,$two$=12: $one$+$two$&#10;" description="my lambda" toReformat="false" toShortenFQNames="true">
+    <variable name="one" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="two" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda 3 without params" value="y=lambda: True" description="my lambda" toReformat="false" toShortenFQNames="true">
+  <template name="lambda 3 without params" value="lambda: True" description="my lambda" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda list assignment 1" value="add_len = lambda y, x:lengths.__setitem__(y, lengths[x] + 1)" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
+  <template name="lambda list assignment 1" value="add_len = lambda idx, val:lengths.__setitem__(idx, lengths[val] + 1)" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -24,12 +27,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda list add 1" value="will_process = lambda vertex: q.append(vertex)" description="my  list+=x" toReformat="false" toShortenFQNames="true">
+  <template name="lambda list add 1" value="will_process = lambda vertex: queue_.append(vertex)" description="my  list+=x" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda dict assignment 1" value="set_counter = lambda x, y:connectings.update({y:counter})" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
+  <template name="lambda dict assignment 1" value="set_counter = lambda key, value: connectings.update({key:value})" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

@@ -11,7 +11,8 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POPLEFT DEQUEUE" value="result  = []&#10;arr=deque($left$)&#10;while arr :&#10;    fst=arr[0]&#10;    lst=arr[-1]&#10;    result+= [arr.popleft()]  &#10;&#10;$END$&#10;  " description="while dequeue: popleft()" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POPLEFT DEQUEUE" value="result  = []&#10;$arr$=deque($left$)&#10;while $arr$ :&#10;    fst=$arr$[0]&#10;    lst=$arr$[-1]&#10;    result+= [$arr$.popleft()]  &#10;&#10;$END$&#10;  " description="while dequeue: popleft()" toReformat="false" toShortenFQNames="true">
+    <variable name="arr" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -27,7 +28,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for FOR LIST" value="for i in range(0,len($P$)):&#10;    print($P$[i])" description="for i in range(len)" toReformat="false" toShortenFQNames="true">
+  <template name="for FOR LIST" value="for i in range(len($P$)):&#10;    print($P$[i])" description="for i in range(len)" toReformat="false" toShortenFQNames="true">
     <variable name="P" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -134,19 +135,19 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap WHILE POP C-STYLE" value="while e:=$d0$.popitem() if $d0$ else None:&#10;    print (e)&#10;$END$&#10;" description="while popitem():" toReformat="false" toShortenFQNames="true">
+  <template name="formap WHILE POP C-STYLE" value="while obj:=$d0$.popitem() if $d0$ else None:&#10;    print (obj)&#10;$END$&#10;" description="while popitem():" toReformat="false" toShortenFQNames="true">
     <variable name="d0" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POP C-STYLE" value="while i:=$left$.pop() if $left$ else None:&#10;    print(i)&#10;    &#10;$END$    " description="while pop():" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POP C-STYLE" value="while obj:=$left$.pop() if $left$ else None:&#10;    print(obj)&#10;    &#10;$END$    " description="while pop():" toReformat="false" toShortenFQNames="true">
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POP HEAP" value="while i := heappop($left$) if $left$ else None:&#10;    print(i)&#10;    &#10;$END$&#10;  " description="while heappop:" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POP HEAP" value="while obj := heappop($left$) if $left$ else None:&#10;    print(obj)&#10;    &#10;$END$&#10;  " description="while heappop:" toReformat="false" toShortenFQNames="true">
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -231,12 +232,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap PARENT_TABLE create graph from 1" value="    parent_table, result_graph = {},  defaultdict(list)&#10;&#10;    for e, p in parent_table.items():&#10;        result_graph[p.parent] += [e]" description="for e, p in parent_table.items():" toReformat="false" toShortenFQNames="true">
+  <template name="formap PARENT_TABLE create graph from 1" value="parent_table, result_graph = {},  defaultdict(list)&#10;&#10;for obj, obj_parent in parent_table.items():&#10;    result_graph[obj_parent.parent] += [obj]" description="for e, p in parent_table.items():" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap PARENT_TABLE create graph from 2" value="g = {v1:[p.parent] for v1, p in sets._UnionFind__table.items()}" description="{v1:[p.parent] for v1, p in sets._UnionFind__table.items()}" toReformat="false" toShortenFQNames="true">
+  <template name="formap PARENT_TABLE create graph from 2" value="g = {vertex:[parent.parent] for vertex, parent in sets._UnionFind__table.items()}" description="{v1:[p.parent] for v1, p in sets._UnionFind__table.items()}" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
