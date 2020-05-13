@@ -4,11 +4,16 @@
   <option name="FORMATTER_TAGS_ENABLED" value="true" />
   <Python>
     <option name="SPACE_AFTER_PY_COLON" value="false" />
+    <option name="BLANK_LINES_BEFORE_FIRST_METHOD" value="1" />
     <option name="DICT_WRAPPING" value="2" />
+    <option name="DICT_NEW_LINE_AFTER_LEFT_BRACE" value="true" />
+    <option name="DICT_NEW_LINE_BEFORE_RIGHT_BRACE" value="true" />
     <option name="FROM_IMPORT_WRAPPING" value="0" />
   </Python>
   <codeStyleSettings language="Python">
     <option name="RIGHT_MARGIN" value="400" />
     <option name="KEEP_LINE_BREAKS" value="false" />
+    <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="0" />
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="0" />
   </codeStyleSettings>
 </code_scheme>
