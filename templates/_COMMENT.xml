@@ -25,4 +25,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="import ALL" value="from collections import *&#10;from dataclasses import dataclass,field # for simple comparable value-object&#10;from functools import * # reduce&#10;from heapq import heappush, heappop, heapify # heap, priority queue&#10;from itertools import * # product&#10;from math import * # log&#10;from operator import * # add - lambda functions&#10;from random import * # rnd&#10;import sys&#10;from typing import Any, Final, Union, Optional, Iterable, Collection, Hashable, Callable&#10;from warnings import warn # warn" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
