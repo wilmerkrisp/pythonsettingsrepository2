@@ -95,4 +95,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="class SUPER solution" value="# &lt;editor-fold desc=&quot;$bfs$&quot;&gt;&#10;class Solution(object):&#10;    &quot;&quot;&quot; Solution class with static methods &quot;&quot;&quot;&#10;&#10;    def _run_helper(arg):&#10;        ...&#10;        &#10;    def $bfs$(list_): # type: (Iterable[Any]) -&gt; int&#10;        &quot;&quot;&quot; $bfs$ method &quot;&quot;&quot;&#10;        if not list_: raise ValueError(&quot;Method input argument must not be empty.&quot;)&#10;        assert isinstance(list_,Iterable)&#10;        &#10;        print (f&quot;method1:{arg}&quot;)&#10;        &#10;        assert list_[0] , &quot;Check invariant - result is not empty&quot;&#10;        return list_[0]&#10;&#10;if __name__ == '__main__': &#10;    data1 = {&#10;        1:[2, 3],&#10;        2:[1, 3, 4],&#10;        3:[1, 2, 4],&#10;        4:[2, 3]&#10;    }&#10;    input_=data1&#10;    result=Solution.$bfs$(input_)&#10;    print(&quot;MAIN $bfs$: &quot;, result)&#10;# &lt;/editor-fold&gt;" description="for algo" toReformat="false" toShortenFQNames="true">
+    <variable name="bfs" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
