@@ -74,4 +74,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function ANNOTATE TYPING TURN-OFF" value="# type: ignore&#10;&#10;#для pytype&#10;# pytype: disable=attribute-error" description="full description" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
