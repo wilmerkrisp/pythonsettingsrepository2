@@ -64,4 +64,14 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function ANNOTATE TYPING 1" value="&quot;&quot;&quot;&#10;Any&#10;Final&#10;Union&#10;Optional&#10;Iterable&#10;Collection&#10;Hashable&#10;Callable&#10;&#10;&#10;tuple&#10;list &#10;set &#10;dict&#10;deque&#10;&quot;&quot;&quot;&#10;&#10;&#10;$END$" description="brief descr" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function ANNOTATE TYPING 2" value="&quot;&quot;&quot;&#10;https://docs.python.org/3.9/whatsnew/3.9.html&#10;https://www.python.org/dev/peps/pep-0585/&#10;https://docs.python.org/3.8/library/typing.html&#10;https://docs.python.org/3.8/library/collections.abc.html#collections.abc.Container&#10;&#10;Any&#10;Final&#10;Union&#10;Optional&#10;Iterable&#10;Collection&#10;Hashable&#10;Callable&#10;&#10;&#10;tuple&#10;list &#10;set &#10;dict&#10;deque&#10;&#10;&#10;&#10;tuple # typing.Tuple&#10;list # typing.List&#10;dict # typing.Dict&#10;set # typing.Set&#10;frozenset # typing.FrozenSet&#10;type # typing.Type&#10;collections.deque&#10;collections.defaultdict&#10;collections.OrderedDict&#10;collections.Counter&#10;collections.ChainMap&#10;collections.abc.Awaitable&#10;collections.abc.Coroutine&#10;collections.abc.AsyncIterable&#10;collections.abc.AsyncIterator&#10;collections.abc.AsyncGenerator&#10;collections.abc.Iterable&#10;collections.abc.Iterator&#10;collections.abc.Generator&#10;collections.abc.Reversible&#10;collections.abc.Container&#10;collections.abc.Collection&#10;collections.abc.Callable&#10;collections.abc.Set # typing.AbstractSet&#10;collections.abc.MutableSet&#10;collections.abc.Mapping&#10;collections.abc.MutableMapping&#10;collections.abc.Sequence&#10;collections.abc.MutableSequence&#10;collections.abc.ByteString&#10;collections.abc.MappingView&#10;collections.abc.KeysView&#10;collections.abc.ItemsView&#10;collections.abc.ValuesView&#10;contextlib.AbstractContextManager # typing.ContextManager&#10;contextlib.AbstractAsyncContextManager # typing.AsyncContextManager&#10;re.Pattern # typing.Pattern, typing.re.Pattern&#10;re.Match # typing.Match, typing.re.Match&#10;&#10;&#10;&quot;&quot;&quot;&#10;&#10;&#10;$END$" description="full description" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
