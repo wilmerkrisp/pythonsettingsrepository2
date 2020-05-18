@@ -21,7 +21,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="print Solution" value="print(Solution().$meth$($END$))&#10;" description="print()" toReformat="false" toShortenFQNames="true">
+  <template name="print Solution" value="print(&quot;solution=&quot;,Solution().$meth$($END$))&#10;" description="print()" toReformat="false" toShortenFQNames="true">
     <variable name="meth" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
