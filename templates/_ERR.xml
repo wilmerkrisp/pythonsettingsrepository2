@@ -53,12 +53,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="err WARN method deprecated" value="warn(&quot;Dont use the legacy method&quot;, DeprecationWarning) # уже запрещено&#10;warn(&quot;In the future the method will be prohibited&quot;, PendingDeprecationWarning) #  - будет запрещено в будущем&#10;warn(&quot;In the future the method will be changed&quot;, FutureWarning)  # метод будет изменен в будущем" description="warn" toReformat="false" toShortenFQNames="true">
+  <template name="err WARN method deprecated" value="warnings.warn(&quot;Dont use the legacy method&quot;, DeprecationWarning) # уже запрещено&#10;warnings.warn(&quot;In the future the method will be prohibited&quot;, PendingDeprecationWarning) #  - будет запрещено в будущем&#10;warnings.warn(&quot;In the future the method will be changed&quot;, FutureWarning)  # метод будет изменен в будущем" description="warn" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="err WARN BEST" value="warn(&quot;Input argument is empty&quot;, UserWarning) " description="UserWarning" toReformat="false" toShortenFQNames="true">
+  <template name="err WARN BEST" value="warnings.warn(&quot;Input argument is empty&quot;, UserWarning) " description="UserWarning" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

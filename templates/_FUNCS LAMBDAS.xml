@@ -1,5 +1,5 @@
 <templateSet group="_FUNCS LAMBDAS">
-  <template name="lambda 1" value="lambda $one$: $one$+1" description="my lambda" toReformat="false" toShortenFQNames="true" deactivated="true">
+  <template name="lambda 1" value="lambda $one$: $one$+1" description="my lambda" toReformat="false" toShortenFQNames="true">
     <variable name="one" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
@@ -17,22 +17,22 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda list assignment 1" value="add_len = lambda idx, val:lengths.__setitem__(idx, lengths[val] + 1)" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
+  <template name="lambda list assignment 1" value="add_len = lambda idx, val:operator.setitem(lengths, idx, lengths[val] + 1)&#10;#add_len = lambda idx, val:lengths.__setitem__(idx, lengths[val] + 1)" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda list add 2" value="will_process = lambda vertex: q.__iadd__([vertex])" description="my  list+=x" toReformat="false" toShortenFQNames="true">
+  <template name="lambda list add 2" value="will_process = lambda vertex: operator.iadd(q, [vertex])&#10;#will_process = lambda vertex: q.__iadd__([vertex])" description="my  list+=x" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda list add 1" value="will_process = lambda vertex: queue_.append(vertex)" description="my  list+=x" toReformat="false" toShortenFQNames="true">
+  <template name="lambda list add 1" value="will_process = lambda vertex: operator.iadd(queue_, vertex)&#10;#will_process = lambda vertex: queue_.append(vertex)" description="my  list+=x" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="lambda dict assignment 1" value="set_counter = lambda key, value: connectings.update({key:value})" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
+  <template name="lambda dict assignment 1" value="set_counter = lambda key, value: operator.ior(connectings,{key:value})&#10;#set_counter = lambda key, value: connectings.update({key:value})&#10;" description="my list[x]=new" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
