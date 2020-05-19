@@ -165,7 +165,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list QUEUE" value="queue_=[]&#10;queue_[:0] = [12]   # push&#10;v = queue_.pop()    # pop" description="NEW  []" toReformat="false" toShortenFQNames="true">
+  <template name="list QUEUE BAD" value="queue_=[]&#10;queue_[:0] = [12]   # push=enque&#10;v = queue_.pop()    # pop =deque" description="NEW  []" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -248,6 +248,16 @@
   </template>
   <template name="map mutable-&gt;immutable" value="tuple($l1$.items())" description="tuple(map.items())" toReformat="false" toShortenFQNames="true">
     <variable name="l1" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="list QUEUE FIXEDSIZE с вытеснением" value="queue_=[]&#10;queue_[:0] = [12]   # push=enque&#10;v = queue_.pop()    # pop =deque&#10;&#10;dec = collections.deque([1, 2, 3, 4, 5, 6], maxlen=6)&#10;dec.appendleft(101)  # если добавить слева то вытеснится справа&#10;# [101, 1, 2, 3, 4, 5]&#10;dec.append(102) # если добавить справа то вытеснится слева&#10;# [1, 2, 3, 4, 5, 102]" description="deque(maxlen)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="list QUEUE" value="queue =collections.deque()&#10;queue.append(12)   # push=enque&#10;v = queue.pop()    # pop =deque" description="NEW  []" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
