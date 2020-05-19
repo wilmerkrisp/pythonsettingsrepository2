@@ -78,4 +78,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="list new list of lists [ [] ]" value="len_x,len_y=10,5&#10;cols = [[0] * len_y for _ in range(len_x)]&#10;&#10;&quot;&quot;&quot;&#10;вложенные [ for for ]  запрещены&#10;&#10;table_vesi = [[[] for _ in range(len(vesi) + 1)] for _ in range(bagpack_capasity + 1)]&#10;    &#10;l = len(graph)&#10;table_vesi = [[inf for _ in range(l)] for _ in range(l)]&#10;&quot;&quot;&quot;" description="[ [for_in] for_in ]" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
