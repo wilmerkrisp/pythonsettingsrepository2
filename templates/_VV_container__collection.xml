@@ -246,4 +246,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="map mutable-&gt;immutable" value="tuple($l1$.items())" description="tuple(map.items())" toReformat="false" toShortenFQNames="true">
+    <variable name="l1" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
