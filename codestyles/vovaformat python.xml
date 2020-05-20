@@ -8,12 +8,13 @@
     <option name="DICT_WRAPPING" value="2" />
     <option name="DICT_NEW_LINE_AFTER_LEFT_BRACE" value="true" />
     <option name="DICT_NEW_LINE_BEFORE_RIGHT_BRACE" value="true" />
-    <option name="FROM_IMPORT_WRAPPING" value="0" />
   </Python>
   <codeStyleSettings language="Python">
     <option name="RIGHT_MARGIN" value="400" />
     <option name="KEEP_LINE_BREAKS" value="false" />
     <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="0" />
     <option name="KEEP_BLANK_LINES_IN_CODE" value="0" />
+    <option name="WRAP_LONG_LINES" value="true" />
+    <option name="WRAP_ON_TYPING" value="0" />
   </codeStyleSettings>
 </code_scheme>
