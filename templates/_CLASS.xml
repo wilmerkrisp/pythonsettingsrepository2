@@ -106,7 +106,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="method OVERLOAD" value="class Cell(object):&#10;    def __init__(self):&#10;        self._alive = False&#10;    @property&#10;    def alive(self):&#10;        return self._alive&#10;    def set_state(self, state):&#10;        self._alive = bool(state)&#10;    set_alive = partialmethod(set_state, True) # new alias for method set_state&#10;    set_dead = partialmethod(set_state, False)&#10;&#10;c = Cell()&#10;c.set_alive()&#10;" description="new_method=partialmethod(old_method, 12)" toReformat="false" toShortenFQNames="true">
+  <template name="method OVERLOAD  как алиас для метода" value="class Cell(object):&#10;    def __init__(self):&#10;        self._alive = False&#10;    @property&#10;    def alive(self):&#10;        return self._alive&#10;    def set_state(self, state):&#10;        self._alive = bool(state)&#10;    set_alive = partialmethod(set_state, True) # new alias for method set_state&#10;    set_dead = partialmethod(set_state, False)&#10;&#10;c = Cell()&#10;c.set_alive()&#10;" description="new_method=partialmethod(old_method, 12)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="method OVERLOAD  SUPER для разных типов разные функции" value="class Negator:&#10;&#10;    @singledispatchmethod  # !! будет смотреть только на тип ТОЛЬКО ПЕРВОГО аргумента &quot;arg&quot;&#10;    def neg(self, arg):&#10;        raise NotImplementedError(&quot;Cannot negate a&quot;)&#10;        &#10;    @neg.register&#10;    def _(self, arg: int): # вызовется при o.neg(1)&#10;        return -arg&#10;        &#10;    @neg.register&#10;    def _(self, arg: bool): # вызовется при o.neg(True)&#10;        return not arg&#10;&#10;" description="@singledispatchmethod" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
