@@ -250,4 +250,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="dl list del many by value" value="while 2 in $s$: $s$.remove($END$)" description="while in : list.remove" toReformat="false" toShortenFQNames="true">
+    <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
