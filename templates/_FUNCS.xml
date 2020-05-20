@@ -79,4 +79,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function PARTIAL HASKELL" value="functools.partial(count_animals, 12)&#10;&#10;&quot;&quot;&quot; можно связать аргумент в середине функции, &#10;но тогда в частичной функции нужно будет указывать именованные параметры (те которые после середины функции шли)&#10;&#10;def count_animals(number, kind, adjective='big'):&#10;fn2 = functools.partial(count_animals, kind='tiger')&#10;fn2(12, adjective='little') &#10;&quot;&quot;&quot;" description="частичные функции" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
