@@ -69,4 +69,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="if matrix" value="# Check for empty matrices&#10;if not $matrix$ or not $matrix$[0]:&#10;    return []&#10;&#10;# Variables to track the size of the matrix&#10;N, M = len($matrix$), len($matrix$[0])&#10;" description="check matrix" toReformat="false" toShortenFQNames="true">
+    <variable name="matrix" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
