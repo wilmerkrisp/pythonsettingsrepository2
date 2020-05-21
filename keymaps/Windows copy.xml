@@ -112,7 +112,6 @@
   </action>
   <action id="InspectCode">
     <keyboard-shortcut first-keystroke="f16" />
-    <keyboard-shortcut first-keystroke="ctrl f4" />
   </action>
   <action id="JumpToLastWindow" />
   <action id="LPPythonTypeInfoAdded">
@@ -132,6 +131,9 @@
     <keyboard-shortcut first-keystroke="ctrl o" />
   </action>
   <action id="OverrideMethods" />
+  <action id="PylintCurrentFileAction">
+    <keyboard-shortcut first-keystroke="ctrl f4" />
+  </action>
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="ctrl alt l" />
     <keyboard-shortcut first-keystroke="f8" />
