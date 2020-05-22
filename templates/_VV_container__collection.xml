@@ -226,7 +226,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="set intersect (super)" value="range_ = set(range(len(pts))) &amp; set(range(idx - 3, idx + 5)) - {idx}&#10;pts_d = map(pts.__getitem__, range_)&#10;&#10;    &#10;# take 4 left points, if possible&#10;cnt = 4&#10;while (cnt := cnt - 1) &gt;= 0 and idx1 &gt; 0:&#10;    idx1 -= 1&#10;&#10;# take 4 right points, if possible&#10;cnt = 4&#10;while (cnt := cnt - 1) &gt;= 0 and idx2 &lt; len(pts) - 1:&#10;    idx2 += 1&#10;pts_delta = pts[idx1: idx] + pts[idx + 1:idx2 + 1]" description="set(range(len(pts))) &amp; set(range(idx - 3, idx + 5))   вместо инкрементальных приращений индекса" toReformat="false" toShortenFQNames="true">
+  <template name="set intersect (super)" value="range_ = set(range(len(pts))) &amp; set(range(idx - 3, idx + 5)) - {idx}&#10;pts_d = map(pts.__getitem__, range_)&#10;# как вариант functools.partial(operator.getitem, arr)&#10; &#10;    &#10;# take 4 left points, if possible&#10;cnt = 4&#10;while (cnt := cnt - 1) &gt;= 0 and idx1 &gt; 0:&#10;    idx1 -= 1&#10;&#10;# take 4 right points, if possible&#10;cnt = 4&#10;while (cnt := cnt - 1) &gt;= 0 and idx2 &lt; len(pts) - 1:&#10;    idx2 += 1&#10;pts_delta = pts[idx1: idx] + pts[idx + 1:idx2 + 1]" description="set(range(len(pts))) &amp; set(range(idx - 3, idx + 5))   вместо инкрементальных приращений индекса" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -241,7 +241,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list range в обратном порядке по массиву" value="range(N-1,-1,-1)$END$" description="range(N-1,-1,-1)" toReformat="false" toShortenFQNames="true">
+  <template name="list range в обратном порядке по массиву" value="range(N-1,-1,-1)" description="range(N-1,-1,-1)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -273,6 +273,11 @@
     </context>
   </template>
   <template name="map new CACHE  LRU Least recently used FIXEDSIZE" value="class LRU(OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the least recently looked-up key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __getitem__(self, key):&#10;        value = super().__getitem__(key)&#10;        self.move_to_end(key)&#10;        return value&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="list range в обратном порядке по массиву SUPER" value="reversed(range(N))" description="reversed(range(N))" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

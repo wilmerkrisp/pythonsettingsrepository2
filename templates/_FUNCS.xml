@@ -99,4 +99,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function PARTIAL for list" value="arr = [1, 2, 3, 4, 5]&#10;fn = functools.partial(operator.getitem, arr)&#10;print(fn(3))" description="functools.partial(operator.getitem, arr)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
