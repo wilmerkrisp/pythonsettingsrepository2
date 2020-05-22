@@ -202,7 +202,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="rl list find/index/count" value="s.index(b) ==error&#10;s.count(b)&#10;s.find(b)==-1&#10; $END$" description="find index count" toReformat="false" toShortenFQNames="true">
+  <template name="rl list find/index/count ONE" value="s.index(b) ==error&#10;s.count(b)&#10;s.find(b)==-1&#10; $END$" description="find index count" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -257,6 +257,11 @@
     </context>
   </template>
   <template name="rl list get OR default 1" value="str = str.zfill(n)" description="можно просто дозаполнить исходные данные пустышками" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="rl list find MANY" value="foo_indexes = [n for n,x in enumerate(alist) if x=='foo']&#10; $END$" description="[  for   in   if x=='foo']" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
