@@ -245,13 +245,18 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="rl list get one noErrorIfAbsent" value="def get_or_default(idx):&#10;    if 0 &lt;= idx &lt; len(nums):&#10;        return nums[idx]&#10;    return None" description="get/compute or default value" toReformat="false" toShortenFQNames="true">
+  <template name="rl list get OR default 2 noErrorIfAbsent" value="def get_or_default(idx):&#10;    if 0 &lt;= idx &lt; len(nums):&#10;        return nums[idx]&#10;    return None" description="def get_or_default(idx):" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
   <template name="dl list del many by value" value="while 2 in $s$: $s$.remove($END$)" description="while in : list.remove" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="rl list get OR default 1" value="str = str.zfill(n)" description="можно просто дозаполнить исходные данные пустышками" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
