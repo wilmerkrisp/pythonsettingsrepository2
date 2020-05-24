@@ -267,12 +267,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map new CACHE LU last updated" value="class LastUpdatedOrderedDict(OrderedDict):&#10;    &quot;&quot;&quot; Store items in the order the keys were last added &quot;&quot;&quot;&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        self.move_to_end(key)&#10;&#10; " description="OrderedDict" toReformat="false" toShortenFQNames="true">
+  <template name="map new CACHE LU last updated" value="class LastUpdatedOrderedDict(collections.OrderedDict):&#10;    &quot;&quot;&quot; Store items in the order the keys were last added &quot;&quot;&quot;&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        self.move_to_end(key)&#10;&#10; " description="OrderedDict" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map new CACHE  LRU Least recently used FIXEDSIZE" value="class LRU(OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the least recently looked-up key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __getitem__(self, key):&#10;        value = super().__getitem__(key)&#10;        self.move_to_end(key)&#10;        return value&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
+  <template name="map new CACHE  LRU Least recently used FIXEDSIZE" value="class LRU(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the least recently looked-up key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __getitem__(self, key):&#10;        value = super().__getitem__(key)&#10;        self.move_to_end(key)&#10;        return value&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -296,6 +296,11 @@
   </template>
   <template name="map new COUNTER find duplicated elements" value="list_dups = [num for num, cnt in $collections$.Counter(nums).items() if cnt &gt; 1]" description="[ Counter(nums)  if cnt &gt; 1]" toReformat="false" toShortenFQNames="true">
     <variable name="collections" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="map new CACHE FIXEDSIZE LIFOqueue" value="class FixedSizeDict(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the LIFOqueue key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
