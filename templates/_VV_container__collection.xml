@@ -221,7 +221,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map new DICT of DICTs" value="result = collections.defaultdict(lambda:collections.defaultdict(lambda:inf))&#10;parents = collections.defaultdict(lambda:collections.defaultdict(lambda:None))&#10;# !! предостережение - каждое получение ненайденного элемента создает его " description="defaultdict(defaultdict)" toReformat="false" toShortenFQNames="true">
+  <template name="map new DICT of DICTs" value="result = collections.defaultdict(lambda:collections.defaultdict(lambda:math.inf))&#10;parents = collections.defaultdict(lambda:collections.defaultdict(lambda:None))&#10;# !! предостережение - каждое получение ненайденного элемента создает его " description="defaultdict(defaultdict)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
