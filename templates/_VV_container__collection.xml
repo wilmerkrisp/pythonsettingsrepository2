@@ -294,4 +294,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="map new COUNTER find duplicated elements" value="list_dups = [num for num, cnt in $collections$.Counter(nums).items() if cnt &gt; 1]" description="[ Counter(nums)  if cnt &gt; 1]" toReformat="false" toShortenFQNames="true">
+    <variable name="collections" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
