@@ -287,4 +287,11 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="map new from list with indexes" value="$che$ = {key: idx for idx, key in enumerate($nums$)}&#10;&#10; " description="{ key:idx }" toReformat="false" toShortenFQNames="true">
+    <variable name="nums" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="che" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
