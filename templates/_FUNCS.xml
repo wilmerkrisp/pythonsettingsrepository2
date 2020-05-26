@@ -89,16 +89,6 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="function TRIGGER" value="trigger = False&#10;&#10;def run_once(proc):&#10;    nonlocal trigger&#10;    if trigger:&#10;        return&#10;    else:&#10;        trigger = True&#10;        proc()&#10;&#10;def is_only_one_zero(elem):&#10;    nonlocal trigger&#10;    if not trigger and elem == 0:&#10;        trigger = True&#10;        return True&#10;    else:&#10;        return False" description="run only once" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="function TRIGGER SUPER" value="trigger = 1&#10;&#10;# flip the trigger&#10;trigger = 1 - trigger" description="trigger = 1 - trigger" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
   <template name="function PARTIAL for list" value="arr = [1, 2, 3, 4, 5]&#10;fn = functools.partial(operator.getitem, arr)&#10;print(fn(3))" description="functools.partial(operator.getitem, arr)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />

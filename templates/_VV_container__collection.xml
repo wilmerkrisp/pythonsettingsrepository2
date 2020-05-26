@@ -153,12 +153,6 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list SWAP elements in list" value="def swap(i, j):&#10;    $arr$[i], $arr$[j] = $arr$[j], $arr$[i]" description="" toReformat="false" toShortenFQNames="true">
-    <variable name="arr" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
   <template name="map get first key" value="next(iter($s$))" description="next(iter)" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -206,11 +200,6 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list HEAP SUPER with deletion operation" value="class Heap():&#10;    &quot;&quot;&quot; Heap - priority queue.&#10;&#10;    Each element is a tuple (key,value)&#10;    &quot;&quot;&quot;&#10;&#10;    REMOVED = '&lt;removed-task&gt;'  # placeholder for a removed task&#10;&#10;    def __init__(self, list_):  # type: (Heap, Iterable) -&gt; None&#10;        self.heap = list(list_) if list_ else []  # list of entries arranged in a heap&#10;        self.entry_finder = {e[1]: e for e in self.heap}  # mapping of VALUES to entries&#10;        heapq.heapify(self.heap)&#10;&#10;    def push(self, key, value):  # type: (Heap, Any, Hashable) -&gt; None&#10;        &quot;&quot;&quot;Add a new VALUE or update the priority of an existing entry&quot;&quot;&quot;&#10;        if value in self.entry_finder:&#10;            self.remove(value)&#10;        entry = [key, value]&#10;        self.entry_finder[value] = entry&#10;        heapq.heappush(self.heap, entry)&#10;&#10;    def remove(self, value):  # type: (Heap, Hashable) -&gt; None&#10;        &quot;&quot;&quot;Mark an existing VALUE as REMOVED.  Raise KeyError if not found.&quot;&quot;&quot;&#10;        entry = self.entry_finder.pop(value)&#10;        entry[-1] = Heap.REMOVED&#10;&#10;    def find_entry(self, value):  # type: (Heap, Hashable) -&gt; Any&#10;        &quot;&quot;&quot; find entry by value &quot;&quot;&quot;&#10;        return self.entry_finder[value]&#10;&#10;    def peek(self):  # type: (Heap) -&gt; Any&#10;        &quot;&quot;&quot; peek first element &quot;&quot;&quot;&#10;        return self.heap[0]&#10;&#10;    def pop(self):  # type: (Heap) -&gt; Optional[Any]&#10;        &quot;&quot;&quot;Remove and return the lowest priority VALUE. Raise KeyError if empty.&quot;&quot;&quot;&#10;        while self.heap:&#10;            _, value = heapq.heappop(self.heap)&#10;            if value is not Heap.REMOVED:&#10;                del self.entry_finder[value]  # так как это операция pop то удалим также из словаря&#10;                return value&#10;        return None&#10;&#10;    def __repr__(self):&#10;        return f&quot;heap={self.heap} \n dict={self.entry_finder}&quot;" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
   <template name="list QUEUE PRIORITY CONCURRENT blocking" value="import queue # SimpleQueue PriorityQueue LifoQueue &#10;&#10;# то же самое что и heapq но только многопоточное&#10;# можно сделать заданного размера, и тогда очередь заблокируется при полном заполнении&#10;pq = queue.PriorityQueue()&#10;pq.put(10)&#10;pq.put(9)&#10;pq.put(8)&#10;&#10;print(&quot;priority queue&quot;,pq.get())" description="standart queue.PriorityQueue" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
@@ -252,27 +241,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list QUEUE FIXEDSIZE с вытеснением" value="queue_=[]&#10;queue_[:0] = [12]   # push=enque&#10;v = queue_.pop()    # pop =deque&#10;&#10;dec = collections.deque([1, 2, 3, 4, 5, 6], maxlen=6)&#10;dec.appendleft(101)  # если добавить слева то вытеснится справа&#10;# [101, 1, 2, 3, 4, 5]&#10;dec.append(102) # если добавить справа то вытеснится слева&#10;# [1, 2, 3, 4, 5, 102]" description="deque(maxlen)" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
   <template name="list QUEUE" value="queue =collections.deque()&#10;queue.append(12)   # push=enque&#10;v = queue.pop()    # pop =deque" description="NEW  []" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
   <template name="map STACK" value="map = {&#10;    1: 1,&#10;    2: 2,&#10;    3: 3,&#10;    4: 4&#10;}&#10;map1 = collections.OrderedDict(map)&#10;print(map1.popitem())  # LIFO queue&#10;print(map1.popitem(last=False))  # FIFO stacke" description="OrderedDict(map)" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="map new CACHE LU last updated" value="class LastUpdatedOrderedDict(collections.OrderedDict):&#10;    &quot;&quot;&quot; Store items in the order the keys were last added &quot;&quot;&quot;&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        self.move_to_end(key)&#10;&#10; " description="OrderedDict" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="map new CACHE  LRU Least recently used FIXEDSIZE" value="class LRU(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the least recently looked-up key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __getitem__(self, key):&#10;        value = super().__getitem__(key)&#10;        self.move_to_end(key)&#10;        return value&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -290,17 +264,6 @@
   <template name="map new from list with indexes" value="$che$ = {key: idx for idx, key in enumerate($nums$)}&#10;&#10; " description="{ key:idx }" toReformat="false" toShortenFQNames="true">
     <variable name="nums" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <variable name="che" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="map new COUNTER find duplicated elements" value="list_dups = [num for num, cnt in $collections$.Counter(nums).items() if cnt &gt; 1]" description="[ Counter(nums)  if cnt &gt; 1]" toReformat="false" toShortenFQNames="true">
-    <variable name="collections" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="map new CACHE FIXEDSIZE LIFOqueue" value="class FixedSizeDict(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the LIFOqueue key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

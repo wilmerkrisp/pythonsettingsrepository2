@@ -4,4 +4,71 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="map new COUNTER find duplicated elements" value="list_dups = [num for num, cnt in $collections$.Counter(nums).items() if cnt &gt; 1]" description="[ Counter(nums)  if cnt &gt; 1]" toReformat="false" toShortenFQNames="true">
+    <variable name="collections" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="map new CACHE LU last updated" value="class LastUpdatedOrderedDict(collections.OrderedDict):&#10;    &quot;&quot;&quot; Store items in the order the keys were last added &quot;&quot;&quot;&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        self.move_to_end(key)&#10;&#10; " description="OrderedDict" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="map new CACHE FIXEDSIZE LIFOqueue" value="class FixedSizeDict(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the LIFOqueue key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="map new CACHE  LRU Least recently used FIXEDSIZE" value="class LRU(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the least recently looked-up key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __getitem__(self, key):&#10;        value = super().__getitem__(key)&#10;        self.move_to_end(key)&#10;        return value&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="list SWAP elements in list" value="def swap(i, j):&#10;    $arr$[i], $arr$[j] = $arr$[j], $arr$[i]" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="arr" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="list QUEUE FIXEDSIZE с вытеснением" value="queue_=[]&#10;queue_[:0] = [12]   # push=enque&#10;v = queue_.pop()    # pop =deque&#10;&#10;dec = collections.deque([1, 2, 3, 4, 5, 6], maxlen=6)&#10;dec.appendleft(101)  # если добавить слева то вытеснится справа&#10;# [101, 1, 2, 3, 4, 5]&#10;dec.append(102) # если добавить справа то вытеснится слева&#10;# [1, 2, 3, 4, 5, 102]" description="deque(maxlen)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="list HEAP SUPER with deletion operation" value="class Heap():&#10;    &quot;&quot;&quot; Heap - priority queue.&#10;&#10;    Each element is a tuple (key,value)&#10;    &quot;&quot;&quot;&#10;&#10;    REMOVED = '&lt;removed-task&gt;'  # placeholder for a removed task&#10;&#10;    def __init__(self, list_):  # type: (Heap, Iterable) -&gt; None&#10;        self.heap = list(list_) if list_ else []  # list of entries arranged in a heap&#10;        self.entry_finder = {e[1]: e for e in self.heap}  # mapping of VALUES to entries&#10;        heapq.heapify(self.heap)&#10;&#10;    def push(self, key, value):  # type: (Heap, Any, Hashable) -&gt; None&#10;        &quot;&quot;&quot;Add a new VALUE or update the priority of an existing entry&quot;&quot;&quot;&#10;        if value in self.entry_finder:&#10;            self.remove(value)&#10;        entry = [key, value]&#10;        self.entry_finder[value] = entry&#10;        heapq.heappush(self.heap, entry)&#10;&#10;    def remove(self, value):  # type: (Heap, Hashable) -&gt; None&#10;        &quot;&quot;&quot;Mark an existing VALUE as REMOVED.  Raise KeyError if not found.&quot;&quot;&quot;&#10;        entry = self.entry_finder.pop(value)&#10;        entry[-1] = Heap.REMOVED&#10;&#10;    def find_entry(self, value):  # type: (Heap, Hashable) -&gt; Any&#10;        &quot;&quot;&quot; find entry by value &quot;&quot;&quot;&#10;        return self.entry_finder[value]&#10;&#10;    def peek(self):  # type: (Heap) -&gt; Any&#10;        &quot;&quot;&quot; peek first element &quot;&quot;&quot;&#10;        return self.heap[0]&#10;&#10;    def pop(self):  # type: (Heap) -&gt; Optional[Any]&#10;        &quot;&quot;&quot;Remove and return the lowest priority VALUE. Raise KeyError if empty.&quot;&quot;&quot;&#10;        while self.heap:&#10;            _, value = heapq.heappop(self.heap)&#10;            if value is not Heap.REMOVED:&#10;                del self.entry_finder[value]  # так как это операция pop то удалим также из словаря&#10;                return value&#10;        return None&#10;&#10;    def __repr__(self):&#10;        return f&quot;heap={self.heap} \n dict={self.entry_finder}&quot;" description="NEW  [class sorted by value]  {class hashed by key}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="func find nearest clothest value" value="idx, val = min(enumerate(points), key=lambda idx_pt:abs(idx_pt[1][0] - to_point[0]))" description="в списке найти значение наиболее близкое к заданному" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="func  число разложить на цифры" value="n = 123&#10;while n &gt; 0:&#10;    n, digit = divmod(n, 10)&#10;    print(digit) # 3 2 1" description="n, digit = divmod(n, 10)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="formap MIN k min elements O(N log k)" value="# 2-3. build heap of top k frequent elements and&#10;# convert it into an output array&#10;# O(N log k) time&#10;counter = collections.Counter(nums)&#10;&#10;# для возвращения используются только ключи словаря&#10;# а для сортировки используем только значения словаря&#10;return heapq.nlargest(k, counter.keys(), key=counter.get)" description="heapq.nlargest" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function TRIGGER SUPER" value="trigger = 1&#10;&#10;# flip the trigger&#10;trigger = 1 - trigger" description="trigger = 1 - trigger" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function TRIGGER" value="trigger = False&#10;&#10;def run_once(proc):&#10;    nonlocal trigger&#10;    if trigger:&#10;        return&#10;    else:&#10;        trigger = True&#10;        proc()&#10;&#10;def is_only_one_zero(elem):&#10;    nonlocal trigger&#10;    if not trigger and elem == 0:&#10;        trigger = True&#10;        return True&#10;    else:&#10;        return False" description="run only once" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="formap MIN k min elements O(N)" value="def find_k_largest(self, nums: List[int], nth: int) -&gt; int:&#10;        length = len(nums)&#10;        if not nums:&#10;            return 0&#10;        if length &lt; 2:&#10;            return max(nums)&#10;&#10;        def swap(i, j):&#10;            nums[i], nums[j] = nums[j], nums[i]&#10;&#10;        # randomly find pivot&#10;        pivot_index = random.randint(0, length - 1)  # [1,10]&#10;        pivot = nums[pivot_index]&#10;        swap(0, pivot_index)&#10;        border = 1&#10;&#10;        # split above and below pivot&#10;        for j in range(1, length):&#10;            if nums[j] &lt; pivot:&#10;                swap(j, border)&#10;                border += 1&#10;&#10;        # put pivot back&#10;        swap(0, border-1) # важно обменятся с последним элементом их ЛЕВОЙ половины&#10;&#10;        if border == nth:&#10;            return pivot&#10;        if nth &lt; border:&#10;            return self.find_k_largest(nums[:border - 1], nth)&#10;        return self.find_k_largest(nums[border:], nth - border)  # idx больше на еденицу чем I тогда начнем искать с 0 те это след миним эллемент" description="hoara i-order statistic problem" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

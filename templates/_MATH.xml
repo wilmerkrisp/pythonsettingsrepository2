@@ -81,17 +81,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="func find nearest clothest value" value="idx, val = min(enumerate(points), key=lambda idx_pt:abs(idx_pt[1][0] - to_point[0]))" description="в списке найти значение наиболее близкое к заданному" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="func  число разложить на цифры" value="n = 123&#10;while n &gt; 0:&#10;    n, digit = divmod(n, 10)&#10;    print(digit) # 3 2 1" description="n, digit = divmod(n, 10)" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="formap MIN k min elements" value="# 2-3. build heap of top k frequent elements and&#10;# convert it into an output array&#10;# O(N log k) time&#10;counter = collections.Counter(nums)&#10;&#10;# для возвращения используются только ключи словаря&#10;# а для сортировки используем только значения словаря&#10;return heapq.nlargest(k, counter.keys(), key=counter.get)" description="sorted(items()  key=lambda)" toReformat="false" toShortenFQNames="true">
+  <template name="func random element from list" value="random.choise(arr)" description="choise(arr)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
