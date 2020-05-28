@@ -96,4 +96,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function CYCLE FIND" value="# множество можно использовать для обнаружения циклов уже виденных элементов&#10;seen=set()&#10;while node:&#10;    if node in seen:&#10;        return True # found cycle!&#10;    else:&#10;        seen|= {node}&#10;    node= node.next" description="множество можно использовать для обнаружения циклов уже виденных элементов" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
