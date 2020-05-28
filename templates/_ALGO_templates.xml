@@ -101,4 +101,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function TWO POINTER for linked list" value="# Initialize slow &amp; fast pointers&#10;node_slow = head&#10;node_fast = head&#10;# Change this condition to fit specific problem.&#10;# Attention: remember to avoid null-pointer error&#10;while node_slow and node_fast and node_fast.next:&#10;    node_slow = node_slow.next  # move slow pointer one step each time&#10;    node_fast = node_fast.next.next  # move fast pointer two steps each time&#10;    if node_slow == node_fast:  # change this condition to fit specific problem&#10;        return True&#10;&#10;return False  # change return value to fit specific problem" description="TEMPLATE" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
