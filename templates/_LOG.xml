@@ -32,7 +32,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="print linked list" value="def printLinkedList(linked_list):&#10;    &quot;&quot;&quot; print linked list &quot;&quot;&quot;&#10;    list_repr = []&#10;&#10;    node = linked_list&#10;    while node:  # because size is a count of elements&#10;        list_repr += [node]&#10;        node = node.next&#10;&#10;    print(str(list_repr))" description="for for print" toReformat="false" toShortenFQNames="true">
+  <template name="print linked list" value="def strLinkedList(linked_list):&#10;    &quot;&quot;&quot; linked list to string&quot;&quot;&quot;&#10;    list_repr = []&#10;&#10;    node = linked_list&#10;    while node:  # because size is a count of elements&#10;        list_repr += [node]&#10;        node = node.next&#10;&#10;    return str(list_repr)&#10;&#10;&#10;def printLinkedList(linked_list):&#10;    &quot;&quot;&quot; print linked list &quot;&quot;&quot;&#10;    print(strLinkedList(linked_list))" description="for for print" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
