@@ -266,4 +266,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="rm map get many" value="itertools.islice($s$, 2, None$END$)&#10;# islice('ABCDEFG', 2, None) --&gt; C D E F G&#10;" description="islice [start,] stop [, step]" toReformat="false" toShortenFQNames="true">
+    <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
