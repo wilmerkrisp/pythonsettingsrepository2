@@ -164,7 +164,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list STACK" value="stack=[]&#10;stack+=[vertex] # push&#10;obj = stack.pop() # pop" description="NEW  []" toReformat="false" toShortenFQNames="true">
+  <template name="list STACK SUPER" value="stack=[11]&#10;stack+=[vertex] # push&#10;obj = stack.pop() # pop&#10;&#10;while obj:=stack.pop() if stack else None:&#10;    print(obj)&#10;    # stack +=[12]&#10;" description="NEW  []" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -241,7 +241,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list QUEUE" value="queue =collections.deque()&#10;queue.append(12)   # push=enque&#10;v = queue.pop()    # pop =deque" description="NEW  []" toReformat="false" toShortenFQNames="true">
+  <template name="list QUEUE SUPER" value="queue =collections.deque([11])&#10;queue.appendLeft(12)   # push=enque&#10;v = queue.pop()    # pop =deque&#10;&#10;while obj:=queue.pop() if queue else None:&#10;    print(obj)&#10;    # queue.appendLeft(12)" description="deque()" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
