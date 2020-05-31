@@ -96,7 +96,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="function CYCLE FIND" value="# множество можно использовать для обнаружения циклов уже виденных элементов&#10;seen=set()&#10;while node:&#10;    if node in seen:&#10;        return True # found cycle!&#10;    else:&#10;        seen|= {node}&#10;    node= node.next" description="множество можно использовать для обнаружения циклов уже виденных элементов" toReformat="false" toShortenFQNames="true">
+  <template name="function CYCLE FIND v1" value="# множество можно использовать для обнаружения циклов уже виденных элементов&#10;seen=set()&#10;while node:&#10;    if node in seen:&#10;        return True # found cycle!&#10;    else:&#10;        seen|= {node}&#10;    node= node.next" description="множество можно использовать для обнаружения циклов уже виденных элементов" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -107,6 +107,11 @@
     </context>
   </template>
   <template name="listlinked _insert_node" value="def _insert_node(self, prev, curr, next):&#10;    prev.next = curr&#10;    curr.next = next" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function CYCLE FIND v2" value="# множество можно использовать для обнаружения циклов уже виденных элементов&#10;node, seen = llist, set()&#10;while node and node not in seen:&#10;    # main work   &#10;      &#10;    seen|= {node}&#10;    node= node.next&#10;" description="множество можно использовать для обнаружения циклов уже виденных элементов" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

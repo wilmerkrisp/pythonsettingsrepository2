@@ -32,7 +32,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="print linked list" value="def linked_list_to_string(linked_list):&#10;    &quot;&quot;&quot; linked list to string&quot;&quot;&quot;&#10;    list_repr = []&#10;&#10;    node = linked_list&#10;    while node:  # because size is a count of elements&#10;        list_repr += [node]&#10;        node = node.next&#10;&#10;    return str(list_repr)&#10;&#10;&#10;def print_linked_list(linked_list):&#10;    &quot;&quot;&quot; print linked list &quot;&quot;&quot;&#10;    print(linked_list_to_string(linked_list))" description="for for print" toReformat="false" toShortenFQNames="true">
+  <template name="print linked list v1" value="def linked_list_to_string(linked_list):&#10;    &quot;&quot;&quot; linked list to string&quot;&quot;&quot;&#10;    list_repr = []&#10;&#10;    node = linked_list&#10;    while node:  # because size is a count of elements&#10;        list_repr += [node]&#10;        node = node.next&#10;&#10;    return str(list_repr)&#10;&#10;&#10;def print_linked_list(linked_list):&#10;    &quot;&quot;&quot; print linked list &quot;&quot;&quot;&#10;    print(linked_list_to_string(linked_list))" description="simple print" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -53,6 +53,11 @@
     </context>
   </template>
   <template name="print binary tree v2" value="import binarytree as bt&#10;&#10;def draw_binary_tree(tree, labels_=None):&#10;    &quot;&quot;&quot;&#10;    class TreeNode(object):&#10;        def __init__(self, x):&#10;            self.val = x&#10;            self.left = None&#10;            self.right = None&#10;    &quot;&quot;&quot;&#10;    tree_map = {}&#10;&#10;    # graph pre-prder traversal&#10;    stack = [tree]&#10;    while node := stack.pop() if stack else None:&#10;        # add node&#10;        tree_map[node] = bt.Node(node.val)&#10;&#10;        if node.left:&#10;            stack += [node.left]&#10;        if node.right:&#10;            stack += [node.right]&#10;&#10;    for node, new_node in tree_map.items():&#10;        new_node.left = tree_map.get(node.left)&#10;        new_node.right = tree_map.get(node.right)&#10;&#10;    root = tree_map[tree]&#10;    print(root)" description="binarytree lib" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="print linked list v2" value="import networkx as nx&#10;import matplotlib.pyplot as plt&#10;&#10;def draw_linked_list(llist, labels_=None):&#10;    &quot;&quot;&quot;&#10;    class ListNode(object):&#10;        def __init__(self, val):&#10;            self.val = val&#10;            self.prev = None&#10;            self.next = None&#10;    &quot;&quot;&quot;&#10;    if not labels_:&#10;        labels_ = {&#10;            llist: &quot;ROOT&quot;&#10;        }&#10;&#10;    graph = nx.DiGraph()&#10;&#10;    # list traversal&#10;    list_repr = []&#10;&#10;    node, seen = llist, set()&#10;    while node and node not in seen:&#10;        graph.add_node(node)&#10;        label_additional = labels_.get(node, &quot;&quot;)&#10;        labels_[node] = f&quot;{node.val}  *{label_additional}*&quot;&#10;&#10;        if node.next:&#10;            graph.add_edge(node, node.next)&#10;&#10;        seen |= {node}&#10;        node = node.next&#10;&#10;&#10;    # pos = nx.planar_layout(graph)&#10;    pos = nx.spring_layout(graph)&#10;    nx.draw_networkx_nodes(graph, pos)&#10;&#10;    nx.draw_networkx_labels(graph, pos, labels=labels_)&#10;    nx.draw_networkx_edge_labels(graph, pos)&#10;    nx.draw_networkx_edges(graph, pos, edge_color='r', arrows=True)&#10;    plt.show()" description="networkx" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
