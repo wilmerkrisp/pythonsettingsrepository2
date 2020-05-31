@@ -37,4 +37,14 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="print graph  undirected DRAW with labels v1" value="import networkx as nx&#10;import matplotlib.pyplot as plt&#10;&#10;&#10;&#10;def draw_graph(graph, labels_=None):&#10;    &quot;&quot;&quot;graph_directed = {&#10;        1:[2, 3],&#10;        2:[3, 4],&#10;        3:[4],&#10;        4:[]}&quot;&quot;&quot;&#10;    if not labels_: labels_ = {}&#10;&#10;    g = nx.DiGraph()&#10;&#10;    for v in graph:&#10;        g.add_node(v)&#10;        label_additional = labels_.get(v, &quot;&quot;);&#10;        labels_[v] = f&quot;{v}  *{label_additional}*&quot;&#10;        for e in graph[v]:&#10;            try:&#10;                g.add_edge(v, e, w=graph[v][e])&#10;            except TypeError as error:&#10;                g.add_edge(v, e)&#10;&#10;    pos = nx.planar_layout(g)&#10;    # pos = nx.spring_layout(g)&#10;    nx.draw_networkx_nodes(g, pos)&#10;&#10;    nx.draw_networkx_labels(g, pos, labels=labels_)&#10;    nx.draw_networkx_edge_labels(g, pos)&#10;    nx.draw_networkx_edges(g, pos, edge_color='r', arrows=True)&#10;    plt.show()" description="networkx" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="print graph  undirected DRAW with labels v2" value="import networkx as nx&#10;import matplotlib.pyplot as plt&#10;&#10;&#10;def draw_graph(graph_matrix, labels_=None):&#10;    &quot;&quot;&quot;graph_directed = {&#10;        1:[2, 3],&#10;        2:[3, 4],&#10;        3:[4],&#10;        4:[]}&quot;&quot;&quot;&#10;    if not labels_:&#10;        labels_ = {}&#10;&#10;    graph = nx.DiGraph()&#10;&#10;    for vertex in graph_matrix:&#10;        graph.add_node(vertex)&#10;        label_additional = labels_.get(vertex, &quot;&quot;)&#10;        labels_[vertex] = f&quot;{vertex}  *{label_additional}*&quot;&#10;        for edges in graph_matrix[vertex]:&#10;            try:&#10;                graph.add_edge(vertex, edges, w=graph_matrix[vertex][edges])&#10;            except (TypeError, IndexError):&#10;                graph.add_edge(vertex, edges)&#10;&#10;    # pos = nx.planar_layout(g)&#10;    pos = nx.spring_layout(graph)&#10;    nx.draw_networkx_nodes(graph, pos)&#10;&#10;    nx.draw_networkx_labels(graph, pos, labels=labels_)&#10;    nx.draw_networkx_edge_labels(graph, pos)&#10;    nx.draw_networkx_edges(graph, pos, edge_color='r', arrows=True)&#10;    plt.show()" description="networkx" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
