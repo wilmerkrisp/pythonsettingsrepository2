@@ -219,7 +219,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="cm map add many 3  / map chain" value="m1 = {'music': 'bach', 'art': 'rembrandt'}&#10;m2 = {'art': 'van gogh', 'opera': 'carmen'}&#10;list(ChainMap(m1, m2))&#10;['music', 'art', 'opera']" description="map1+map2 склеить несколько словарей ChainMap(m1, m2)" toReformat="false" toShortenFQNames="true">
+  <template name="cm map add many 3  / map chain" value="m1 = {&#10;    'music': 'bach',&#10;    'art': 'rembrandt'&#10;}&#10;m2 = {&#10;    'art': 'van gogh',&#10;    'opera': 'carmen'&#10;}&#10;res = collections.ChainMap(m1, m2)&#10;for k, v in res.items():&#10;    print(k, v)&#10;&quot;&quot;&quot;&#10;music bach&#10;art van gogh&#10;opera carmen&#10;&quot;&quot;&quot;" description="map1+map2 склеить несколько словарей ChainMap(m1, m2)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -268,11 +268,6 @@
   </template>
   <template name="rm map get many" value="itertools.islice($s$, 2, None$END$)&#10;# islice('ABCDEFG', 2, None) --&gt; C D E F G&#10;" description="islice [start,] stop [, step]" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="rl list GROUP BY KEY" value="vehicles = [('Ford', 'Taurus'), ('Dodge', 'Durango'), ('Chevrolet', 'Cobalt'), ('Ford', 'F150'), ('Dodge', 'Charger'), ('Ford', 'GT')]&#10;sorted_vehicles = sorted(vehicles)&#10;groups = itertools.groupby(sorted_vehicles, lambda make: make[0])&#10;&#10;for key, value in groups:&#10;    print(&quot;___&quot;)&#10;    for left, right in value:&#10;        print(left, right)&#10;&#10;&quot;&quot;&quot;&#10;___&#10;Chevrolet Cobalt&#10;___&#10;Dodge Charger&#10;Dodge Durango&#10;___&#10;Ford F150&#10;Ford GT&#10;Ford Taurus&#10;&quot;&quot;&quot;&#10;" description="groupby" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
