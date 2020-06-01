@@ -41,4 +41,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="if XOR" value="if bool(root.left) ^ bool(root.right):&#10;            return False" description="bool(left) ^ bool(right)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
