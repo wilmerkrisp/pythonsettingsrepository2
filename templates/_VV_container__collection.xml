@@ -273,7 +273,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map GROUP BY KEY" value="m1 = {&#10;    'music': 'bach',&#10;    'art': 'rembrandt'&#10;}&#10;m2 = {&#10;    'art': 'van gogh',&#10;    'opera': 'carmen'&#10;}&#10;&#10;&#10;def group_dicts(dict_left, dict_right):&#10;    merged = collections.defaultdict(list)&#10;    for key, value in itertools.chain(dict_left.items(), dict_right.items()):&#10;        merged[key] += [value]&#10;    return merged&#10;&#10;&#10;print(&quot;RESULT=&quot;, group_dicts(m1, m2))&#10;" description="new dict" toReformat="false" toShortenFQNames="true">
+  <template name="map GROUP BY KEY v1" value="m1 = {&#10;    'music': 'bach',&#10;    'art': 'rembrandt'&#10;}&#10;m2 = {&#10;    'art': 'van gogh',&#10;    'opera': 'carmen'&#10;}&#10;&#10;&#10;def group_dicts(dict_left, dict_right):&#10;    merged = collections.defaultdict(list)&#10;    for key, value in itertools.chain(dict_left.items(), dict_right.items()):&#10;        merged[key] += [value]&#10;    return merged&#10;&#10;&#10;print(&quot;RESULT=&quot;, group_dicts(m1, m2))&#10;" description="new dict" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="map GROUP BY KEY v2" value="m1 = {&#10;    'music': 'bach',&#10;    'art': 'rembrandt'&#10;}&#10;m2 = {&#10;    'art': 'van gogh',&#10;    'opera': 'carmen'&#10;}&#10;&#10;&#10;def group_dicts(*dicts):&#10;    &quot;&quot;&quot; group_dicts(map1, map2, map3)&quot;&quot;&quot;&#10;    items = [d.items() for d in dicts]&#10;    # items = list(map(operator.methodcaller('items'), dicts))&#10;    merged = collections.defaultdict(list)&#10;    for key, value in itertools.chain.from_iterable(items):&#10;        merged[key] += [value]&#10;    return merged&#10;&#10;&#10;print(&quot;RESULT=&quot;, group_dicts(m1, m2))&#10;" description="new dict" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
