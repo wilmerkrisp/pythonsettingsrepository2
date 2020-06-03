@@ -151,4 +151,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function traversal compare tree" value="def compare_trees_recursive(self, root1, root2):&#10;    &quot;&quot;&quot; compare two trees recursive&quot;&quot;&quot;&#10;    if not root1 and not root2:&#10;        return True&#10;    if not root1 or not root2:&#10;        return False&#10;    return root1.val == root2.val and self.compare_trees_recursive(root1.left, root2.left) and self.compare_trees_recursive(root1.right, root2.right)&#10;&#10;def compare_trees_iterative(self, root1, root2):&#10;    &quot;&quot;&quot; compare two trees iterative&quot;&quot;&quot;&#10;    stack = [root2, root1]&#10;    while stack:&#10;        node1, node2 = stack.pop(), stack.pop() if stack else None&#10;        if not node1 and not node2: # тк список может хранить None значения&#10;            continue&#10;        if not node1 or not node2:&#10;            return False&#10;        if node1.val != node2.val:&#10;            return False&#10;        stack += [node2.right, node1.right, node2.left, node1.left]&#10;    return True" description="recursive and iterative" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
