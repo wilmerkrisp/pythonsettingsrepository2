@@ -5,25 +5,25 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POP + result" value="result  = []&#10;while $left$ :&#10;    fst=$left$[0]&#10;    lst=$left$[-1]&#10;    result[:0] = [$left$.pop()]  &#10;&#10;$END$    " description="while list: pop()" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POP + result" value="result  = []&#10;while $left$ :&#10;    fst=$left$[0]&#10;    lst=$left$[-1]&#10;    result[:0] = [$left$.pop()]  # TODO плохой вариант так как вставка будет занимать много времени&#10;&#10;$END$    " description="while list: pop()" toReformat="false" toShortenFQNames="true">
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POP C-STYLE _SUPER_stack" value="while obj:=$left$.pop() if $left$ else None:&#10;    print(obj)&#10;    # stack += [12]&#10;    &#10;$END$    " description="while pop():" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POP C-STYLE _SUPER_stack" value="while obj:=$left$.pop() if $left$ else None:&#10;    print(obj)&#10;    # stack += [12]&#10;    # стек не должен сожержать None элементы&#10;    &#10;$END$    " description="while pop():   стек не должен сожержать None элементы" toReformat="false" toShortenFQNames="true">
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POP HEAP _SUPER_" value="while obj := heapq.heappop($left$) if $left$ else None:&#10;    print(obj)&#10;    &#10;$END$&#10;  " description="while heappop:" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POP HEAP _SUPER_" value="while obj := heapq.heappop($left$) if $left$ else None:&#10;    print(obj)&#10;    # куча не должна сожержать None элементы&#10;    &#10;$END$&#10;  " description="while heappop:   куча не должна сожержать None элементы" toReformat="false" toShortenFQNames="true">
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POPLEFT DEQUEUE" value="result  = []&#10;$arr$=collections.deque($left$)&#10;while $arr$ :&#10;    fst=$arr$[0]&#10;    lst=$arr$[-1]&#10;    result+= [$arr$.popleft()]  &#10;&#10;$END$&#10;  " description="while dequeue: popleft()" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POPLEFT DEQUEUE" value="result  = []&#10;$arr$=collections.deque($left$)&#10;while $arr$ :&#10;    fst=$arr$[0]&#10;    lst=$arr$[-1]&#10;    result+= [$arr$.popleft()]&#10;    &#10;    # $arr$+=[newval]&#10;    #  очередь не должна сожержать None элементы&#10;&#10;$END$&#10;  " description="while dequeue: popleft()" toReformat="false" toShortenFQNames="true">
     <variable name="arr" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -90,7 +90,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for WHILE POP C-STYLE _SUPER_queue" value="while obj:=$left$.pop() if $left$ else None:&#10;    print(obj)&#10;    # queue.appendLeft(12)&#10;" description="while pop():" toReformat="false" toShortenFQNames="true">
+  <template name="for WHILE POP C-STYLE _SUPER_queue" value="while obj:=$left$.pop() if $left$ else None: &#10;    print(obj)&#10;    # queue.appendLeft(12)&#10;    #  очередь не должна сожержать None элементы&#10;" description="while pop():   очередь не должна сожержать None элементы" toReformat="false" toShortenFQNames="true">
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />

@@ -164,7 +164,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list STACK SUPER" value="stack=[11]&#10;stack+=[vertex] # push&#10;obj = stack.pop() # pop&#10;&#10;while obj:=stack.pop() if stack else None:&#10;    print(obj)&#10;    # stack +=[12]&#10;" description="NEW  []" toReformat="false" toShortenFQNames="true">
+  <template name="list STACK SUPER LIFO" value="stack=[11]&#10;stack+=[vertex] # push&#10;obj = stack.pop() # pop&#10;&#10;while obj:=stack.pop() if stack else None:&#10;    print(obj)&#10;    &#10;    # stack +=[12]&#10;    # стэк не должен содержать None элементы&#10;" description="NEW  []" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -174,7 +174,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list HEAP how to use" value="heap=[]&#10;heapq.heappush(heap, (5, 'write code'))&#10;obj =  heapq.heappop(heap)     # pop возвращает наименьший элемент&#10;obj = heap[0]             # это самый маленький элемент, без удаления &#10; &#10;# heapq.heapify(list) - сам список будет МУТИРОВАН!!" description="NEW  [] priority queue" toReformat="false" toShortenFQNames="true">
+  <template name="list HEAP how to use" value="heap=[]&#10;heapq.heapify(heap) - сам список будет МУТИРОВАН!!&#10;&#10;heapq.heappush(heap, (5, 'write code'))&#10;obj =  heapq.heappop(heap)     # pop возвращает наименьший элемент&#10;obj = heap[0]             # это самый маленький элемент, без удаления &#10; &#10;&#10;while obj := heapq.heappop(heap) if heap else None:&#10;    print(obj)&#10;    # куча не должна содержать None элементы" description="NEW  [] priority queue" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -241,12 +241,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list QUEUE SUPER" value="queue =collections.deque([11])&#10;queue.appendLeft(12)   # push=enque&#10;v = queue.pop()    # pop =deque&#10;&#10;while obj:=queue.pop() if queue else None:&#10;    print(obj)&#10;    # queue.appendLeft(12)" description="deque()" toReformat="false" toShortenFQNames="true">
+  <template name="list QUEUE SUPER FIFO" value="queue =collections.deque([11])&#10;queue.appendLeft(12)   # push=enque&#10;v = queue.pop()    # pop =deque&#10;&#10;while obj:=queue.pop() if queue else None:&#10;    print(obj)&#10;    &#10;    # queue.appendLeft(12)&#10;    # куча не должна содержать None элементы" description="deque()" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map STACK" value="map = {&#10;    1: 1,&#10;    2: 2,&#10;    3: 3,&#10;    4: 4&#10;}&#10;map1 = collections.OrderedDict(map)&#10;print(map1.popitem())  # LIFO queue&#10;print(map1.popitem(last=False))  # FIFO stacke" description="OrderedDict(map)" toReformat="false" toShortenFQNames="true">
+  <template name="map STACK LIFO" value="map = {&#10;    1: 1,&#10;    2: 2,&#10;    3: 3,&#10;    4: 4&#10;}&#10;stack = collections.OrderedDict(map)&#10;&#10;while obj:=stack.popitem() if stack else None:&#10;    print (obj)&#10;    # stack|={2:new}&#10;" description="OrderedDict(map)   stack.popitem()  # LIFO stack" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -284,6 +284,21 @@
     </context>
   </template>
   <template name="map GROUP BY KEY v2  (dicts key:[vals])" value="def group_dicts(*dicts):&#10;    &quot;&quot;&quot; group_dicts(map1, map2, map3)&quot;&quot;&quot;&#10;    items = [d.items() for d in dicts]&#10;    merged = collections.defaultdict(list)&#10;    for key, value in itertools.chain.from_iterable(items):&#10;        merged[key] += value&#10;    return merged" description="new dict" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="list STACK 2  стек может содержать None-элемнеты" value="stack = [root]&#10;while stack:&#10;    node = stack.pop()&#10;    if node is None:&#10;        continue&#10;    yield node.val  # main work&#10;&#10;    stack += [node.right]  # стек может содержать None элементы&#10;    stack += [node.left] " description="вариант когда стек может содержать None-элемнеты" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="map QUEUE FIFO" value="map = {&#10;    1: 1,&#10;    2: 2,&#10;    3: 3,&#10;    4: 4&#10;}&#10;queue = collections.OrderedDict(map)&#10;&#10;while obj:=queue.popitem(last=False) if stack else None: # элемент будем забирать сначала очереди&#10;    print (obj)&#10;    # queue|={2:new}&#10;" description="OrderedDict(map)  queue.popitem(last=False)  # FIFO queue" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="map QUEUE FIFO variant" value="map = {&#10;    1: 1,&#10;    2: 2,&#10;    3: 3,&#10;    4: 4&#10;}&#10;queue = collections.OrderedDict(map)&#10;&#10;while obj:=queue.popitem() if stack else None:&#10;    print (obj)&#10;    # queue|={12:new}&#10;    # queue.move_to_end(12,last=False) переместим элемент вначало очереди&#10;" description="OrderedDict(map)  queue.move_to_end(key,last=False)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
