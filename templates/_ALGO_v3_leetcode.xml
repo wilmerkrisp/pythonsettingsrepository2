@@ -126,4 +126,29 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function traversal recursive preorder binary tree" value="def traversal(self, root):&#10;    if not root:&#10;        return []&#10;&#10;    tree_left = traversal(root.left)&#10;    tree_right = traversal(root.right)&#10;    return [root.val] + tree_left + tree_right" description="SUPER O(N)ST tree pre-order traversal recursive(bottom-up)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function traversal iterative preorder binary tree (STACK BASED DFS)" value="def traversal(self, root):&#10;    stack = [root]&#10;    while node := stack.pop() if stack else None:&#10;        yield node.val  # main work&#10;&#10;        if node.right:&#10;            stack += [node.right]&#10;        if node.left:&#10;            stack += [node.left]  # would be on top of stack, left node processed first" description="SUPER O(N)ST tree pre-order traversal" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function traversal iterative levelorder binary tree (QUEUE BASED BFS)" value="def traversal(self, root):&#10;    queue = collections.deque([root])&#10;    while node := queue.pop() if queue else None:&#10;        yield node.val  # main work&#10;&#10;        if node.left:&#10;            queue.appendleft(node.left)&#10;        if node.right:&#10;            queue.appendleft(node.right)" description="SUPER BFS O(N)ST tree level-order traversal" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function traversal recursive levelorder binary tree (GROUPED LEVELS)" value="def traversal(self, root ) :&#10;    levels = collections.defaultdict(list)&#10;    if not root:&#10;        return levels.values()&#10;&#10;    def helper(node, level):&#10;        if not node:&#10;            return&#10;        levels[level] += [node.val]&#10;        helper(node.left, level + 1)&#10;        helper(node.right, level + 1)&#10;&#10;    helper(root, 0)&#10;&#10;    return itertools.chain.from_iterable(levels.values()) # levels.values() если нужно получить просто группы" description="SUPER O(N)ST tree level-order traversal recursive(top-down)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function traversal iterative levelorder binary tree (ADDITIONAL INFO IN STACK)" value="def traversal(self, root )  :&#10;    levels = collections.defaultdict(list)&#10;&#10;    stack = [(1, root)]&#10;    while stack:&#10;        level, node = stack.pop()&#10;        levels[level] += [node.val]&#10;&#10;        if node.left:&#10;            stack += [(level + 1, node.left)]&#10;        if node.right:&#10;            stack += [(level + 1, node.right)]&#10;&#10;    return levels.values()" description="SUPER O(N)ST tree level-order traversal" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
