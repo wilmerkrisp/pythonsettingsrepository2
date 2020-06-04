@@ -94,4 +94,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function CACHE" value="@functools.lru_cache(maxsize=10 ** 6)" description="@functools.lru_cache" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
