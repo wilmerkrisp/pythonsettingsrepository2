@@ -32,7 +32,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="print linked list v1" value="def linked_list_to_string(linked_list):&#10;    &quot;&quot;&quot; linked list to string&quot;&quot;&quot;&#10;    list_repr = []&#10;&#10;    node = linked_list&#10;    while node:  # because size is a count of elements&#10;        list_repr += [node]&#10;        node = node.next&#10;&#10;    return str(list_repr)&#10;&#10;&#10;def print_linked_list(linked_list):&#10;    &quot;&quot;&quot; print linked list &quot;&quot;&quot;&#10;    print(linked_list_to_string(linked_list))" description="simple print" toReformat="false" toShortenFQNames="true">
+  <template name="print linked list v1" value="def linked_list_to_string(linked_list):&#10;    &quot;&quot;&quot; linked list to string&quot;&quot;&quot;&#10;    list_repr = []&#10;&#10;    node = linked_list&#10;    while node:  # because size is a count of elements&#10;        list_repr += [node]&#10;        node = node.next&#10;&#10;    return str(list_repr)&#10;&#10;&#10;def print_linked_list(linked_list):&#10;    &quot;&quot;&quot; print linked list &quot;&quot;&quot;&#10;    print(linked_list_to_string(linked_list))&#10;    &#10;    &#10;class ListNode(object):&#10;    &quot;&quot;&quot; node for single linked list&quot;&quot;&quot;&#10;    &#10;    def __init__(self, val):&#10;        self.val = val&#10;        self.next = None&#10;    &#10;    def __repr__(self):&#10;        return str(self.val)&#10;&#10;N1, N2, N3, N4, N5 = ListNode(1), ListNode(2), ListNode(3), ListNode(4), ListNode(5)&#10;result_string = linked_list_to_string(N1)" description="simple print" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
