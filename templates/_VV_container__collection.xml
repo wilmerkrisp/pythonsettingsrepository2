@@ -241,7 +241,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list QUEUE SUPER FIFO" value="queue =collections.deque([11])&#10;queue.appendLeft(12)   # push=enque&#10;v = queue.pop()    # pop =deque&#10;&#10;while obj:=queue.pop() if queue else None:&#10;    print(obj)&#10;    &#10;    # queue.appendLeft(12)&#10;    # куча не должна содержать None элементы" description="deque()" toReformat="false" toShortenFQNames="true">
+  <template name="list QUEUE SUPER FIFO" value="queue =collections.deque([11])&#10;queue.appendLeft(12)   # push=enque&#10;v = queue.pop()    # pop =deque&#10;&#10;while obj:=queue.pop() if queue else None:&#10;    print(obj)&#10;    &#10;    # queue.appendLeft(12)&#10;    # очередь не должна содержать None элементы" description="deque()" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -288,7 +288,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list STACK 2  стек может содержать None-элемнеты" value="stack = [root]&#10;while stack:&#10;    node = stack.pop()&#10;    if node is None:&#10;        continue&#10;    yield node.val  # main work&#10;&#10;    stack += [node.right]  # стек может содержать None элементы&#10;    stack += [node.left] " description="вариант когда стек может содержать None-элемнеты" toReformat="false" toShortenFQNames="true">
+  <template name="list STACK 2  стек может содержать None-элемнеты" value="stack = [root]&#10;while stack:&#10;    node = stack.pop()&#10;    if node is None:&#10;        continue&#10;    yield node.val  # main work&#10;&#10;    stack += [node.right, node.left]  # стек может содержать None элементы" description="вариант когда стек может содержать None-элемнеты" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>

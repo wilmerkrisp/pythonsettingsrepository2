@@ -156,4 +156,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function traversal iterative preorder binary tree (STACK BASED DFS + None elements)" value="def traversal(node_root):            &#10;    stack = [node_root]&#10;    while stack:&#10;        node = stack.pop()&#10;        yield node.val  # main work&#10;        if node is None: # стэк может содержать пустые элементы&#10;            continue&#10;&#10;        stack += [node.right, node.left]  # left would be on top of stack, left node processed first" description="SUPER O(N)ST tree pre-order traversal" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
