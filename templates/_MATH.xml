@@ -61,7 +61,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="func округление" value="math.trunc() # усечение, отбросить дробную часть&#10;math.floor() # округлить к низу&#10;math.round(2.65) # округлить до 2&#10;math.round(2.65, 1) # округлить до 2.6&#10;" description="trunc/floor/round" toReformat="false" toShortenFQNames="true">
+  <template name="func округление" value="// усекает книзу&#10;math.trunc() # усечение, отбросить дробную часть&#10;math.floor() # округлить к низу&#10;math.round(2.65) # округлить до 2&#10;math.round(2.65, 1) # округлить до 2.6&#10;" description="trunc/floor/round" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
