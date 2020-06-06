@@ -46,4 +46,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="string из 20 символов" value="&quot;&quot;.zfill(20)" description="&quot;&quot;.zfill(20)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+      <option name="Python_Class" value="false" />
+    </context>
+  </template>
 </templateSet>
