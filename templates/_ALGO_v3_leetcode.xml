@@ -166,4 +166,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function TEMPLATE devide and conquer" value="def divide_and_conquer( S ):&#10;    # (1). Divide the problem into a set of subproblems.&#10;    [S1, S2, ... Sn] = divide(S)&#10;&#10;    # (2). Solve the subproblem recursively,&#10;    #   obtain the results of subproblems as [R1, R2... Rn].&#10;    rets = [divide_and_conquer(Si) for Si in [S1, S2, ... Sn]]&#10;    [R1, R2,... Rn] = rets&#10;&#10;    # (3). combine the results from the subproblems.&#10;    #   and return the combined result.&#10;    return combine([R1, R2,... Rn])" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
