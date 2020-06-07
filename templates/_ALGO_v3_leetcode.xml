@@ -101,7 +101,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="function TEMPLATE  two_pointers for linked list" value="# Initialize slow &amp; fast pointers&#10;node_slow = head&#10;node_fast = head&#10;# Change this condition to fit specific problem.&#10;# Attention: remember to avoid null-pointer error&#10;while node_slow and node_fast and node_fast.next:&#10;    node_slow = node_slow.next  # move slow pointer one step each time&#10;    node_fast = node_fast.next.next  # move fast pointer two steps each time&#10;    if node_slow == node_fast:  # change this condition to fit specific problem&#10;        return True&#10;&#10;return False  # change return value to fit specific problem" description="TEMPLATE" toReformat="false" toShortenFQNames="true">
+  <template name="function TEMPLATE  two_pointers for linked list" value="# Initialize slow &amp; fast pointers&#10;node_slow = head&#10;node_fast = head&#10;# Change this condition to fit specific problem.&#10;# Attention: remember to avoid null-pointer error&#10;while node_slow and node_fast and node_fast.next:&#10;    node_slow = node_slow.next  # move slow pointer one step each time&#10;    node_fast = node_fast.next.next  # move fast pointer two steps each time&#10;    if node_slow == node_fast:  # change this condition to fit specific problem&#10;        return True&#10;&#10;return False  # change return value to fit specific problem" description="from LEETCODE" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -161,7 +161,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="function TEMPLATE devide and conquer" value="def divide_and_conquer( S ):&#10;    # (1). Divide the problem into a set of subproblems.&#10;    [S1, S2, ... Sn] = divide(S)&#10;&#10;    # (2). Solve the subproblem recursively,&#10;    #   obtain the results of subproblems as [R1, R2... Rn].&#10;    rets = [divide_and_conquer(Si) for Si in [S1, S2, ... Sn]]&#10;    [R1, R2,... Rn] = rets&#10;&#10;    # (3). combine the results from the subproblems.&#10;    #   and return the combined result.&#10;    return combine([R1, R2,... Rn])" description="" toReformat="false" toShortenFQNames="true">
+  <template name="function TEMPLATE devide and conquer" value="def divide_and_conquer( S ):&#10;    # (1). Divide the problem into a set of subproblems.&#10;    [S1, S2, ... Sn] = divide(S)&#10;&#10;    # (2). Solve the subproblem recursively,&#10;    #   obtain the results of subproblems as [R1, R2... Rn].&#10;    rets = [divide_and_conquer(Si) for Si in [S1, S2, ... Sn]]&#10;    [R1, R2,... Rn] = rets&#10;&#10;    # (3). combine the results from the subproblems.&#10;    #   and return the combined result.&#10;    return combine([R1, R2,... Rn])" description="from LEETCODE" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function TEMPLATE backtracking" value="def backtrack(candidate):&#10;    if find_solution(candidate):&#10;        output(candidate)&#10;        return&#10;    &#10;    # iterate all possible candidates.&#10;    for next_candidate in list_of_candidates:&#10;        if is_valid(next_candidate):&#10;            # try this partial candidate solution&#10;            place(next_candidate)&#10;            # given the candidate, explore further.&#10;            backtrack(next_candidate)&#10;            # backtrack&#10;            remove(next_candidate)" description="from LEETCODE" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
