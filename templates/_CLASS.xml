@@ -116,12 +116,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class enumeration" value="import enum&#10;@enum.unique&#10;class Color(enum.Enum):&#10;    RED = enum.auto()&#10;    GREEN = enum.auto()&#10;    BLUE = enum.auto()&#10;&#10;print(Color.RED)&#10;print(Color.RED is Color.RED)&#10;for i in Direction:&#10;    print(i)" description="class Color(enum.Enum):" toReformat="false" toShortenFQNames="true">
+  <template name="class enumeration" value="import enum&#10;@enum.unique&#10;class Color(enum.Enum):&#10;    RED = enum.auto()&#10;    GREEN = enum.auto()&#10;    BLUE = enum.auto()&#10;&#10;print(Color.RED)&#10;print(Color.RED is Color.RED) # сравнение is(по идентичности)&#10;for i in Direction:&#10;    print(i)" description="class Color(enum.Enum):" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class enumeration INTEGER" value="@enum.unique&#10;class Direction(enum.IntFlag):&#10;    UP = 1&#10;    RIGHT = 2&#10;    DOWN = 3&#10;    LEFT = 4&#10;    &#10;print(Color.RED)&#10;print(Color.RED is Color.RED)&#10;for i in Direction:&#10;    print(i)" description="class Color(enum.IntFlag):" toReformat="false" toShortenFQNames="true">
+  <template name="class enumeration INTEGER" value="@enum.unique&#10;class Direction(enum.IntFlag):&#10;    UP = 1&#10;    RIGHT = 2&#10;    DOWN = 3&#10;    LEFT = 4&#10;    &#10;print(Color.RED)&#10;print( Direction.UP==1) #сравнение ==(по значению) так как enum это число&#10;for i in Direction:&#10;    print(i)" description="class Color(enum.IntFlag):" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
