@@ -92,4 +92,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="for MIN CUSTOM" value="min_val, min_idx = math.inf, None&#10;for i in range(idx_from, idx_to):&#10;    if min_val &gt; $heights$[i]:&#10;        min_val, min_idx = $heights$[i], i" description="for i in range" toReformat="false" toShortenFQNames="true">
+    <variable name="heights" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
