@@ -86,4 +86,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="for MIN SUPER index and value" value="min_index, min_value = min(enumerate($heights$), key=operator.itemgetter(1))" description="min(key=)" toReformat="false" toShortenFQNames="true">
+    <variable name="heights" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
