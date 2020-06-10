@@ -202,7 +202,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="rl list find/index/count ONE" value="s.index(b) ==error&#10;s.count(b)&#10;s.find(b)==-1&#10; $END$" description="find index count" toReformat="false" toShortenFQNames="true">
+  <template name="rl list find/index/count ONE НЕ_БИНАРНЫЙ_ПОИСК" value="s.index(b) ==error&#10;s.count(b)&#10;s.find(b)==-1 # ! ТОЛЬКО ДЛЯ СТРОК&#10; $END$" description="find index count" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -268,6 +268,12 @@
   </template>
   <template name="rm map get many" value="itertools.islice($s$, 2, None$END$)&#10;# islice('ABCDEFG', 2, None) --&gt; C D E F G&#10;" description="islice [start,] stop [, step]" toReformat="false" toShortenFQNames="true">
     <variable name="s" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="rl list index==-1 НЕ_БИНАРНЫЙ_ПОИСК" value="$left$_idx = $left$.index(target) if target in $left$ else -1&#10;$END$" description="idex if val in list else -1" toReformat="false" toShortenFQNames="true">
+    <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
