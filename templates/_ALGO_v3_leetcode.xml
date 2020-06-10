@@ -176,4 +176,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="class binary search" value="class BinarySearch(object):&#10;    &quot;&quot;&quot; ok &quot;&quot;&quot;&#10;&#10;    def search_pass_indexes(self, nums: List[int], target: int) -&gt; int:  # pylint: disable=invalid-name&#10;        &quot;&quot;&quot; O(log N)T O(1)S &quot;&quot;&quot;&#10;&#10;        def helper(left, right):&#10;            if left &gt;= right:  # [left,right) поэтому правый индекс не может быть равен левому&#10;                return -1&#10;&#10;            mid = (right - left) // 2 + left&#10;            pivot = nums[mid]&#10;            if pivot == target:&#10;                return mid&#10;&#10;            if pivot &lt; target:&#10;                return helper(mid + 1, right)&#10;            else:&#10;                return helper(left, mid)&#10;&#10;        return helper(0, len(nums))&#10;&#10;    def search_pass_arrs(self, nums: List[int], target: int) -&gt; int:  # pylint: disable=invalid-name&#10;        &quot;&quot;&quot;  O(log N)T O(N)S &quot;&quot;&quot;&#10;&#10;        def helper(arr, idx):&#10;            if not arr:&#10;                return -1&#10;&#10;            idx_pivot = len(arr) // 2&#10;            left, mid, right = arr[:idx_pivot], arr[idx_pivot], arr[idx_pivot + 1:]&#10;&#10;            if mid == target:&#10;                return idx + idx_pivot&#10;&#10;            if mid &lt; target:&#10;                return helper(right, idx + idx_pivot + 1) # +1 к индексцу так как пропускаем опорный элемент&#10;            else:&#10;                return helper(left, idx)&#10;&#10;        return helper(nums, 0)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
