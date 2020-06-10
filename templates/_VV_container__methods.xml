@@ -202,7 +202,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="rl list find/index/count ONE НЕ_БИНАРНЫЙ_ПОИСК" value="s.index(b) ==error&#10;s.count(b)&#10;s.find(b)==-1 # ! ТОЛЬКО ДЛЯ СТРОК&#10; $END$" description="find index count" toReformat="false" toShortenFQNames="true">
+  <template name="rl list find/index/count ONE НЕ_БИНАРНЫЙ_ПОИСК O(N)T" value="s.index(b) ==error&#10;s.count(b)&#10;s.find(b)==-1 # ! ТОЛЬКО ДЛЯ СТРОК&#10; $END$" description="find index count" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -272,8 +272,13 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="rl list index==-1 НЕ_БИНАРНЫЙ_ПОИСК" value="$left$_idx = $left$.index(target) if target in $left$ else -1&#10;$END$" description="idex if val in list else -1" toReformat="false" toShortenFQNames="true">
+  <template name="rl list index==-1 НЕ_БИНАРНЫЙ_ПОИСК O(N)T" value="$left$_idx = $left$.index(target) if target in $left$ else -1&#10;$END$" description="idex if val in list else -1" toReformat="false" toShortenFQNames="true">
     <variable name="left" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="rl list index==-1 SUPER БИНАРНЫЙ_ПОИСК O(log N)T" value="def index(arr, x):&#10;    &quot;&quot;&quot;Locate the leftmost value exactly equal to x&quot;&quot;&quot;&#10;    idx = bisect.bisect_left(arr, x)&#10;    if idx != len(arr) and arr[idx] == x:&#10;        return idx&#10;    return -1" description="bisect.bisect_left" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
