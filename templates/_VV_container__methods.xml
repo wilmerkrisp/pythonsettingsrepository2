@@ -283,4 +283,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="rl list index==-1 БИНАРНЫЙ_ПОИСК [from to)" value="def index(self, arr, x, left_idx, right_idx):&#10;    &quot;&quot;&quot;Locate the leftmost value exactly equal to x in arr[left right) &quot;&quot;&quot;&#10;    idx = bisect.bisect_left(arr, x, left_idx, right_idx)&#10;    if idx != len(arr) and arr[idx] == x:&#10;        return idx&#10;    return -1" description="bisect.bisect_left" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
