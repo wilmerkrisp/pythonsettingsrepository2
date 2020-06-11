@@ -30,7 +30,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="formap SORT by value DICT 2" value="nsmallest(len(result), result.items(), key=lambda e:e[1])" description="nsmallest" toReformat="false" toShortenFQNames="true">
+  <template name="formap SORT by value DICT 2" value="heapq.nsmallest(len(result), result.items(), key=lambda e:e[1])" description="nsmallest O(n log k)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
