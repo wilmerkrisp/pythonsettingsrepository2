@@ -98,4 +98,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function CLOSEST VALUES TO val" value="# находит ближайшее значение близкое к x, включая само x&#10;res = heapq.nsmallest(k, arr, key=lambda e: abs(e - x))" description="nsmallest O(n log k)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
