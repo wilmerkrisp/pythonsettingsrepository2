@@ -181,4 +181,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function CYCLE FIND v3 O(N)T O(1)Space" value="def findDuplicate(self, nums: List[int]) -&gt; int:&#10;    # (1) detect cycle&#10;    ptr_slow, ptr_fast = nums[0], nums[nums[0]] # каждый сделал один шаг&#10;    while ptr_slow != ptr_fast:&#10;        ptr_slow = nums[ptr_slow]&#10;        ptr_fast = nums[nums[ptr_fast]]&#10;&#10;    # (2) detect start cycle&#10;    ptr_slow, ptr_slow2 = 0, ptr_fast&#10;    while ptr_slow != ptr_slow2:&#10;        ptr_slow = nums[ptr_slow]&#10;        ptr_slow2 = nums[ptr_slow2]&#10;&#10;    return ptr_slow&#10;" description="Floyds алгоритм черепахи и зайца" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
