@@ -103,4 +103,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="for SORT  DESC(1) ASC(2) настраиваем ключи сортировки по отдельности" value="recomended.sort(key=lambda x: [-x[0], x[1]]) " description="key=lambda x: [-x[0], x[1]]" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
