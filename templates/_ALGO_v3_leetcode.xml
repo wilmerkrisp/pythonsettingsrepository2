@@ -15,12 +15,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map new CACHE FIXEDSIZE LIFOqueue" value="class FixedSizeDict(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the LIFOqueue key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
+  <template name="map new CACHE FIXEDSIZE LIFO stack" value="class FixedSizeDict(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the LIFOqueue key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            self.popitem(last=False)&#10;            &#10;#        if len(self) &gt; self.maxsize:&#10;#            oldest = next(iter(self))&#10;#            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map new CACHE  LRU Least recently used FIXEDSIZE v1" value="class LRU(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the least recently looked-up key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __getitem__(self, key):&#10;        value = super().__getitem__(key)&#10;        self.move_to_end(key)&#10;        return value&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
+  <template name="map new CACHE  LRU Least recently used FIXEDSIZE bad" value="class LRU(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the least recently looked-up key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __getitem__(self, key):&#10;        value = super().__getitem__(key)&#10;        self.move_to_end(key)&#10;        return value&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        if len(self) &gt; self.maxsize:&#10;            oldest = next(iter(self))&#10;            del self[oldest]&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -31,7 +31,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="list QUEUE FIXEDSIZE с вытеснением" value="queue_=[]&#10;queue_[:0] = [12]   # push=enque&#10;v = queue_.pop()    # pop =deque&#10;&#10;dec = collections.deque([1, 2, 3, 4, 5, 6], maxlen=6)&#10;dec.appendleft(101)  # если добавить слева то вытеснится справа&#10;# [101, 1, 2, 3, 4, 5]&#10;dec.append(102) # если добавить справа то вытеснится слева&#10;# [1, 2, 3, 4, 5, 102]" description="deque(maxlen)" toReformat="false" toShortenFQNames="true">
+  <template name="list QUEUE FIFO FIXEDSIZE с вытеснением" value="queue_=[]&#10;queue_[:0] = [12]   # push=enque&#10;v = queue_.pop()    # pop =deque&#10;&#10;dec = collections.deque([1, 2, 3, 4, 5, 6], maxlen=6)&#10;dec.appendleft(101)  # если добавить слева то вытеснится справа&#10;# [101, 1, 2, 3, 4, 5]&#10;dec.append(102) # если добавить справа то вытеснится слева&#10;# [1, 2, 3, 4, 5, 102]" description="deque(maxlen)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -86,7 +86,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="map new CACHE  LRU Least recently used FIXEDSIZE v2 SUPER" value="class LRU(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the least recently looked-up key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __getitem__(self, key):&#10;        value = super().__getitem__(key)&#10;        self.move_to_end(key)&#10;        return value&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        self.move_to_end(key)&#10;        if len(self) &gt; self.maxsize:&#10;            self.popitem(last=False)&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
+  <template name="map new CACHE  LRU Least recently used FIXEDSIZE SUPER" value="class LRU(collections.OrderedDict):&#10;    &quot;&quot;&quot; Limit size, evicting the least recently looked-up key when full &quot;&quot;&quot;&#10;&#10;    def __init__(self, maxsize=128, /, *args, **kwds):&#10;        self.maxsize = maxsize&#10;        super().__init__(*args, **kwds)&#10;&#10;    def __getitem__(self, key):&#10;        value = super().__getitem__(key)&#10;        self.move_to_end(key)&#10;        return value&#10;&#10;    def __setitem__(self, key, value):&#10;        super().__setitem__(key, value)&#10;        self.move_to_end(key)&#10;        if len(self) &gt; self.maxsize:&#10;            self.popitem(last=False)&#10;&#10; " description="OrderedDict  размер кэша можно ограничить" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
