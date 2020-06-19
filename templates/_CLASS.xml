@@ -126,4 +126,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="class enumeration DIRECTION" value="class Direction(enum.Enum):&#10;    UP = (0, -1)&#10;    RIGHT = (1, 0)&#10;    DOWN = (0, 1)&#10;    LEFT = (-1, 0)&#10;&#10;&#10;def next_step(x, y, direction):&#10;    return x + direction.value[0], y + direction.value[1]" description="UP = (0, -1)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
