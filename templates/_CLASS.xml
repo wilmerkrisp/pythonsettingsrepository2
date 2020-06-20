@@ -126,7 +126,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="class enumeration DIRECTION" value="class Direction(enum.Enum):&#10;    UP = (0, -1)&#10;    RIGHT = (1, 0)&#10;    DOWN = (0, 1)&#10;    LEFT = (-1, 0)&#10;x_max, y_max = 10, 10&#10;def next_step(x, y, direction):&#10;    x_new, y_new = x + direction.value[0], y + direction.value[1]&#10;    if 0 &lt;= x_new &lt; x_max and 0 &lt;= y_new &lt; y_max:&#10;        return x_new, y_new&#10;    return None, None" description="UP = (0, -1)" toReformat="false" toShortenFQNames="true">
+  <template name="class enumeration DIRECTION" value="class Direction(enum.Enum):&#10;    UP = (0, -1)&#10;    RIGHT = (1, 0)&#10;    DOWN = (0, 1)&#10;    LEFT = (-1, 0)&#10;    &#10;    &#10;x, y, x_max, y_max = 0, 0, 10, 10&#10;for d in Direction:&#10;    x_new, y_new = x + d.value[0], y + d.value[1]&#10;    if not (0 &lt;= x_new &lt; x_max and 0 &lt;= y_new &lt; y_max and graph[y_new][x_new] != WALL):&#10;        continue&#10; &#10;" description="UP = (0, -1)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
