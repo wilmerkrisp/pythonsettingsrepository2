@@ -83,4 +83,10 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="for matrix grid table" value="for y, row in enumerate($rooms$):&#10;    for x, val in enumerate(row):&#10;        print(x,y,val)$END$" description="for_in enumerate" toReformat="false" toShortenFQNames="true">
+    <variable name="rooms" expression="pyIterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
