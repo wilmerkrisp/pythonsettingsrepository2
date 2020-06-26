@@ -123,7 +123,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="func tilda ~x" value="~x is equivalent to (-x) - 1" description="(-x) - 1" toReformat="false" toShortenFQNames="true">
+  <template name="func tilda ~x =(-x) - 1" value="~x is equivalent to (-x) - 1" description="найти симметричный элемент в массиве с другой стороны" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
