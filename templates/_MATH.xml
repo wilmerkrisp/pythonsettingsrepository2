@@ -108,4 +108,19 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="function TRIGGER" value="trigger = False&#10;&#10;def run_once(proc):&#10;    nonlocal trigger&#10;    if trigger:&#10;        return&#10;    else:&#10;        trigger = True&#10;        proc()&#10;&#10;def is_only_one_zero(elem):&#10;    nonlocal trigger&#10;    if not trigger and elem == 0:&#10;        trigger = True&#10;        return True&#10;    else:&#10;        return False" description="run only once" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="function TRIGGER SUPER" value="trigger = 1&#10;&#10;# flip the trigger&#10;trigger = 1 - trigger" description="trigger = 1 - trigger" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="func получить все цифры числа" value="num = x&#10;while num &gt; 0:&#10;    num, digit = divmod(num, 10)&#10;    DEB = digit" description="divmod" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
