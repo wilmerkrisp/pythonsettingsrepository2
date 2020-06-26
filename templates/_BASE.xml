@@ -58,7 +58,7 @@
       <option name="Python_Class" value="false" />
     </context>
   </template>
-  <template name="str isalnum" value="def isalnum(sym: str):  # isalnum -  своя функция так как системная str.isalpha str.isalnum дает True на всю таблицу&#10;    return True if sym.isnumeric() or 'a' &lt;= sym &lt; 'z' or 'A' &lt;= sym &lt; 'Z' else False" description="'a' &lt;= sym &lt; 'z'" toReformat="false" toShortenFQNames="true">
+  <template name="str isalnum" value="def isalnum(sym: str):  # isalnum -  своя функция так как системная str.isalpha str.isalnum дает True на всю таблицу&#10;    return True if sym.isnumeric() or 'a' &lt;= sym &lt;= 'z' or 'A' &lt;= sym &lt;= 'Z' else False" description="'a' &lt;= sym &lt; 'z'" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
       <option name="Python_Class" value="false" />
