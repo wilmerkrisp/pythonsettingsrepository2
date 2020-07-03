@@ -15,7 +15,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="func random integer" value="random.randint(1,10) #   [1,10]" description="randint(1,10) #   [1,10]" toReformat="false" toShortenFQNames="true">
+  <template name="func random integer SUPER" value="random.randint(1,10) #   [1,10]" description="randint(1,10) #   [1,10]   Alias for randrange(a, b+1)" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -124,6 +124,11 @@
     </context>
   </template>
   <template name="func tilda ~x =(-x) - 1" value="~x is equivalent to (-x) - 1" description="найти симметричный элемент в массиве с другой стороны" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="func random integer from range" value="random.randrange(1,11) #   [1,10]" description="choice(range(start, stop, step))," toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
